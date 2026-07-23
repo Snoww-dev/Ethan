@@ -80,6 +80,9 @@ function sendCareers_(d) {
     options.attachments = [blob];
   }
   MailApp.sendEmail(HR_EMAIL, subject, plain_(rows), options);
+
+  // Tự động xác nhận lại cho ỨNG VIÊN (không để lỗi làm hỏng luồng chính)
+  try { sendAutoReply_(d, 'careers'); } catch (e) {}
 }
 
 function sendContact_(d) {
@@ -99,6 +102,53 @@ function sendContact_(d) {
   };
   if (BCC_ALL) options.bcc = BCC_ALL;
   MailApp.sendEmail(SUPPORT_EMAIL, subject, plain_(rows), options);
+
+  // Tự động xác nhận lại cho KHÁCH LIÊN HỆ (không để lỗi làm hỏng luồng chính)
+  try { sendAutoReply_(d, 'contact'); } catch (e) {}
+}
+
+// ── Email TỰ ĐỘNG gửi lại NGƯỜI GỬI form (ứng viên / khách liên hệ) ──
+// kind: 'careers' | 'contact'. Bỏ qua nếu email người gửi không hợp lệ.
+function sendAutoReply_(d, kind) {
+  var to = String(d && d.email || '').trim();
+  if (!isEmail_(to)) return;
+  var name = String(d && d.name || '').trim() || 'bạn';
+  var subject, intro;
+  if (kind === 'careers') {
+    subject = 'Ethan Ecom — Đã nhận hồ sơ ứng tuyển của bạn';
+    intro   = 'Công ty Ethan Ecom đã nhận được hồ sơ ứng tuyển của bạn và sẽ liên hệ lại trong thời gian sớm nhất.';
+  } else {
+    subject = 'Ethan Ecom — Đã nhận email liên hệ của bạn';
+    intro   = 'Công ty Ethan Ecom đã nhận được email của bạn và sẽ liên hệ lại trong thời gian sớm nhất.';
+  }
+  var plain = 'Chào ' + name + ',\n\n' + intro +
+              '\n\nĐây là email xác nhận tự động, bạn không cần trả lời email này.' +
+              '\n\nTrân trọng,\nĐội ngũ Ethan Ecom';
+  MailApp.sendEmail(to, subject, plain, {
+    htmlBody: buildAutoReply_(name, intro),
+    name: SENDER_NAME,
+    replyTo: kind === 'careers' ? HR_EMAIL : SUPPORT_EMAIL
+  });
+}
+
+function buildAutoReply_(name, intro) {
+  var h = '<div style="font-family:Arial,Helvetica,sans-serif;color:#1A2433;max-width:560px;margin:0 auto;border:1px solid #DCE6F0">';
+  h += '<div style="background:#16305C;padding:22px 28px">' +
+       '<span style="color:#ffffff;font-size:20px;font-weight:bold;letter-spacing:1px">ETHAN ECOM</span></div>';
+  h += '<div style="padding:28px">';
+  h += '<p style="font-size:16px;margin:0 0 14px">Chào <b>' + escape_(name) + '</b>,</p>';
+  h += '<p style="font-size:15px;line-height:1.7;margin:0 0 16px">' + escape_(intro) + '</p>';
+  h += '<p style="font-size:15px;line-height:1.7;margin:0 0 16px;color:#5A6B82">Đây là email xác nhận tự động, bạn không cần trả lời email này.</p>';
+  h += '<p style="font-size:15px;line-height:1.7;margin:0">Trân trọng,<br><b>Đội ngũ Ethan Ecom</b></p>';
+  h += '</div>';
+  h += '<div style="background:#EAF3FB;padding:16px 28px;font-size:13px;color:#5A6B82;line-height:1.6">' +
+       'Ethan Ecom · Võ Dõng, Thống Nhất, Đồng Nai<br>support@ethanecom.com · +84 967 473 979</div>';
+  h += '</div>';
+  return h;
+}
+
+function isEmail_(s) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(s == null ? '' : s).trim());
 }
 
 // Bỏ các dòng có giá trị trống để email gọn (form inline có nhiều field tuỳ chọn)

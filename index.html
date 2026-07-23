@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 <title>Ethan Ecom: TMĐT xuyên biên giới, tự chủ sản xuất tại Đồng Nai</title>
 <meta name="description" content="Ethan Ecom, nơi khơi nguồn sáng tạo và hỗ trợ sự phát triển cá nhân. Doanh nghiệp TMĐT xuyên biên giới, tự chủ sản xuất in-house (thêu, in giấy, in 3D), bán đa sàn TikTok Shop US, Etsy, Amazon. Đồng lòng đồng sức, bứt phá gặt thành công.">
 <link rel="canonical" href="https://ethanecom.com/">
@@ -3557,9 +3559,9 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
   .ecult-stage{position:relative; z-index:10; width:100%; height:100%; display:flex; align-items:center; justify-content:center;}
 
   .ecult-media{
-    position:absolute; top:30%; left:50%;   /* neo cao lúc nhỏ (sát nút Xem video), JS hạ dần về 50% khi phình */
+    position:absolute; top:24%; left:50%;   /* neo cao lúc nhỏ (sát chữ/nút Xem video), JS hạ dần về 50% khi phình */
     transform:translate(-50%,-50%);
-    width:300px; height:400px;             /* JS cập nhật khi cuộn */
+    width:800px; height:450px;             /* khung chữ nhật ngang 16:9 lúc nhỏ (đã to sẵn, đỡ trống) · JS cập nhật khi cuộn */
     max-width:97vw; max-height:92vh;
     border-radius:0; overflow:hidden;
     box-shadow:none;
@@ -3735,15 +3737,19 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
       ticking = false;
       return;
     }
-    var rect  = section.getBoundingClientRect();
-    var range = section.offsetHeight - window.innerHeight;
-    var p  = range > 0 ? clamp(-rect.top / range, 0, 1) : 0;
-    var ep = clamp(p / 0.7, 0, 1);                 // phình xong ở 70% quãng cuộn, rồi giữ
+    var rect = section.getBoundingClientRect();
+    var vh   = window.innerHeight;
+    /* Bắt đầu phình RẤT SỚM: ngay khi chữ "Một ngày" trôi qua (đỉnh .ecult còn cách đỉnh
+       màn hình ~0.6 vh), phình xong sau khi cuộn thêm ~0.95 vh, rồi GIỮ full suốt phần
+       còn lại của pin. Không phụ thuộc chiều cao section nên khởi động không bị trễ. */
+    var lin = clamp((vh * 0.6 - rect.top) / (vh * 0.95), 0, 1);
+    var ep  = 1 - (1 - lin) * (1 - lin);           // ease-out: phình nhanh rồi mượt dần về cuối
 
-    media.style.width  = (300 + ep * (isMobile ? 720 : 1650)) + 'px';
-    media.style.height = (400 + ep * (isMobile ? 340 : 760)) + 'px';
-    /* neo cao lúc nhỏ (sát nút Xem video) → trôi về giữa màn hình (50%) khi phình */
-    var t0 = isMobile ? 34 : 30;
+    /* khung giữ tỉ lệ ngang 16:9 suốt quá trình phình (800×450 → ~1600×900, bị cap 97vw/92vh) */
+    media.style.width  = (800 + ep * (isMobile ? 560 : 800)) + 'px';
+    media.style.height = (450 + ep * (isMobile ? 300 : 450)) + 'px';
+    /* neo cao lúc nhỏ (sát chữ) → trôi về giữa màn hình (50%) khi phình */
+    var t0 = isMobile ? 34 : 26;
     if(!reduce) media.style.top = (t0 + ep * (50 - t0)) + '%';
 
     /* Ẩn 2 nút nổi (Ứng tuyển / Liên hệ) khi video mở gần full màn hình */
@@ -5144,11 +5150,13 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
 /* Mép trên: dải TRẮNG MỜ DẦN — ảnh ẩn ở mép rồi hiện ra dần (feather fade),
    áp lên cả ảnh + canvas ink nên vùng chuyển tiếp đồng nhất. */
 .ink-stage{
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.45) 110px,#000 230px);
-          mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.45) 110px,#000 230px);
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.6) 40px,#000 90px);
+          mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.6) 40px,#000 90px);
 }
 /* light theme — section matches the light block above, heading in navy */
 .ink-dark{background:#ffffff;padding-bottom:0}
+/* Desktop (≥769px): ẩn hẳn khu "Không gian" — chỉ hiện trên mobile */
+@media(min-width:769px){.ink-dark{display:none}}
 /* Tiêu đề khu vực này dùng Fahkwang cho cả 2 dòng */
 .ink-dark .sl{color:#274E76; font-family:var(--font-heading); font-weight:var(--fw-regular); font-size:clamp(26px,6vw,50px); line-height:1.15; letter-spacing:2px; margin-bottom:14px}
 .ink-dark .st{color:#142E4A; font-family:var(--font-heading); font-weight:var(--fw-regular); font-size:20px; line-height:1.4; text-transform:uppercase; letter-spacing:1px}
@@ -5181,8 +5189,9 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
   .ink-clouds{display:none}
 }
 @media(prefers-reduced-motion:reduce){.ink-clouds{display:none}}
-.ink-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-/* Điện thoại: ảnh "Không gian" hiện TOÀN BỘ (ngang, contain) — cao theo tỉ lệ ảnh, sát footer, không mask mờ mép */
+/* Ảnh toà nhà (portrait) hiện TRỌN VẸN, canh giữa giữa mây trôi (contain, không crop) */
+.ink-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+/* Điện thoại: cùng 1 ảnh toà nhà, hiện toàn bộ theo tỉ lệ ảnh — sát footer, không mask mờ mép */
 @media(max-width:768px){
   .ink-stage{height:auto;-webkit-mask-image:none;mask-image:none}
   .ink-stage img{position:static;inset:auto;width:100%;height:auto;object-fit:contain}
@@ -5190,21 +5199,6 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
   .ink-dark .divider.c{margin-top:8px}          /* giảm khoảng cách chữ → divider */
   .ink-dark .ink-wrap{margin-top:12px;margin-bottom:0}   /* giảm khoảng cách chữ → ảnh */
 }
-/* ── Mobile: ẩn ảnh congty, hiện slide 3 ảnh toà nhà chạy nối tiếp liên tục (marquee liền mạch) ── */
-.ink-slide{display:none}
-@media(max-width:768px){
-  .ink-stage .ink-desk-img{display:none}
-  .ink-slide{display:block;overflow:hidden;width:100vw;margin-left:calc(50% - 50vw)}
-  .ink-track{display:flex;gap:10px;width:max-content;animation:inkSlide 22s linear infinite;will-change:transform}
-  .ink-slide:hover .ink-track,.ink-slide:active .ink-track{animation-play-state:paused}
-  .ink-stage .ink-track img{
-    position:static;inset:auto;flex:0 0 300px;width:300px;height:500px;
-    object-fit:cover;border-radius:0;display:block;
-  }
-}
-/* dịch đúng 1 bộ 3 ảnh (3×300px + 3×gap10px = 930px) → nối vòng liền mạch, không đứt quãng */
-@keyframes inkSlide{from{transform:translateX(0)}to{transform:translateX(-930px)}}
-@media(prefers-reduced-motion:reduce){.ink-track{animation:none}}
 /* Mobile: tiêu đề "Câu chuyện" (section stories trang chủ) tăng lên 26px */
 @media(max-width:768px){ .section--blog-dark .st{font-size:26px !important} }
 </style>
@@ -5219,18 +5213,7 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
     </div>
     <div class="ink-wrap">
       <div class="ink-stage reveal">
-        <img class="ink-desk-img" src="assets/images/about/congty.jpg" alt="Không gian làm việc tại công ty Ethan Ecom" loading="lazy" onerror="this.style.visibility='hidden'">
-        <!-- Mobile: slide 3 ảnh toà nhà chạy nối tiếp liên tục (marquee, lặp liền mạch nhờ nhân đôi) -->
-        <div class="ink-slide" role="group" aria-label="Ảnh không gian Ethan Ecom">
-          <div class="ink-track">
-            <img src="assets/images/about/toanha-mobile1.jpeg" alt="Không gian Ethan Ecom 1" loading="lazy">
-            <img src="assets/images/about/toanha-moblie.jpeg"  alt="Không gian Ethan Ecom 2" loading="lazy">
-            <img src="assets/images/about/toanha-moblie2.jpeg" alt="Không gian Ethan Ecom 3" loading="lazy">
-            <img src="assets/images/about/toanha-mobile1.jpeg" alt="" aria-hidden="true" loading="lazy">
-            <img src="assets/images/about/toanha-moblie.jpeg"  alt="" aria-hidden="true" loading="lazy">
-            <img src="assets/images/about/toanha-moblie2.jpeg" alt="" aria-hidden="true" loading="lazy">
-          </div>
-        </div>
+        <img class="ink-desk-img" src="assets/images/about/toanha-moblie.jpeg" alt="Toà nhà văn phòng Ethan Ecom" loading="lazy" onerror="this.style.visibility='hidden'">
       </div>
       <!-- Mây trôi quanh đường wave: một phần đè nền trắng, một phần đè ảnh.
            --w cỡ · --t vị trí dọc so với mép wave · --o độ mờ · --d tốc độ · --dl delay âm (lệch nhịp) -->

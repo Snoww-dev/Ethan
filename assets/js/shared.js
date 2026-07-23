@@ -12,7 +12,7 @@
      trong apps-script/Code.gs. KHÔNG sửa rải rác nhiều file.
    • Để trống '' → popup tự fallback FormSubmit; form inline báo lỗi nhẹ.
    ════════════════════════════════════════════════════════════════ */
-window.ETHAN_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyfY9EWOodMhurWvfzgid_RB4kulSV95w64-qILoMy8CEZzWAxWqGL1vBTCmZgJubZhvg/exec';
+window.ETHAN_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyOrdtN3l393FEUeupwkoHKHqc-9Nqa0p7H1AQc7jyyQCIf_j8SH4jXDwg7SZct4vvlpA/exec';
 
 /* Đọc File → chuỗi base64 (bỏ tiền tố "data:...;base64,") để nhét vào JSON */
 window.ethanFileToBase64 = function (file) {

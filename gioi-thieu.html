@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 <title>Giới thiệu | Ethan Ecom: Đồng lòng đồng sức, bứt phá thành công</title>
 <meta name="description" content="Về Ethan Ecom, doanh nghiệp TMĐT xuyên biên giới tại Đồng Nai, tự chủ sản xuất in-house (thêu, in giấy, in 3D). Câu chuyện thương hiệu, 5 giá trị cốt lõi, đội ngũ 90 thành viên và hành trình từ 2017.">
 <link rel="canonical" href="https://ethanecom.com/gioi-thieu">
@@ -97,48 +99,140 @@
 .orgx-stat-label{font-family:var(--font-text);font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.9);margin-top:10px}
 .orgx-stat-sub{font-family:var(--font-heading);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:16px}
 
-/* ── HÀNH TRÌNH — timeline "lướt qua từng hành trình" (scroll spotlight) ── */
-.jrn{max-width:760px;margin:0 auto;position:relative}
-/* Rail: đường nền + phần fill chạy theo cuộn + đốm sáng dẫn đường */
-.jrn-track{position:absolute;left:29px;top:0;height:0;width:2px;transform:translateX(-1px);
-  background:rgba(22,48,92,.12);border-radius:0;z-index:0}
-.jrn-fill{position:absolute;left:0;top:0;width:100%;height:0;border-radius:0;
-  background:linear-gradient(to bottom,var(--blue),var(--blue-br));
-  box-shadow:0 0 10px rgba(43,143,255,.45);transition:height .12s linear}
-.jrn-comet{position:absolute;left:50%;top:0;width:11px;height:11px;border-radius:50%;
-  transform:translate(-50%,-50%);background:var(--blue-br);opacity:0;
-  box-shadow:0 0 0 5px rgba(43,143,255,.18),0 0 18px 4px rgba(43,143,255,.55);
-  transition:top .12s linear,opacity .3s ease}
-.jrn-item{position:relative;display:grid;grid-template-columns:60px 1fr;gap:28px;align-items:start}
-.jrn-rail{position:relative;display:flex;justify-content:center}
-.jrn-node{width:58px;height:58px;border-radius:50%;background:#fff;border:1px solid rgba(22,48,92,.14);
-  display:flex;align-items:center;justify-content:center;font-size:25px;position:relative;z-index:2;
-  box-shadow:0 6px 20px rgba(22,48,92,.08);
-  transition:border-color .45s ease,box-shadow .45s ease,transform .45s cubic-bezier(.34,1.4,.5,1)}
-.jrn-content{padding:2px 0 clamp(60px,9vh,116px);
-  transition:opacity .55s ease,transform .55s cubic-bezier(.4,0,.2,1)}
-.jrn-item:last-child .jrn-content{padding-bottom:0}
-/* Spotlight: mốc đang xem sáng rõ, mốc khác mờ đi → cảm giác lướt qua từng chặng */
-.jrn.jrn--spotlight .jrn-item:not(.is-active) .jrn-content{opacity:.34;transform:translateY(8px)}
-.jrn.jrn--spotlight .jrn-item.is-active .jrn-content{opacity:1;transform:none}
-.jrn-item.is-active .jrn-node{border-color:var(--blue);transform:scale(1.14);
-  box-shadow:0 0 0 5px rgba(30,127,224,.14),0 14px 32px rgba(30,127,224,.30)}
-.jrn-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:11px}
-.jrn-year{font-family:var(--font-numeral);font-weight:var(--fw-bold);font-size:36px;line-height:1;color:var(--navy);letter-spacing:.01em}
-.jrn-label{font-family:var(--font-heading);font-size:11.5px;font-weight:var(--fw-semibold);letter-spacing:.22em;text-transform:uppercase;color:var(--blue)}
-.jrn-title{font-family:var(--font-heading);font-weight:var(--fw-semibold);font-size:19px;line-height:1.35;color:var(--navy);margin:0 0 9px}
-.jrn-text{font-family:var(--font-text);font-size:15.5px;line-height:1.75;color:var(--text2);margin:0;max-width:58ch}
+/* ── HÀNH TRÌNH — STEPPER GHIM: mỗi lần 1 chặng, cuộn để chuyển; nền biển xanh + trời mây + sóng WebGL ── */
+.jrn-pin{position:relative;height:520vh}
+/* Ẩn hẳn menu khi section đang ghim (không hiện lại kể cả cuộn lên) */
+.header.nav-locked{transform:translateY(-100%)!important;opacity:0!important;pointer-events:none!important;
+  box-shadow:none!important;border-bottom-color:transparent!important;transition:transform .45s ease,opacity .45s ease}
+.header.nav-locked::before,.header.nav-locked::after{opacity:0!important}
+.jrn-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;
+  display:flex;flex-direction:column;
+  background:linear-gradient(180deg,
+    #ffffff 0%, #f8fbfe 5%, #eef6fc 10%, #dcebf8 15%, #c4def4 22%, #7fb3e0 33%, #4a85c1 44%,
+    #2f6aa8 58%, #1e5089 74%, #143c66 90%, #102f52 100%)}
+/* Trời mây — mây trắng trôi ngang ở dải trên */
+.jrn-sky{position:absolute;left:0;right:0;top:0;height:56%;overflow:hidden;z-index:1;pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 60%,transparent 96%);
+          mask-image:linear-gradient(180deg,#000 0%,#000 60%,transparent 96%)}
+.jrn-cloud{position:absolute;width:clamp(180px,26vw,500px);height:auto;opacity:.7;
+  filter:drop-shadow(0 12px 26px rgba(20,54,102,.14));will-change:transform}
+.jrn-cloud.jc1{top:1%;  opacity:.95;transform:scale(1.15);animation:jrn-drift 78s linear infinite}
+.jrn-cloud.jc2{top:12%; opacity:.85;transform:scale(1.0); animation:jrn-drift 96s linear infinite;animation-delay:-30s}
+.jrn-cloud.jc3{top:24%; opacity:.72;transform:scale(1.25);animation:jrn-drift 128s linear infinite;animation-delay:-64s}
+.jrn-cloud.jc4{top:34%; opacity:.55;transform:scale(.8); animation:jrn-drift-rev 112s linear infinite;animation-delay:-52s}
+.jrn-cloud.jc5{top:6%;  opacity:.7; transform:scale(1.05);animation:jrn-drift-rev 150s linear infinite;animation-delay:-96s}
+@keyframes jrn-drift{from{left:-34%}to{left:110%}}
+@keyframes jrn-drift-rev{from{left:110%}to{left:-34%}}
+/* Lớp mây phủ (foreground) — bao QUANH mép màn, KHOÉT TRỐNG ở giữa cho chữ (mask ellipse) */
+.jrn-fog{position:absolute;inset:-6%;z-index:5;pointer-events:none;opacity:1;
+  -webkit-mask-image:radial-gradient(ellipse 50% 56% at 50% 48%, transparent 0%, transparent 34%, #000 72%);
+          mask-image:radial-gradient(ellipse 50% 56% at 50% 48%, transparent 0%, transparent 34%, #000 72%)}
+.jrn-fog::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 52% 58% at 50% 48%, rgba(240,247,252,0) 34%, rgba(240,247,252,.55) 60%, rgba(233,243,251,.9) 84%, rgba(230,241,250,.98) 100%)}
+.jrn-fog .fg{position:absolute;height:auto;filter:brightness(1.32) contrast(.95);opacity:.92;will-change:transform}
+.jrn-fog .fg1{top:-18%;left:-15%;width:62vw}
+.jrn-fog .fg2{top:-16%;right:-15%;width:64vw;transform:scaleX(-1)}
+.jrn-fog .fg3{bottom:-18%;left:-13%;width:64vw}
+.jrn-fog .fg4{bottom:-16%;right:-13%;width:66vw;transform:scaleX(-1) scaleY(-1)}
+.jrn-fog .fg5{top:28%;left:-20%;width:52vw}
+.jrn-fog .fg6{top:34%;right:-20%;width:54vw;transform:scaleX(-1)}
+.jrn-fog .fg7{top:-14%;left:24%;width:56vw}
+.jrn-fog .fg8{bottom:-14%;left:28%;width:54vw;transform:scaleX(-1)}
+/* Bỏ gạch phân cách giữa Hành trình ↔ Mạng lưới (đã có mây bắc cầu) */
+.jrn-pin + .sec-divider{display:none}
+/* Mây mềm vắt qua ranh giới 2 section — tràn tự nhiên (không khung, không lớp trắng chữ nhật) */
+.jrn-seam{position:absolute;left:0;right:0;height:44vh;z-index:6;pointer-events:none}
+.jrn-seam-top{top:0;transform:translateY(-50%)}
+/* clip + mask fade để mây đáy journey KHÔNG tràn xuống đè nội dung Mạng lưới */
+.jrn-seam-bottom{bottom:0;transform:translateY(16%);height:24vh;overflow:hidden;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 38%,transparent 100%);
+          mask-image:linear-gradient(180deg,#000 0%,#000 38%,transparent 100%)}
+.jrn-seam-bottom .sfg{opacity:.18}
+/* ── Section Mạng lưới toàn cầu: mây phủ lúc mới vào → DẠT SANG 2 BÊN khi cuộn tới để lộ bản đồ ── */
+.gnet-section{position:relative;overflow:hidden}
+.gnet-clouds{position:absolute;left:0;right:0;top:0;height:100%;z-index:4;pointer-events:none;
+  opacity:calc(1 - var(--part,0))}
+.gnc{position:absolute;height:auto;filter:brightness(1.32) contrast(.93);will-change:transform,opacity}
+.gnc-l1{top:-8%; left:-8%; width:66vw;transform:translateX(calc(var(--part,0) * -100%))}
+.gnc-l2{top:28%; left:-14%;width:56vw;transform:translateX(calc(var(--part,0) * -110%)) scaleY(-1)}
+.gnc-r1{top:-6%; right:-8%; width:68vw;transform:translateX(calc(var(--part,0) * 100%)) scaleX(-1)}
+.gnc-r2{top:30%; right:-14%;width:58vw;transform:translateX(calc(var(--part,0) * 110%)) scaleX(-1) scaleY(-1)}
+@media (prefers-reduced-motion: reduce){ .gnet-clouds{opacity:0} }
+/* quầng trắng elip mềm (toả, không cạnh) ngay trên đường kẻ → làm tan vệt nối trắng */
+.jrn-seam-top::before{content:'';position:absolute;left:-8%;right:-8%;top:0;height:100%;
+  background:radial-gradient(ellipse 78% 46% at 50% 50%, rgba(255,255,255,.9) 0%, rgba(255,255,255,.45) 38%, rgba(255,255,255,0) 68%)}
+.jrn-seam .sfg{position:absolute;height:auto;filter:brightness(1.12) contrast(.95);opacity:.6}
+.jrn-seam .s1{width:66vw;left:-16%; top:2%}
+.jrn-seam .s2{width:60vw;left:24%;  top:-8%; opacity:.5;transform:scaleX(-1)}
+.jrn-seam .s3{width:64vw;right:-16%;top:6%;  opacity:.55}
+/* Sóng WebGL — lớp biển */
+.jrn-sea{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:1;pointer-events:none;
+  opacity:0;transition:opacity 1.2s ease}
+.jrn-sea.is-on{opacity:1}
+/* Khung nội dung trong sân khấu ghim */
+.jrn-stage-inner{position:relative;z-index:7;height:100%;width:100%;max-width:1500px;margin:0 auto;
+  display:flex;flex-direction:column;padding:clamp(60px,8.5vh,104px) 24px clamp(24px,4.5vh,46px)}
+.jrn-topline{flex:0 0 auto;text-align:center}
+.jrn-topline .sl{display:block;font-family:var(--font-heading);font-size:var(--fs-caption);font-weight:var(--fw-semibold);letter-spacing:.24em;text-transform:uppercase;color:#2b6bb0;margin-bottom:10px}
+.jrn-topline .st{margin:0}
+/* Vùng các chặng — 1 chặng hiện mỗi lần, cross-fade */
+.jrn-steps{position:relative;flex:1 1 auto;width:100%;max-width:860px;margin:0 auto}
+.jrn-panel{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  opacity:0;transform:translateY(34px);transition:opacity .55s ease,transform .7s cubic-bezier(.2,.7,.2,1);
+  pointer-events:none;padding:0 12px clamp(40px,9vh,110px)}
+.jrn-panel.is-on{opacity:1;transform:none}
+.jrn-pnode{width:clamp(74px,9vw,98px);height:clamp(74px,9vw,98px);border-radius:50%;
+  background:rgba(255,255,255,.96);display:flex;align-items:center;justify-content:center;
+  font-size:clamp(34px,4.4vw,46px);margin-bottom:clamp(18px,3vh,30px);
+  box-shadow:0 20px 50px rgba(8,30,60,.38),0 0 0 6px rgba(255,255,255,.12)}
+.jrn-pnode svg{width:clamp(34px,4.6vw,48px);height:clamp(34px,4.6vw,48px);
+  stroke:#16305C;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.jrn-phead{display:flex;align-items:baseline;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.jrn-panel .jrn-year{font-size:clamp(42px,6.4vw,74px)}
+.jrn-panel .jrn-title{font-size:clamp(20px,3vw,30px);margin:0 0 16px}
+.jrn-panel .jrn-text{font-size:clamp(15px,1.7vw,18px);line-height:1.8;max-width:60ch;margin:0 auto}
+/* base type dùng chung */
+.jrn-year{font-family:var(--font-numeral);font-weight:var(--fw-bold);line-height:1;color:var(--navy);letter-spacing:.01em}
+.jrn-label{font-family:var(--font-heading);font-size:12px;font-weight:var(--fw-semibold);letter-spacing:.22em;text-transform:uppercase;color:var(--blue)}
+.jrn-title{font-family:var(--font-heading);font-weight:var(--fw-semibold);line-height:1.35;color:var(--navy)}
+.jrn-text{font-family:var(--font-text);color:var(--text2)}
+.jrn-intro-text{font-family:var(--font-heading);font-weight:var(--fw-regular);
+  font-size:clamp(20px,2.8vw,30px);line-height:1.5;letter-spacing:.01em;max-width:20ch;margin:0 auto}
+/* Vòng tròn bọc quanh từng năm hành trình (thay chấm) */
+.jrn-dots{flex:0 0 auto;display:flex;gap:clamp(10px,1.4vw,20px);justify-content:center;align-items:center;margin-bottom:16px}
+.jrn-dot{appearance:none;-webkit-appearance:none;cursor:pointer;padding:0;
+  width:clamp(46px,4.4vw,56px);height:clamp(46px,4.4vw,56px);border-radius:50%;
+  border:2px solid rgba(255,224,140,.9);background:rgba(255,224,140,.12);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-numeral);font-weight:var(--fw-bold);font-size:clamp(11px,1.05vw,13px);
+  color:#ffe08c;letter-spacing:.01em;text-shadow:0 1px 6px rgba(8,26,52,.5);
+  transition:transform .35s ease,border-color .4s ease,background .4s ease,color .4s ease,box-shadow .4s ease}
+.jrn-dot:hover{border-color:#ffe08c;color:#fff0c4;transform:scale(1.08)}
+.jrn-dot:focus-visible{outline:2px solid #ffe08c;outline-offset:3px}
+.jrn-dot.is-on{border-color:#ffe08c;color:#16305C;background:#ffe08c;transform:scale(1.15);text-shadow:none;
+  box-shadow:0 0 0 4px rgba(255,224,140,.3),0 10px 26px rgba(255,224,140,.38)}
+.jrn-scrollcue{flex:0 0 auto;display:flex;justify-content:center;transition:opacity .4s ease}
+.jrn-scrollcue.is-hidden{opacity:0;pointer-events:none}
+.jrn-intro-cue{display:block;width:22px;height:34px;border-radius:12px;border:2px solid rgba(255,255,255,.62);position:relative}
+.jrn-intro-cue i{position:absolute;left:50%;top:7px;width:4px;height:7px;border-radius:2px;
+  background:#bfe4ff;transform:translateX(-50%);animation:jrn-cue 1.5s ease-in-out infinite}
+@keyframes jrn-cue{0%{opacity:0;transform:translate(-50%,0)}30%{opacity:1}100%{opacity:0;transform:translate(-50%,12px)}}
+/* Màu chữ trên nền biển */
+.jrn-sea-section .st{color:#123a6b}
+.jrn-sea-section .jrn-year,
+.jrn-sea-section .jrn-title{color:#fff;text-shadow:0 2px 16px rgba(8,26,52,.5)}
+.jrn-sea-section .jrn-label{color:#bfe4ff}
+.jrn-sea-section .jrn-text{color:#e4eefb;text-shadow:0 1px 12px rgba(8,26,52,.45)}
+.jrn-sea-section .jrn-intro-text{color:#fff;text-shadow:0 2px 18px rgba(8,26,52,.55)}
 @media(max-width:768px){
-  .jrn-track{left:22px}
-  .jrn-item{grid-template-columns:46px 1fr;gap:18px}
-  .jrn-node{width:46px;height:46px;font-size:20px}
-  .jrn-year{font-size:28px}
-  .jrn-content{padding-bottom:clamp(48px,7vh,84px)}
+  .jrn-pin{height:470vh}
+  .jrn-panel .jrn-year{font-size:clamp(36px,11vw,60px)}
+  .jrn-panel .jrn-text{font-size:16px}
 }
 @media (prefers-reduced-motion: reduce){
-  .jrn.jrn--spotlight .jrn-item .jrn-content{opacity:1;transform:none;transition:none}
-  .jrn-comet{display:none}
-  .jrn-fill{transition:none}
+  .jrn-cloud{animation:none}
+  .jrn-intro-cue i{animation:none}
+  .jrn-panel{transition:opacity .3s ease}
 }
 
 /* ── RESPONSIVE ── */
@@ -188,8 +282,8 @@
 }
 
 /* ── EMPLOYEE VOICES — comment card tối kiểu chat (đồng bộ tuyen-dung) ── */
-.emp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:980px;margin:0 auto}
-.emp-card{position:relative;background:#14171f;border:1px solid rgba(255,255,255,.08);border-radius:0;display:flex;flex-direction:column;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s}
+.emp-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;max-width:1280px;margin:0 auto}
+.emp-card{flex:0 1 calc(33.333% - 15px);position:relative;background:#14171f;border:1px solid rgba(255,255,255,.08);border-radius:0;display:flex;flex-direction:column;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s}
 .emp-card:hover{border-color:rgba(43,143,255,.45);box-shadow:0 18px 48px rgba(9,16,32,.45);transform:translateY(-4px)}
 .emp-head{display:flex;align-items:center;gap:14px;padding:20px 22px;border-bottom:1px solid rgba(255,255,255,.08)}
 .emp-avatar-img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0;background:#232733}
@@ -217,8 +311,9 @@
   12%{opacity:1}
   100%{opacity:0;transform:translate(var(--dx,0px),var(--dy,-260px)) scale(var(--sc,1.25)) rotate(var(--rot,0deg))}
 }
-@media(max-width:1024px){ .emp-grid{grid-template-columns:1fr 1fr} }
-@media(max-width:768px){ .emp-grid{grid-template-columns:1fr} }
+/* 3 cột (desktop) → 2 cột (tablet) → 1 cột (mobile); hàng cuối lẻ tự căn giữa nhờ flex */
+@media(max-width:1024px){ .emp-card{ flex-basis:calc(50% - 11px) } }
+@media(max-width:768px){ .emp-card{ flex-basis:100% } }
 
 /* ── GLOBAL NETWORK MAP (card thế vision teaser) ── */
 .gnet-card{background:linear-gradient(135deg,#26436E,#16305C);border-radius:0;padding:48px 24px 40px;position:relative;overflow:hidden}
@@ -431,71 +526,103 @@ html.smx-lock,body.smx-lock{overflow:hidden}
     </div>
   </section>
 
-  <!-- TIMELINE / MILESTONES -->
-  <section class="section section--gray">
-    <div class="container">
-      <div class="sh c reveal">
-        <div class="sl">Hành trình phát triển</div>
-        <h2 class="st">Từng bước vươn tầm thế giới</h2>
-        <div class="divider c"></div>
-        <p class="ss">Những cột mốc quan trọng trong hành trình xây dựng Ethan Ecom.</p>
+  <!-- TIMELINE / MILESTONES — stepper ghim: mỗi lần 1 chặng, cuộn để chuyển -->
+  <section class="jrn-sea-section jrn-pin" aria-label="Hành trình phát triển Ethan Ecom">
+    <div class="jrn-stage">
+      <div class="jrn-sky" aria-hidden="true">
+        <img class="jrn-cloud jc1" src="assets/images/cloud/may-cloud.png" alt="" width="820" height="460" loading="lazy" decoding="async">
+        <img class="jrn-cloud jc2" src="assets/images/cloud/may-cloud.png" alt="" width="820" height="460" loading="lazy" decoding="async">
+        <img class="jrn-cloud jc3" src="assets/images/cloud/may-cloud.png" alt="" width="820" height="460" loading="lazy" decoding="async">
+        <img class="jrn-cloud jc4" src="assets/images/cloud/may-cloud.png" alt="" width="820" height="460" loading="lazy" decoding="async">
+        <img class="jrn-cloud jc5" src="assets/images/cloud/may-cloud.png" alt="" width="820" height="460" loading="lazy" decoding="async">
       </div>
-      <div class="jrn">
-        <div class="jrn-track" aria-hidden="true"><span class="jrn-fill"></span><span class="jrn-comet"></span></div>
+      <canvas class="jrn-sea" aria-hidden="true"></canvas>
 
-        <div class="jrn-item">
-          <div class="jrn-rail"><span class="jrn-node">🦅</span></div>
-          <div class="jrn-content">
-            <div class="jrn-head"><span class="jrn-year">2017</span><span class="jrn-label">Khởi nguồn</span></div>
+      <!-- Lớp mây phủ: cuộn tới ranh giới giữa 2 chặng → mây trùm kín màn, tan ra để lộ chặng kế -->
+      <div class="jrn-fog" aria-hidden="true">
+        <img class="fg fg1" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+        <img class="fg fg2" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+        <img class="fg fg3" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+        <img class="fg fg4" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+        <img class="fg fg5" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+        <img class="fg fg6" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+        <img class="fg fg7" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+        <img class="fg fg8" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+      </div>
+
+      <div class="jrn-stage-inner">
+        <div class="jrn-topline">
+          <span class="sl">Hành trình phát triển</span>
+          <h2 class="st">Từng bước vươn tầm thế giới</h2>
+        </div>
+
+        <div class="jrn-steps">
+          <div class="jrn-panel is-on" data-step="0">
+            <span class="jrn-pnode" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 18H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4Z"/><path d="M21 14 10 2 3 14h18Z"/><path d="M10 2v16"/></svg></span>
+            <div class="jrn-phead"><span class="jrn-year">2017</span><span class="jrn-label">Khởi nguồn</span></div>
             <h3 class="jrn-title">Team "Eagle" ra đời</h3>
             <p class="jrn-text">Một team nhỏ được thành lập với tên "Eagle", biểu tượng đại bàng của sự mạnh mẽ, bản lĩnh và kiên cường. Những bước chân đầu tiên trong ngành e-commerce.</p>
           </div>
-        </div>
 
-        <div class="jrn-item">
-          <div class="jrn-rail"><span class="jrn-node">🤝</span></div>
-          <div class="jrn-content">
-            <div class="jrn-head"><span class="jrn-year">2018–2019</span><span class="jrn-label">Bước ngoặt</span></div>
+          <div class="jrn-panel" data-step="2">
+            <span class="jrn-pnode" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="9.17" y1="14.83" x2="4.93" y2="19.07"/></svg></span>
+            <div class="jrn-phead"><span class="jrn-year">2018–2019</span><span class="jrn-label">Bước ngoặt</span></div>
             <h3 class="jrn-title">Vượt qua khủng hoảng: bài học "đồng đội"</h3>
             <p class="jrn-text">Khi gần như toàn bộ tài khoản Merch by Amazon bị khoá, những người đồng hành vẫn chọn ở lại. Khoảnh khắc đó dạy chúng tôi ý nghĩa thật sự của hai chữ "đồng đội" và quyết tâm không bỏ cuộc.</p>
           </div>
-        </div>
 
-        <div class="jrn-item">
-          <div class="jrn-rail"><span class="jrn-node">🚀</span></div>
-          <div class="jrn-content">
-            <div class="jrn-head"><span class="jrn-year">2019+</span><span class="jrn-label">Đổi tên</span></div>
+          <div class="jrn-panel" data-step="3">
+            <span class="jrn-pnode" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+            <div class="jrn-phead"><span class="jrn-year">2019+</span><span class="jrn-label">Đổi tên</span></div>
             <h3 class="jrn-title">Trở thành "Ethan Ecom"</h3>
             <p class="jrn-text">Đội ngũ lớn dần, cái tên được đổi thành Ethan Ecom, mang ý nghĩa vững chắc, bền bỉ và đoàn kết, phù hợp với định hướng phát triển dài hạn.</p>
           </div>
-        </div>
 
-        <div class="jrn-item">
-          <div class="jrn-rail"><span class="jrn-node">🏭</span></div>
-          <div class="jrn-content">
-            <div class="jrn-head"><span class="jrn-year">2024</span><span class="jrn-label">Bài bản</span></div>
+          <div class="jrn-panel" data-step="4">
+            <span class="jrn-pnode" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <div class="jrn-phead"><span class="jrn-year">2024</span><span class="jrn-label">Bài bản</span></div>
             <h3 class="jrn-title">Vận hành công ty bài bản</h3>
             <p class="jrn-text">Chính thức vận hành như một doanh nghiệp có hệ thống, tự chủ sản xuất in-house (thêu, in giấy, in nhựa 3D) song song bán hàng đa nền tảng quốc tế.</p>
           </div>
-        </div>
 
-        <div class="jrn-item">
-          <div class="jrn-rail"><span class="jrn-node">🌍</span></div>
-          <div class="jrn-content">
-            <div class="jrn-head"><span class="jrn-year">2026</span><span class="jrn-label">Hôm nay</span></div>
+          <div class="jrn-panel" data-step="5">
+            <span class="jrn-pnode" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+            <div class="jrn-phead"><span class="jrn-year">2026</span><span class="jrn-label">Hôm nay</span></div>
             <h3 class="jrn-title">90 thành viên: Đa sàn quốc tế</h3>
             <p class="jrn-text">Ethan hôm nay là một đội ngũ 90 người, tự chủ sản xuất, bán trên TikTok Shop US, Etsy, Amazon, eBay với rating 4–5 sao, và tiếp tục lớn lên từng ngày.</p>
           </div>
         </div>
 
+        <div class="jrn-dots" role="tablist" aria-label="Chọn mốc hành trình">
+          <button type="button" class="jrn-dot" data-step="0" aria-label="Xem mốc 2017">2017</button><button type="button" class="jrn-dot" data-step="1" aria-label="Xem mốc 2018–2019">2018</button><button type="button" class="jrn-dot" data-step="2" aria-label="Xem mốc 2019+">2019</button><button type="button" class="jrn-dot" data-step="3" aria-label="Xem mốc 2024">2024</button><button type="button" class="jrn-dot" data-step="4" aria-label="Xem mốc 2026">2026</button>
+        </div>
+        <div class="jrn-scrollcue" aria-hidden="true"><span class="jrn-intro-cue"><i></i></span></div>
       </div>
+    </div>
+
+    <!-- Dải mây vắt qua ranh giới 2 section → chuyển tiếp mượt (xoá vết nối màu) -->
+    <div class="jrn-seam jrn-seam-top" aria-hidden="true">
+      <img class="sfg s1" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+      <img class="sfg s2" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+      <img class="sfg s3" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+    </div>
+    <div class="jrn-seam jrn-seam-bottom" aria-hidden="true">
+      <img class="sfg s1" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+      <img class="sfg s2" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+      <img class="sfg s3" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
     </div>
   </section>
 
   <div class="sec-divider reveal"></div>
 
   <!-- GLOBAL NETWORK — bản đồ kết nối US · UK · Đồng Nai (thế vision teaser) -->
-  <section class="section section--gray">
+  <section class="section section--gray gnet-section">
+    <div class="gnet-clouds" aria-hidden="true">
+      <img class="gnc gnc-l1" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+      <img class="gnc gnc-l2" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+      <img class="gnc gnc-r1" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+      <img class="gnc gnc-r2" src="assets/images/cloud/may-cloud.png" alt="" loading="lazy" decoding="async">
+    </div>
     <div class="container">
       <div class="gnet-card reveal" aria-label="Mạng lưới kết nối toàn cầu của Ethan Ecom">
         <div class="gnet-head">
@@ -723,53 +850,8 @@ html.smx-lock,body.smx-lock{overflow:hidden}
         <p class="ss">Không phải quảng cáo, đây là những chia sẻ thật về môi trường làm việc, từ chính các thành viên trong đội ngũ 90 người.</p>
       </div>
       <div class="emp-grid">
+        <!-- Hàng 1: các chia sẻ dài (gom chung để không bị khoảng trống lớn) -->
         <div class="emp-card reveal d1">
-          <div class="emp-head">
-            <img class="emp-avatar-img" src="assets/images/connguoi/Duyn-KD3.jpeg" alt="Duyên Trần" loading="lazy" decoding="async">
-            <div class="emp-id">
-              <div class="emp-name">Duyên Trần</div>
-              <div class="emp-role">Sell Manager · Khối Kinh Doanh</div>
-            </div>
-            <div class="emp-time">Hôm qua, 10:12</div>
-          </div>
-          <div class="emp-body">
-            <p class="emp-quote">Điều mình thích nhất ở Ethan là Boss luôn tạo cơ hội để nuôi dưỡng con người, không chỉ phục vụ trong công việc mà còn cả kỹ năng trong cuộc sống.</p>
-          </div>
-          <div class="emp-foot">
-            <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
-            <div class="emp-reacts">
-              <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
-              <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
-              <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
-              <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
-              <button type="button" class="emp-react" aria-label="Thả like">👍</button>
-            </div>
-          </div>
-        </div>
-        <div class="emp-card reveal d2">
-          <div class="emp-head">
-            <img class="emp-avatar-img" src="assets/images/connguoi/Hana-KD6.jpeg" alt="Hân Đặng" loading="lazy" decoding="async">
-            <div class="emp-id">
-              <div class="emp-name">Hân Đặng</div>
-              <div class="emp-role">Sell Manager · Khối Kinh Doanh</div>
-            </div>
-            <div class="emp-time">2 ngày trước</div>
-          </div>
-          <div class="emp-body">
-            <p class="emp-quote">Muốn đi riêng thì đi một mình, muốn đi chung thì đi cùng nhau.</p>
-          </div>
-          <div class="emp-foot">
-            <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
-            <div class="emp-reacts">
-              <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
-              <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
-              <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
-              <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
-              <button type="button" class="emp-react" aria-label="Thả like">👍</button>
-            </div>
-          </div>
-        </div>
-        <div class="emp-card reveal d3">
           <div class="emp-head">
             <img class="emp-avatar-img" src="assets/images/connguoi/sang-rd.jpeg" alt="Sang Nguỵ" loading="lazy" decoding="async">
             <div class="emp-id">
@@ -792,7 +874,30 @@ html.smx-lock,body.smx-lock{overflow:hidden}
             </div>
           </div>
         </div>
-        <div class="emp-card reveal d4">
+        <div class="emp-card reveal d2">
+          <div class="emp-head">
+            <img class="emp-avatar-img" src="assets/images/connguoi/Thach-designer.jpeg" alt="Phạm Thạch" loading="lazy" decoding="async">
+            <div class="emp-id">
+              <div class="emp-name">Phạm Thạch</div>
+              <div class="emp-role">EMB Team Leader · Khối Sản Xuất</div>
+            </div>
+            <div class="emp-time">4 ngày trước</div>
+          </div>
+          <div class="emp-body">
+            <p class="emp-quote">Khởi đầu tại Ethan với vốn kiến thức bằng 0 về thiết kế Mỹ, tôi đã có một hành trình 6 tháng vừa học vừa thực chiến. Kết quả là tôi hoàn toàn làm chủ được gu thẩm mỹ Mỹ và tạo ra những sản phẩm bán chạy, bởi ở đây, mọi bài học đều đến từ những dự án thực tế.</p>
+          </div>
+          <div class="emp-foot">
+            <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
+            <div class="emp-reacts">
+              <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
+              <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
+              <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
+              <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
+              <button type="button" class="emp-react" aria-label="Thả like">👍</button>
+            </div>
+          </div>
+        </div>
+        <div class="emp-card reveal d3">
           <div class="emp-head">
             <img class="emp-avatar-img" src="assets/images/connguoi/Tien-KD5.jpeg" alt="Vũ Quốc Tiến" loading="lazy" decoding="async">
             <div class="emp-id">
@@ -815,6 +920,75 @@ html.smx-lock,body.smx-lock{overflow:hidden}
             </div>
           </div>
         </div>
+        <div class="emp-card reveal d4">
+          <div class="emp-head">
+            <img class="emp-avatar-img" src="assets/images/connguoi/Duyn-KD3.jpeg" alt="Duyên Trần" loading="lazy" decoding="async">
+            <div class="emp-id">
+              <div class="emp-name">Duyên Trần</div>
+              <div class="emp-role">Sell Manager · Khối Kinh Doanh</div>
+            </div>
+            <div class="emp-time">Hôm qua, 10:12</div>
+          </div>
+          <div class="emp-body">
+            <p class="emp-quote">Điều mình thích nhất ở Ethan là Boss luôn tạo cơ hội để nuôi dưỡng con người, không chỉ phục vụ trong công việc mà còn cả kỹ năng trong cuộc sống.</p>
+          </div>
+          <div class="emp-foot">
+            <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
+            <div class="emp-reacts">
+              <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
+              <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
+              <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
+              <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
+              <button type="button" class="emp-react" aria-label="Thả like">👍</button>
+            </div>
+          </div>
+        </div>
+        <div class="emp-card reveal d5">
+          <div class="emp-head">
+            <img class="emp-avatar-img" src="assets/images/connguoi/Thu-KD2.jpeg" alt="Thư Trịnh" loading="lazy" decoding="async">
+            <div class="emp-id">
+              <div class="emp-name">Thư Trịnh</div>
+              <div class="emp-role">Sell Manager · Khối Kinh Doanh</div>
+            </div>
+            <div class="emp-time">Hôm nay, 08:45</div>
+          </div>
+          <div class="emp-body">
+            <p class="emp-quote">Ở đây, mình được tự do đề xuất ý tưởng và luôn có người sẵn sàng lắng nghe — đó là điều mình trân trọng nhất ở Ethan.</p>
+          </div>
+          <div class="emp-foot">
+            <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
+            <div class="emp-reacts">
+              <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
+              <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
+              <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
+              <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
+              <button type="button" class="emp-react" aria-label="Thả like">👍</button>
+            </div>
+          </div>
+        </div>
+        <div class="emp-card reveal d6">
+          <div class="emp-head">
+            <img class="emp-avatar-img" src="assets/images/connguoi/Hana-KD6.jpeg" alt="Hân Đặng" loading="lazy" decoding="async">
+            <div class="emp-id">
+              <div class="emp-name">Hân Đặng</div>
+              <div class="emp-role">Sell Manager · Khối Kinh Doanh</div>
+            </div>
+            <div class="emp-time">2 ngày trước</div>
+          </div>
+          <div class="emp-body">
+            <p class="emp-quote">Muốn đi riêng thì đi một mình, muốn đi chung thì đi cùng nhau.</p>
+          </div>
+          <div class="emp-foot">
+            <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
+            <div class="emp-reacts">
+              <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
+              <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
+              <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
+              <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
+              <button type="button" class="emp-react" aria-label="Thả like">👍</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -823,6 +997,8 @@ html.smx-lock,body.smx-lock{overflow:hidden}
   <style>
   /* ── INK / KHÔNG GIAN — ảnh full-bleed mép trên trắng mờ dần + mây trôi ── */
   .ink-dark{position:relative;background:#ffffff;padding-bottom:0}
+  /* Desktop (≥769px): ẩn hẳn khu "Không gian" — chỉ hiện trên mobile */
+  @media(min-width:769px){.ink-dark{display:none}}
   .ink-dark .sl{color:#274E76;font-family:var(--font-heading);font-weight:var(--fw-regular);font-size:clamp(26px,6vw,50px);line-height:1.15;letter-spacing:2px;margin-bottom:14px}
   .ink-dark .st{color:#142E4A;font-family:var(--font-heading);font-weight:var(--fw-regular);font-size:20px;line-height:1.4;text-transform:uppercase;letter-spacing:1px}
   .ink-stage{position:relative;overflow:hidden;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);height:clamp(540px,44vw,840px);background:#ffffff;
@@ -1080,50 +1256,247 @@ html.smx-lock,body.smx-lock{overflow:hidden}
   }
 })();
 
-/* Timeline "lướt qua từng hành trình" — spotlight mốc đang xem + rail fill theo cuộn */
+/* Hành trình — STEPPER GHIM: cuộn qua section, mỗi nhịp hiện 1 chặng, chặng trước biến mất */
 (function(){
-  var jrn = document.querySelector('.jrn');
-  if(!jrn) return;
-  var items = Array.prototype.slice.call(jrn.querySelectorAll('.jrn-item'));
-  if(!items.length) return;
-  var track = jrn.querySelector('.jrn-track');
-  var fill  = jrn.querySelector('.jrn-fill');
-  var comet = jrn.querySelector('.jrn-comet');
-  var nodes = items.map(function(it){ return it.querySelector('.jrn-node'); });
-  jrn.classList.add('jrn--spotlight');
-
-  var firstC = 0, span = 1;
-  function measure(){
-    var jr = jrn.getBoundingClientRect();
-    var f  = nodes[0].getBoundingClientRect();
-    var l  = nodes[nodes.length - 1].getBoundingClientRect();
-    firstC = (f.top - jr.top) + f.height / 2;
-    var lastC = (l.top - jr.top) + l.height / 2;
-    span = Math.max(1, lastC - firstC);
-    if(track){ track.style.top = firstC + 'px'; track.style.height = span + 'px'; }
-  }
+  var section = document.querySelector('.jrn-pin');
+  if(!section) return;
+  var panels = Array.prototype.slice.call(section.querySelectorAll('.jrn-panel'));
+  if(!panels.length) return;
+  var dots = Array.prototype.slice.call(section.querySelectorAll('.jrn-dot'));
+  var cue  = section.querySelector('.jrn-scrollcue');
+  var hdr  = null;   /* header do shared.js chèn sau → lấy lười trong update() */
+  var n = panels.length, cur = -1;
   function update(){
-    var vc = window.innerHeight * 0.45;            /* điểm hội tụ tiêu điểm */
-    var jrTop = jrn.getBoundingClientRect().top;
-    var prog = (vc - (jrTop + firstC)) / span;
-    prog = Math.max(0, Math.min(1, prog));
-    if(fill)  fill.style.height = (prog * 100) + '%';
-    if(comet){ comet.style.top = (prog * 100) + '%'; comet.style.opacity = (prog > 0.002 && prog < 0.998) ? '1' : '0'; }
-    var best = 0, bd = Infinity;
-    for(var i = 0; i < nodes.length; i++){
-      var r = nodes[i].getBoundingClientRect();
-      var c = r.top + r.height / 2;
-      var d = Math.abs(c - vc);
-      if(d < bd){ bd = d; best = i; }
-    }
-    for(var j = 0; j < items.length; j++){ items[j].classList.toggle('is-active', j === best); }
+    var rect = section.getBoundingClientRect();
+    /* Ẩn hẳn menu khi section đang ghim (phủ kín màn hình) — kể cả khi cuộn lên */
+    if(!hdr) hdr = document.getElementById('hdr');
+    if(hdr) hdr.classList.toggle('nav-locked', rect.top <= 40 && rect.bottom >= window.innerHeight - 1);
+    var total = section.offsetHeight - window.innerHeight;   /* quãng cuộn trong lúc ghim */
+    var scrolled = Math.min(Math.max(-rect.top, 0), total);
+    var prog = total > 0 ? scrolled / total : 0;
+    var idx = Math.min(n - 1, Math.floor(prog * n));
+    if(idx === cur) return;
+    cur = idx;
+    for(var i = 0; i < n; i++) panels[i].classList.toggle('is-on', i === idx);
+    /* vòng tròn năm ứng 1-1 với mốc (bắt đầu là 2017 = idx0) */
+    for(var d = 0; d < dots.length; d++) dots[d].classList.toggle('is-on', d === idx);
+    if(cue) cue.classList.toggle('is-hidden', idx >= n - 1);
   }
   var ticking = false;
   function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(function(){ update(); ticking = false; }); } }
-  measure(); update();
+  /* Bấm vòng tròn năm → cuộn mượt tới chặng đó (dừng ở giữa băng của chặng) */
+  dots.forEach(function(dot){
+    dot.addEventListener('click', function(){
+      var step = parseInt(dot.getAttribute('data-step'), 10);
+      var total = section.offsetHeight - window.innerHeight;
+      var docTop = section.getBoundingClientRect().top + window.scrollY;
+      var targetY = docTop + ((step + 0.5) / n) * total;
+      window.scrollTo({ top: Math.round(targetY), behavior: 'smooth' });
+    });
+  });
+  update();
   window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', function(){ measure(); update(); }, { passive: true });
-  window.addEventListener('load', function(){ measure(); update(); });
+  window.addEventListener('resize', function(){ cur = -1; update(); }, { passive: true });
+  window.addEventListener('load', update);
+})();
+
+/* Mạng lưới toàn cầu — mây DẠT SANG 2 BÊN theo cuộn để lộ bản đồ */
+(function(){
+  var sec = document.querySelector('.gnet-section');
+  if(!sec || !sec.querySelector('.gnet-clouds')) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ sec.style.setProperty('--part', '1'); return; }
+  function update(){
+    var r = sec.getBoundingClientRect(), vh = window.innerHeight;
+    /* part=0 khi section mới ló (top≈0.92vh) → part=1 khi đã vào khung nhìn (top≈0.42vh) → nội dung sạch mây */
+    var p = (vh * 0.92 - r.top) / (vh * 0.5);
+    sec.style.setProperty('--part', Math.max(0, Math.min(1, p)).toFixed(3));
+  }
+  var t = false;
+  function onScroll(){ if(!t){ t = true; requestAnimationFrame(function(){ update(); t = false; }); } }
+  update();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  window.addEventListener('load', update);
+})();
+
+/* ── NỀN SÓNG BIỂN — WebGL thuần (port shader GLSL Hills, tone sáng nautical) ──
+   Không phụ thuộc thư viện: RawShader gốc là GLSL WebGL1, chỉ cần tự cấp ma trận + lưới. */
+(function(){
+  var canvas = document.querySelector('.jrn-sea');
+  if(!canvas) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var gl = canvas.getContext('webgl', {antialias:false, alpha:true, premultipliedAlpha:false})
+        || canvas.getContext('experimental-webgl', {antialias:false, alpha:true});
+  if(!gl) return;
+
+  var SIZE = 256, SEG = 200;   /* kích thước vật lý giữ 256 cho khớp shader; lưới 200 cho nhẹ */
+
+  var vertSrc = [
+    'attribute vec3 position;',
+    'uniform mat4 projectionMatrix;',
+    'uniform mat4 modelViewMatrix;',
+    'uniform float time;',
+    'varying vec3 vPosition;',
+    'mat4 rotateMatrixX(float radian){return mat4(1.0,0.0,0.0,0.0, 0.0,cos(radian),-sin(radian),0.0, 0.0,sin(radian),cos(radian),0.0, 0.0,0.0,0.0,1.0);}',
+    'vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}',
+    'vec4 mod289(vec4 x){return x-floor(x*(1.0/289.0))*289.0;}',
+    'vec4 permute(vec4 x){return mod289(((x*34.0)+1.0)*x);}',
+    'vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-0.85373472095314*r;}',
+    'vec3 fade(vec3 t){return t*t*t*(t*(t*6.0-15.0)+10.0);}',
+    'float cnoise(vec3 P){',
+    ' vec3 Pi0=floor(P);vec3 Pi1=Pi0+vec3(1.0);Pi0=mod289(Pi0);Pi1=mod289(Pi1);',
+    ' vec3 Pf0=fract(P);vec3 Pf1=Pf0-vec3(1.0);',
+    ' vec4 ix=vec4(Pi0.x,Pi1.x,Pi0.x,Pi1.x);vec4 iy=vec4(Pi0.yy,Pi1.yy);',
+    ' vec4 iz0=Pi0.zzzz;vec4 iz1=Pi1.zzzz;',
+    ' vec4 ixy=permute(permute(ix)+iy);vec4 ixy0=permute(ixy+iz0);vec4 ixy1=permute(ixy+iz1);',
+    ' vec4 gx0=ixy0*(1.0/7.0);vec4 gy0=fract(floor(gx0)*(1.0/7.0))-0.5;gx0=fract(gx0);',
+    ' vec4 gz0=vec4(0.5)-abs(gx0)-abs(gy0);vec4 sz0=step(gz0,vec4(0.0));',
+    ' gx0-=sz0*(step(0.0,gx0)-0.5);gy0-=sz0*(step(0.0,gy0)-0.5);',
+    ' vec4 gx1=ixy1*(1.0/7.0);vec4 gy1=fract(floor(gx1)*(1.0/7.0))-0.5;gx1=fract(gx1);',
+    ' vec4 gz1=vec4(0.5)-abs(gx1)-abs(gy1);vec4 sz1=step(gz1,vec4(0.0));',
+    ' gx1-=sz1*(step(0.0,gx1)-0.5);gy1-=sz1*(step(0.0,gy1)-0.5);',
+    ' vec3 g000=vec3(gx0.x,gy0.x,gz0.x);vec3 g100=vec3(gx0.y,gy0.y,gz0.y);',
+    ' vec3 g010=vec3(gx0.z,gy0.z,gz0.z);vec3 g110=vec3(gx0.w,gy0.w,gz0.w);',
+    ' vec3 g001=vec3(gx1.x,gy1.x,gz1.x);vec3 g101=vec3(gx1.y,gy1.y,gz1.y);',
+    ' vec3 g011=vec3(gx1.z,gy1.z,gz1.z);vec3 g111=vec3(gx1.w,gy1.w,gz1.w);',
+    ' vec4 norm0=taylorInvSqrt(vec4(dot(g000,g000),dot(g010,g010),dot(g100,g100),dot(g110,g110)));',
+    ' g000*=norm0.x;g010*=norm0.y;g100*=norm0.z;g110*=norm0.w;',
+    ' vec4 norm1=taylorInvSqrt(vec4(dot(g001,g001),dot(g011,g011),dot(g101,g101),dot(g111,g111)));',
+    ' g001*=norm1.x;g011*=norm1.y;g101*=norm1.z;g111*=norm1.w;',
+    ' float n000=dot(g000,Pf0);float n100=dot(g100,vec3(Pf1.x,Pf0.yz));',
+    ' float n010=dot(g010,vec3(Pf0.x,Pf1.y,Pf0.z));float n110=dot(g110,vec3(Pf1.xy,Pf0.z));',
+    ' float n001=dot(g001,vec3(Pf0.xy,Pf1.z));float n101=dot(g101,vec3(Pf1.x,Pf0.y,Pf1.z));',
+    ' float n011=dot(g011,vec3(Pf0.x,Pf1.yz));float n111=dot(g111,Pf1);',
+    ' vec3 fade_xyz=fade(Pf0);',
+    ' vec4 n_z=mix(vec4(n000,n100,n010,n110),vec4(n001,n101,n011,n111),fade_xyz.z);',
+    ' vec2 n_yz=mix(n_z.xy,n_z.zw,fade_xyz.y);float n_xyz=mix(n_yz.x,n_yz.y,fade_xyz.x);',
+    ' return 2.2*n_xyz;}',
+    'void main(void){',
+    ' vec3 updatePosition=(rotateMatrixX(radians(90.0))*vec4(position,1.0)).xyz;',
+    ' float sin1=sin(radians(updatePosition.x/128.0*90.0));',
+    ' vec3 noisePosition=updatePosition+vec3(0.0,0.0,time*-30.0);',
+    ' float noise1=cnoise(noisePosition*0.08);',
+    ' float noise2=cnoise(noisePosition*0.06);',
+    ' float noise3=cnoise(noisePosition*0.4);',
+    ' vec3 lastPosition=updatePosition+vec3(0.0, noise1*sin1*8.0+noise2*sin1*8.0+noise3*(abs(sin1)*2.0+0.5)+pow(sin1,2.0)*40.0, 0.0);',
+    ' vPosition=lastPosition;',
+    ' gl_Position=projectionMatrix*modelViewMatrix*vec4(lastPosition,1.0);}'
+  ].join('\n');
+
+  var fragSrc = [
+    'precision highp float;',
+    'varying vec3 vPosition;',
+    'void main(void){',
+    ' float dist=length(vPosition);',                           /* xa dần về chân trời */
+    ' float h=vPosition.y;',                                    /* độ cao sóng */
+    ' float t=clamp(dist/145.0,0.0,1.0);',                      /* 0 = foreground, 1 = chân trời */
+    ' vec3 deep=vec3(0.02,0.29,0.55);',                         /* xanh biển đậm, bão hoà (đỏ thấp → không xám) */
+    ' vec3 mid=vec3(0.07,0.45,0.72);',                          /* xanh tươi trung gian */
+    ' vec3 farC=vec3(0.30,0.62,0.83);',                         /* chân trời vẫn xanh rõ (không ngả trắng/xám) */
+    ' vec3 col=(t<0.5)?mix(deep,mid,t*2.0):mix(mid,farC,(t-0.5)*2.0);',
+    ' float foam=smoothstep(7.0,18.0,h);',                      /* bọt trắng ở đỉnh sóng (nhẹ hơn để không bạc màu) */
+    ' col=mix(col,vec3(0.85,0.93,1.0),foam*0.38);',
+    ' float glint=smoothstep(12.0,22.0,h)*(1.0-t)*0.12;',       /* lấp lánh nhẹ phía gần */
+    ' col+=glint;',
+    ' float a=smoothstep(150.0,42.0,dist)*0.96;',               /* đặc ở gần, tan dần về xa để hoà vào chân trời */
+    ' gl_FragColor=vec4(col, clamp(a,0.0,1.0));}'
+  ].join('\n');
+
+  function compile(type, src){
+    var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+    if(!gl.getShaderParameter(s, gl.COMPILE_STATUS)) return null;
+    return s;
+  }
+  var vs = compile(gl.VERTEX_SHADER, vertSrc), fs = compile(gl.FRAGMENT_SHADER, fragSrc);
+  if(!vs || !fs) return;
+  var prog = gl.createProgram();
+  gl.attachShader(prog, vs); gl.attachShader(prog, fs); gl.linkProgram(prog);
+  if(!gl.getProgramParameter(prog, gl.LINK_STATUS)) return;
+  gl.useProgram(prog);
+
+  /* Lưới phẳng XY, [-128..128] — khớp PlaneGeometry(256,256,SEG,SEG) */
+  var verts = [], idx = [], n = SEG + 1, half = SIZE / 2, stepP = SIZE / SEG;
+  for(var iy = 0; iy < n; iy++){
+    for(var ix = 0; ix < n; ix++){
+      verts.push(-half + ix * stepP, half - iy * stepP, 0);
+    }
+  }
+  for(var y = 0; y < SEG; y++){
+    for(var x = 0; x < SEG; x++){
+      var a = y * n + x, b = a + 1, c = a + n, d = c + 1;
+      idx.push(a, c, b, b, c, d);
+    }
+  }
+  var posBuf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, posBuf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
+  var idxBuf = gl.createBuffer();
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, idxBuf);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(idx), gl.STATIC_DRAW);
+  var idxCount = idx.length;
+
+  var locPos = gl.getAttribLocation(prog, 'position');
+  gl.enableVertexAttribArray(locPos);
+  gl.vertexAttribPointer(locPos, 3, gl.FLOAT, false, 0, 0);
+  var locProj = gl.getUniformLocation(prog, 'projectionMatrix');
+  var locMV   = gl.getUniformLocation(prog, 'modelViewMatrix');
+  var locTime = gl.getUniformLocation(prog, 'time');
+
+  gl.enable(gl.BLEND);
+  gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+  gl.enable(gl.DEPTH_TEST);
+  gl.depthFunc(gl.LEQUAL);
+  gl.clearColor(0, 0, 0, 0);
+
+  /* ── ma trận: perspective + lookAt (camera 0,16,125 → nhìn 0,28,0) ── */
+  function perspective(fovyDeg, aspect, near, far){
+    var f = 1 / Math.tan(fovyDeg * Math.PI / 360), nf = 1 / (near - far);
+    return [f/aspect,0,0,0, 0,f,0,0, 0,0,(far+near)*nf,-1, 0,0,2*far*near*nf,0];
+  }
+  function lookAt(ex,ey,ez, cx,cy,cz, ux,uy,uz){
+    var zx=ex-cx, zy=ey-cy, zz=ez-cz;
+    var zl=1/Math.hypot(zx,zy,zz); zx*=zl; zy*=zl; zz*=zl;
+    var xx=uy*zz-uz*zy, xy=uz*zx-ux*zz, xz=ux*zy-uy*zx;
+    var xl=1/Math.hypot(xx,xy,xz); xx*=xl; xy*=xl; xz*=xl;
+    var yx=zy*xz-zz*xy, yy=zz*xx-zx*xz, yz=zx*xy-zy*xx;
+    return [xx,yx,zx,0, xy,yy,zy,0, xz,yz,zz,0,
+      -(xx*ex+xy*ey+xz*ez), -(yx*ex+yy*ey+yz*ez), -(zx*ex+zy*ey+zz*ez), 1];
+  }
+  var proj = perspective(45, 1, 1, 10000);
+  var mv   = lookAt(0,16,125, 0,28,0, 0,1,0);
+
+  var DPR = Math.min(window.devicePixelRatio || 1, 1.5);
+  function resize(){
+    var w = canvas.clientWidth || canvas.offsetWidth, h = canvas.clientHeight || canvas.offsetHeight;
+    if(!w || !h) return;
+    canvas.width = Math.round(w * DPR); canvas.height = Math.round(h * DPR);
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    proj = perspective(45, w / h, 1, 10000);
+    gl.uniformMatrix4fv(locProj, false, new Float32Array(proj));
+    gl.uniformMatrix4fv(locMV, false, new Float32Array(mv));
+  }
+
+  var time = 0, last = 0, raf = 0, running = false;
+  function frame(now){
+    if(!running) return;
+    raf = requestAnimationFrame(frame);
+    var dt = last ? Math.min((now - last) / 1000, 0.05) : 0.016; last = now;
+    time += dt * 0.5;                                  /* speed 0.5 như bản gốc */
+    gl.uniform1f(locTime, time);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    gl.drawElements(gl.TRIANGLES, idxCount, gl.UNSIGNED_SHORT, 0);
+  }
+  function start(){ if(running) return; running = true; last = 0; raf = requestAnimationFrame(frame); }
+  function stop(){ running = false; if(raf) cancelAnimationFrame(raf); raf = 0; }
+
+  resize();
+  window.addEventListener('resize', resize, {passive:true});
+  canvas.classList.add('is-on');
+  /* chỉ chạy khi section trong/gần khung nhìn — tiết kiệm pin & CPU */
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ en[0].isIntersecting ? start() : stop(); },
+      {rootMargin:'200px 0px'}).observe(canvas);
+  } else { start(); }
 })();
 
 /* ── Emoji reaction trên card "Người Ethan nói gì về Ethan?" — pop nút + emoji tung lên trong card ── */
