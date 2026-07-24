@@ -5056,6 +5056,227 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
   </div>
 </section>
 
+<!-- ĐỜI SỐNG CÔNG TY — "Người Ethan nói gì về Ethan?" (port từ trang Giới thiệu) -->
+<style>
+/* ── EMPLOYEE VOICES — comment card tối kiểu chat (avatar + giờ đăng + reaction) ── */
+.emp-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;max-width:1280px;margin:0 auto}
+.emp-card{flex:0 1 calc(33.333% - 15px);position:relative;background:#14171f;border:1px solid rgba(255,255,255,.08);border-radius:0;display:flex;flex-direction:column;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s}
+.emp-card:hover{border-color:rgba(43,143,255,.45);box-shadow:0 18px 48px rgba(9,16,32,.45);transform:translateY(-4px)}
+.emp-head{display:flex;align-items:center;gap:14px;padding:20px 22px;border-bottom:1px solid rgba(255,255,255,.08)}
+.emp-avatar-img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0;background:#232733}
+.emp-id{flex:1;min-width:0}
+.emp-name{font-family:var(--font-lead);font-size:var(--fs-base);font-weight:var(--fw-semibold);color:#fff}
+.emp-role{font-size:var(--fs-caption);color:#9aa4b5;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.emp-time{font-size:var(--fs-caption);color:#7d8698;flex-shrink:0;align-self:flex-start;padding-top:4px}
+.emp-body{padding:20px 22px;flex:1}
+.emp-quote{font-size:var(--fs-base);color:#e8ebf1;line-height:1.75}
+.emp-foot{display:flex;align-items:center;gap:12px;padding:16px 22px;border-top:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
+.emp-input{flex:1;min-width:0;background:#0d0f15;border:1px solid rgba(255,255,255,.1);border-radius:0;padding:10px 16px;font-family:var(--font-text);font-size:var(--fs-caption);color:#e8ebf1;outline:none;transition:border-color .2s}
+.emp-input::placeholder{color:#7d8698}
+.emp-input:focus{border-color:rgba(43,143,255,.55)}
+.emp-reacts{display:flex;gap:6px;flex-shrink:0}
+.emp-react{background:none;border:none;font-size:18px;line-height:1;cursor:pointer;padding:4px;border-radius:0;transition:transform .15s ease;min-width:28px;min-height:28px}
+.emp-react:hover{transform:scale(1.25)}
+.emp-react.popped{animation:emp-pop .45s cubic-bezier(.34,1.56,.64,1)}
+@keyframes emp-pop{0%{transform:scale(1)}40%{transform:scale(1.6) rotate(-8deg)}100%{transform:scale(1)}}
+.emp-float{position:absolute;font-size:22px;line-height:1;pointer-events:none;z-index:5;opacity:0;
+  animation:emp-rise var(--dur,1.2s) cubic-bezier(.18,.65,.35,1) var(--delay,0s) forwards}
+@keyframes emp-rise{
+  0%{opacity:0;transform:translate(0,0) scale(.5) rotate(0deg)}
+  12%{opacity:1}
+  100%{opacity:0;transform:translate(var(--dx,0px),var(--dy,-260px)) scale(var(--sc,1.25)) rotate(var(--rot,0deg))}
+}
+@media(max-width:1024px){ .emp-card{ flex-basis:calc(50% - 11px) } }
+@media(max-width:768px){ .emp-card{ flex-basis:100% } }
+/* Mô tả gọn 2 hàng trên desktop — nới max-width để không rớt chữ "người." xuống hàng 3 */
+#voices .ss{max-width:760px}
+</style>
+<section class="section" id="voices" data-flow="#FDFEFE">
+  <div class="container">
+    <div class="sh c reveal">
+      <div class="sl">Đời sống công ty</div>
+      <h2 class="st">Người Ethan nói gì về Ethan?</h2>
+      <div class="divider c"></div>
+      <p class="ss">Không phải quảng cáo, đây là những chia sẻ thật về môi trường làm việc, từ chính các thành viên trong đội ngũ 90 người.</p>
+    </div>
+    <div class="emp-grid">
+      <div class="emp-card reveal d1">
+        <div class="emp-head">
+          <img class="emp-avatar-img" src="assets/images/connguoi/sang-rd.jpeg" alt="Sang Nguỵ" loading="lazy" decoding="async">
+          <div class="emp-id">
+            <div class="emp-name">Sang Nguỵ</div>
+            <div class="emp-role">R&amp;D · Khối Sản Xuất</div>
+          </div>
+          <div class="emp-time">Tuần trước</div>
+        </div>
+        <div class="emp-body">
+          <p class="emp-quote">Trong thời gian làm việc tại Ethan, mình có cơ hội tìm hiểu sâu hơn về nhiều sản phẩm kinh doanh, từ đó mở rộng kiến thức và nâng cao hiểu biết về lĩnh vực của công ty. Bên cạnh đó, mình còn được đào tạo và thực hành sử dụng các loại máy móc, thiết bị hiện đại, giúp nâng cao kỹ năng chuyên môn và tích lũy nhiều kinh nghiệm thực tế. Ethan thật sự là môi trường giúp mình phát triển cả về kiến thức lẫn kỹ năng.</p>
+        </div>
+        <div class="emp-foot">
+          <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
+          <div class="emp-reacts">
+            <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
+            <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
+            <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
+            <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
+            <button type="button" class="emp-react" aria-label="Thả like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="emp-card reveal d2">
+        <div class="emp-head">
+          <img class="emp-avatar-img" src="assets/images/connguoi/Thach-designer.jpeg" alt="Phạm Thạch" loading="lazy" decoding="async">
+          <div class="emp-id">
+            <div class="emp-name">Phạm Thạch</div>
+            <div class="emp-role">EMB Team Leader · Khối Sản Xuất</div>
+          </div>
+          <div class="emp-time">4 ngày trước</div>
+        </div>
+        <div class="emp-body">
+          <p class="emp-quote">Khởi đầu tại Ethan với vốn kiến thức bằng 0 về thiết kế Mỹ, tôi đã có một hành trình 6 tháng vừa học vừa thực chiến. Kết quả là tôi hoàn toàn làm chủ được gu thẩm mỹ Mỹ và tạo ra những sản phẩm bán chạy, bởi ở đây, mọi bài học đều đến từ những dự án thực tế.</p>
+        </div>
+        <div class="emp-foot">
+          <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
+          <div class="emp-reacts">
+            <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
+            <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
+            <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
+            <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
+            <button type="button" class="emp-react" aria-label="Thả like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="emp-card reveal d3">
+        <div class="emp-head">
+          <img class="emp-avatar-img" src="assets/images/connguoi/Tien-KD5.jpeg" alt="Vũ Quốc Tiến" loading="lazy" decoding="async">
+          <div class="emp-id">
+            <div class="emp-name">Vũ Quốc Tiến</div>
+            <div class="emp-role">Sell Manager</div>
+          </div>
+          <div class="emp-time">3 ngày trước</div>
+        </div>
+        <div class="emp-body">
+          <p class="emp-quote">Mọi người rất thân thiện và nhiệt tình. Nhớ hồi mới vào làm, mình chưa biết quay dựng sản phẩm, nhưng nhờ mọi người hỗ trợ, người chỉ mình sắp xếp bố cục, người chỉ cách quay và góc máy, người chỉ thao tác edit trên máy, nhờ vậy mà chỉ sau 2 tuần mình đã có thể làm tốt công việc media rồi!</p>
+        </div>
+        <div class="emp-foot">
+          <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
+          <div class="emp-reacts">
+            <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
+            <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
+            <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
+            <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
+            <button type="button" class="emp-react" aria-label="Thả like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="emp-card reveal d4">
+        <div class="emp-head">
+          <img class="emp-avatar-img" src="assets/images/connguoi/Duyn-KD3.jpeg" alt="Duyên Trần" loading="lazy" decoding="async">
+          <div class="emp-id">
+            <div class="emp-name">Duyên Trần</div>
+            <div class="emp-role">Sell Manager · Khối Kinh Doanh</div>
+          </div>
+          <div class="emp-time">Hôm qua, 10:12</div>
+        </div>
+        <div class="emp-body">
+          <p class="emp-quote">Điều mình thích nhất ở Ethan là Boss luôn tạo cơ hội để nuôi dưỡng con người, không chỉ phục vụ trong công việc mà còn cả kỹ năng trong cuộc sống.</p>
+        </div>
+        <div class="emp-foot">
+          <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
+          <div class="emp-reacts">
+            <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
+            <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
+            <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
+            <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
+            <button type="button" class="emp-react" aria-label="Thả like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="emp-card reveal d5">
+        <div class="emp-head">
+          <img class="emp-avatar-img" src="assets/images/connguoi/Thu-KD2.jpeg" alt="Thư Trịnh" loading="lazy" decoding="async">
+          <div class="emp-id">
+            <div class="emp-name">Thư Trịnh</div>
+            <div class="emp-role">Sell Manager · Khối Kinh Doanh</div>
+          </div>
+          <div class="emp-time">Hôm nay, 08:45</div>
+        </div>
+        <div class="emp-body">
+          <p class="emp-quote">Ở đây, mình được tự do đề xuất ý tưởng và luôn có người sẵn sàng lắng nghe — đó là điều mình trân trọng nhất ở Ethan.</p>
+        </div>
+        <div class="emp-foot">
+          <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
+          <div class="emp-reacts">
+            <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
+            <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
+            <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
+            <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
+            <button type="button" class="emp-react" aria-label="Thả like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="emp-card reveal d6">
+        <div class="emp-head">
+          <img class="emp-avatar-img" src="assets/images/connguoi/Hana-KD6.jpeg" alt="Hân Đặng" loading="lazy" decoding="async">
+          <div class="emp-id">
+            <div class="emp-name">Hân Đặng</div>
+            <div class="emp-role">Sell Manager · Khối Kinh Doanh</div>
+          </div>
+          <div class="emp-time">2 ngày trước</div>
+        </div>
+        <div class="emp-body">
+          <p class="emp-quote">Muốn đi riêng thì đi một mình, muốn đi chung thì đi cùng nhau.</p>
+        </div>
+        <div class="emp-foot">
+          <input class="emp-input" type="text" placeholder="Viết cảm nhận..." aria-label="Viết cảm nhận">
+          <div class="emp-reacts">
+            <button type="button" class="emp-react" aria-label="Thả cảm xúc yêu thích">😍</button>
+            <button type="button" class="emp-react" aria-label="Thả tim">❤️</button>
+            <button type="button" class="emp-react" aria-label="Thả lửa">🔥</button>
+            <button type="button" class="emp-react" aria-label="Thả sét">⚡</button>
+            <button type="button" class="emp-react" aria-label="Thả like">👍</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+/* ── Emoji reaction trên card "Người Ethan nói gì về Ethan?" — pop nút + emoji tung lên trong card ── */
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.emp-react').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btn.classList.remove('popped');
+      void btn.offsetWidth;
+      btn.classList.add('popped');
+      if (reduceMotion) return;
+      var card = btn.closest('.emp-card');
+      var cardRect = card.getBoundingClientRect();
+      var btnRect  = btn.getBoundingClientRect();
+      var startX = btnRect.left - cardRect.left + btnRect.width/2;
+      var startY = btnRect.top  - cardRect.top  + btnRect.height/2;
+      var emoji = btn.textContent;
+      for (var i = 0; i < 8; i++){
+        var s = document.createElement('span');
+        s.className = 'emp-float';
+        s.textContent = emoji;
+        s.style.left = startX + 'px';
+        s.style.top  = startY + 'px';
+        s.style.setProperty('--dx',  ((Math.random()-0.5) * 140).toFixed(0) + 'px');
+        s.style.setProperty('--dy',  (-(140 + Math.random()*220)).toFixed(0) + 'px');
+        s.style.setProperty('--rot', ((Math.random()-0.5) * 60).toFixed(0) + 'deg');
+        s.style.setProperty('--sc',  (0.9 + Math.random()*0.8).toFixed(2));
+        s.style.setProperty('--dur', (0.9 + Math.random()*0.7).toFixed(2) + 's');
+        s.style.setProperty('--delay', (Math.random()*0.18).toFixed(2) + 's');
+        s.addEventListener('animationend', function(){ this.remove(); });
+        card.appendChild(s);
+      }
+    });
+  });
+})();
+</script>
+
 <script>
 (function(){
   var tabsEl   = document.getElementById('recruitTabs');
