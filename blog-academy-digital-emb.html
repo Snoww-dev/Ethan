@@ -124,8 +124,12 @@ body{overflow-x:clip}
 }
 /* ── CAPTION ẢNH BÀI VIẾT ── */
 .article-main figcaption{font-family:var(--font-text);font-size:var(--fs-caption);color:var(--muted,#5A6B82);text-align:center;line-height:1.5;padding:12px 14px 0}
-.agallery figure{position:relative}
-.agallery figcaption{position:absolute;left:0;right:0;bottom:0;z-index:1;margin:0;padding:26px 14px 12px;color:#fff;text-align:left;font-family:var(--font-text);font-size:var(--fs-small);line-height:1.45;background:linear-gradient(180deg,rgba(15,34,68,0) 0%,rgba(15,34,68,.9) 100%)}
+.agallery figure{position:static;aspect-ratio:auto;overflow:visible;display:flex;flex-direction:column}
+.agallery figure img{width:100%;height:auto;flex:none}
+.agallery--2 figure img{aspect-ratio:4/3;object-fit:cover}
+.agallery--3 figure img{aspect-ratio:3/4;object-fit:cover}
+.agallery figure:hover img{transform:none}
+.agallery figcaption{margin:0;padding:10px 8px 0}
 </style>
 </head>
 <body class="typo-eco">
