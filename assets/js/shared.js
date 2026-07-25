@@ -169,6 +169,10 @@ function buildFooter() {
           <span class="ft-label">Facebook</span>
           <a href="https://www.facebook.com/ethanecom3979" target="_blank" rel="noopener">facebook.com/ethanecom3979</a>
         </p>
+        <p>
+          <span class="ft-label">TikTok</span>
+          <a href="https://www.tiktok.com/@ethanecommerch" target="_blank" rel="noopener">tiktok.com/@ethanecommerch</a>
+        </p>
       </div>
 
     </div>
@@ -178,6 +182,7 @@ function buildFooter() {
       <div class="ft-social">
         Theo dõi chúng tôi:
         <a href="https://www.facebook.com/ethanecom3979" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.tiktok.com/@ethanecommerch" target="_blank" rel="noopener">TikTok</a>
       </div>
       <div class="ft-copy">
         © 2017–2026 Ethan Ecom · Công Ty TNHH MTV Phát Triển Công Nghệ Ethan. All rights reserved.
