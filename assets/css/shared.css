@@ -747,7 +747,7 @@ body.will-animate .reveal.active { opacity: 1; transform: none; }
     cursor: pointer; transition: filter .2s, background .2s, color .2s;
   }
   .mcta--apply   { background: #fff; color: var(--navy, #16305C); }
-  .mcta--contact { background: var(--blue, #1E7FE0); color: #fff; }
+  .mcta--contact { background: #176BD0; color: #fff; }
   .mcta:active   { filter: brightness(.95); }
   /* chừa chỗ để bar không che nội dung/footer cuối trang */
   body { padding-bottom: 56px; }

@@ -67,7 +67,7 @@ function buildHeader() {
       ${leftItems}
     </nav>
     <a href="./" class="logo">
-      <img src="assets/images/logo.jpg" alt="Ethan Ecom">
+      <img src="assets/images/logo.webp" alt="Ethan Ecom" width="512" height="512">
     </a>
     <nav class="nav nav-right">
       ${rightItems}
@@ -104,7 +104,7 @@ function buildFooter() {
     <!-- Logo -->
     <div class="ft-logo">
       <a class="ft-logo-badge" href="./" aria-label="Ethan Ecom, về trang chủ">
-        <img src="assets/images/logo.png" alt="Ethan Ecom">
+        <img src="assets/images/logo.png" alt="Ethan Ecom" width="490" height="372">
       </a>
       <div class="ft-logo-sub">Ecommerce / Print On Demand / Digital Marketing</div>
     </div>
