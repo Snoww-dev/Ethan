@@ -194,15 +194,17 @@
 .jrn-sky{position:absolute;left:0;right:0;top:0;height:56%;overflow:hidden;z-index:1;pointer-events:none;
   -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 60%,transparent 96%);
           mask-image:linear-gradient(180deg,#000 0%,#000 60%,transparent 96%)}
-.jrn-cloud{position:absolute;width:clamp(180px,26vw,500px);height:auto;opacity:.7;
+.jrn-cloud{position:absolute;left:0;width:clamp(180px,26vw,500px);height:auto;opacity:.7;
   filter:drop-shadow(0 12px 26px rgba(20,54,102,.14));will-change:transform}
-.jrn-cloud.jc1{top:1%;  opacity:.7; transform:scale(1.15);animation:jrn-drift 78s linear infinite}
-.jrn-cloud.jc2{top:12%; opacity:.6; transform:scale(1.0); animation:jrn-drift 96s linear infinite;animation-delay:-30s}
-.jrn-cloud.jc3{top:24%; opacity:.5; transform:scale(1.25);animation:jrn-drift 128s linear infinite;animation-delay:-64s}
-.jrn-cloud.jc4{top:34%; opacity:.38;transform:scale(.8); animation:jrn-drift-rev 112s linear infinite;animation-delay:-52s}
-.jrn-cloud.jc5{top:6%;  opacity:.5; transform:scale(1.05);animation:jrn-drift-rev 150s linear infinite;animation-delay:-96s}
-@keyframes jrn-drift{from{left:-34%}to{left:110%}}
-@keyframes jrn-drift-rev{from{left:110%}to{left:-34%}}
+/* Trôi mây bằng transform:translateX (chạy trên GPU, không reflow như animate `left`).
+   Cỡ mỗi đám giữ qua biến --jc-s để keyframe transform không ghi đè scale. */
+.jrn-cloud.jc1{top:1%;  opacity:.7; --jc-s:1.15;animation:jrn-drift 78s linear infinite}
+.jrn-cloud.jc2{top:12%; opacity:.6; --jc-s:1.0; animation:jrn-drift 96s linear infinite;animation-delay:-30s}
+.jrn-cloud.jc3{top:24%; opacity:.5; --jc-s:1.25;animation:jrn-drift 128s linear infinite;animation-delay:-64s}
+.jrn-cloud.jc4{top:34%; opacity:.38;--jc-s:.8;  animation:jrn-drift-rev 112s linear infinite;animation-delay:-52s}
+.jrn-cloud.jc5{top:6%;  opacity:.5; --jc-s:1.05;animation:jrn-drift-rev 150s linear infinite;animation-delay:-96s}
+@keyframes jrn-drift{from{transform:translateX(-34vw) scale(var(--jc-s,1))}to{transform:translateX(110vw) scale(var(--jc-s,1))}}
+@keyframes jrn-drift-rev{from{transform:translateX(110vw) scale(var(--jc-s,1))}to{transform:translateX(-34vw) scale(var(--jc-s,1))}}
 /* Lớp mây phủ (foreground) — bao QUANH mép màn, KHOÉT TRỐNG ở giữa cho chữ (mask ellipse) */
 .jrn-fog{position:absolute;inset:-6%;z-index:5;pointer-events:none;opacity:1;
   -webkit-mask-image:radial-gradient(ellipse 54% 60% at 50% 48%, transparent 0%, transparent 44%, #000 82%);
@@ -1481,7 +1483,9 @@ html.smx-lock,body.smx-lock{overflow:hidden}
         || canvas.getContext('experimental-webgl', {antialias:false, alpha:true});
   if(!gl) return;
 
-  var SIZE = 256, SEG = 200;   /* kích thước vật lý giữ 256 cho khớp shader; lưới 200 cho nhẹ */
+  /* Mobile: lưới thưa hơn nhiều → đỡ giật (mỗi đỉnh chạy Perlin noise nặng mỗi frame) */
+  var IS_SMALL = (window.matchMedia && window.matchMedia('(max-width:768px)').matches) || window.innerWidth < 768;
+  var SIZE = 256, SEG = IS_SMALL ? 96 : 200;   /* kích thước vật lý giữ 256 cho khớp shader; lưới thưa trên mobile */
 
   var vertSrc = [
     'attribute vec3 position;',
@@ -1617,7 +1621,7 @@ html.smx-lock,body.smx-lock{overflow:hidden}
   var proj = perspective(45, 1, 1, 10000);
   var mv   = lookAt(0,16,125, 0,28,0, 0,1,0);
 
-  var DPR = Math.min(window.devicePixelRatio || 1, 1.5);
+  var DPR = Math.min(window.devicePixelRatio || 1, IS_SMALL ? 1 : 1.5);   /* mobile render @1x cho nhẹ GPU */
   function resize(){
     var w = canvas.clientWidth || canvas.offsetWidth, h = canvas.clientHeight || canvas.offsetHeight;
     if(!w || !h) return;
