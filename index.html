@@ -1241,63 +1241,63 @@
 }
 
 /* Card */
-.vcard{
+.val-card{
   background:var(--cv-surface);border:1px solid var(--cv-border);
   padding:var(--cv-sp-md);position:relative;isolation:isolate;
   opacity:0;transform:translateY(28px);
   transition:opacity .7s var(--cv-ease),transform .7s var(--cv-ease),
              border-color .4s var(--cv-ease),box-shadow .5s var(--cv-ease);
 }
-.values2.is-in .vcard{opacity:1;transform:none}
-.values2.is-in .values2-row:first-child .vcard:nth-child(1){transition-delay:.05s}
-.values2.is-in .values2-row:first-child .vcard:nth-child(2){transition-delay:.14s}
-.values2.is-in .values2-row:first-child .vcard:nth-child(3){transition-delay:.23s}
-.values2.is-in .values2-row + .values2-row .vcard:nth-child(1){transition-delay:.32s}
-.values2.is-in .values2-row + .values2-row .vcard:nth-child(2){transition-delay:.41s}
+.values2.is-in .val-card{opacity:1;transform:none}
+.values2.is-in .values2-row:first-child .val-card:nth-child(1){transition-delay:.05s}
+.values2.is-in .values2-row:first-child .val-card:nth-child(2){transition-delay:.14s}
+.values2.is-in .values2-row:first-child .val-card:nth-child(3){transition-delay:.23s}
+.values2.is-in .values2-row + .values2-row .val-card:nth-child(1){transition-delay:.32s}
+.values2.is-in .values2-row + .values2-row .val-card:nth-child(2){transition-delay:.41s}
 
-.vcard::before{
+.val-card::before{
   content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:3px;
   background:var(--cv-navy-800);transform:scaleX(0);transform-origin:left;
   transition:transform .55s var(--cv-ease);
 }
-.vcard:hover::before,.vcard:focus-within::before{transform:scaleX(1)}
-.vcard:hover,.vcard:focus-within{
+.val-card:hover::before,.val-card:focus-within::before{transform:scaleX(1)}
+.val-card:hover,.val-card:focus-within{
   border-color:var(--cv-navy-200);box-shadow:0 18px 40px -24px rgba(20,46,74,.4);
 }
 
-.vcard-meta{
+.val-card-meta{
   font-family:var(--font-heading);font-weight:var(--fw-regular);
   font-size:18px;line-height:27px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--cv-navy-500);margin:0 0 var(--cv-sp-xs);
   display:flex;align-items:baseline;gap:var(--cv-sp-3xs);
 }
-.vcard-num{opacity:.45}
-.vcard-title{
+.val-card-num{opacity:.45}
+.val-card-title{
   font-family:var(--font-heading);font-weight:var(--fw-regular);
   font-size:20px;line-height:20px;letter-spacing:.04em;text-transform:uppercase;
   color:var(--cv-text);margin:var(--cv-sp-2xs) 0 0;transition:color .4s var(--cv-ease);
 }
-.vcard:hover .vcard-title{color:var(--cv-navy-900)}
-.vcard-desc{
+.val-card:hover .val-card-title{color:var(--cv-navy-900)}
+.val-card-desc{
   font-family:var(--font-text);font-weight:var(--fw-regular);
   font-size:18px;line-height:27px;color:var(--cv-text-2);margin:var(--cv-sp-xs) 0 0;
 }
 
 /* Media */
-.vcard-media{
+.val-card-media{
   position:relative;aspect-ratio:3/4;background:var(--cv-navy-900);
   overflow:hidden;margin-top:var(--cv-sp-md);
 }
-.vcard-media img{
+.val-card-media img{
   width:100%;height:100%;object-fit:cover;display:block;
   filter:brightness(.99);transform:scale(1);
   transition:filter .45s var(--cv-ease),transform .6s var(--cv-ease);
 }
-.vcard:hover .vcard-media img{filter:brightness(1.07);transform:scale(1.02)}
+.val-card:hover .val-card-media img{filter:brightness(1.07);transform:scale(1.02)}
 /* Thẻ 02 (insight.jpg): lệch khung nhìn về mép trái ảnh gốc */
-.values2-row:first-child .vcard:nth-child(2) .vcard-media img{object-position:left center}
+.values2-row:first-child .val-card:nth-child(2) .val-card-media img{object-position:left center}
 /* Thẻ 03 (ảnh studio duty.jpg): lệch khung nhìn về mép phải ảnh gốc */
-.values2-row:first-child .vcard:nth-child(3) .vcard-media img{object-position:right center}
+.values2-row:first-child .val-card:nth-child(3) .val-card-media img{object-position:right center}
 
 
 /* Tablet ≤1024px */
@@ -1308,9 +1308,9 @@
   .values2-title .line.sub{font-size:16px;letter-spacing:.18em}
   .values2-lead{font-size:15px;line-height:22.5px}
   .values2-row,.values2-row + .values2-row{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
-  .vcard-meta{font-size:15px;line-height:22.5px}
-  .vcard-title{font-size:22px;line-height:30px}
-  .vcard-desc{font-size:15px;line-height:22.5px}
+  .val-card-meta{font-size:15px;line-height:22.5px}
+  .val-card-title{font-size:22px;line-height:30px}
+  .val-card-desc{font-size:15px;line-height:22.5px}
 }
 
 /* Mobile ≤767px */
@@ -1318,20 +1318,20 @@
   .values2{padding:40px var(--cv-sp-xs)}
   .values2-title{font-size:22px;line-height:32px}
   .values2-title .line.sub{font-size:14px;letter-spacing:.14em}
-  .values2-lead,.vcard-desc,.vcard-meta{font-size:14px;line-height:21px}
-  .vcard-title{font-size:18px;line-height:26px}
+  .values2-lead,.val-card-desc,.val-card-meta{font-size:14px;line-height:21px}
+  .val-card-title{font-size:18px;line-height:26px}
   .values2-row,.values2-row + .values2-row{grid-template-columns:1fr}
   .values2-grids{margin-top:28px}                         /* trước clamp 48–88px */
   .values2-row + .values2-row{margin-top:16px}
-  .vcard{padding:var(--cv-sp-sm)}
-  .vcard-media{aspect-ratio:16/10;margin-top:12px}        /* trước 3/4 → ~453px, nay ~213px */
-  .vcard-desc{margin-top:8px}
+  .val-card{padding:var(--cv-sp-sm)}
+  .val-card-media{aspect-ratio:16/10;margin-top:12px}        /* trước 3/4 → ~453px, nay ~213px */
+  .val-card-desc{margin-top:8px}
 }
 
 /* Reduced motion */
 @media(prefers-reduced-motion:reduce){
   .values2 *{transition-duration:.01ms !important}
-  .values2 .vcard{opacity:1;transform:none}
+  .values2 .val-card{opacity:1;transform:none}
   .values2-lead{opacity:1;transform:none}
   .values2-title .line > span{transform:none}
 }
@@ -3813,29 +3813,29 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
 
       <div class="values2-row">
 
-        <article class="vcard" tabindex="0">
-          <p class="vcard-meta"><span class="vcard-num">01.</span> Unity</p>
-          <h3 class="vcard-title">Đồng lòng</h3>
-          <p class="vcard-desc">Hỗ trợ đồng đội, cùng nhau vì mục tiêu chung.</p>
-          <div class="vcard-media">
+        <article class="val-card" tabindex="0">
+          <p class="val-card-meta"><span class="val-card-num">01.</span> Unity</p>
+          <h3 class="val-card-title">Đồng lòng</h3>
+          <p class="val-card-desc">Hỗ trợ đồng đội, cùng nhau vì mục tiêu chung.</p>
+          <div class="val-card-media">
             <img src="assets/images/hero/doingu.webp" alt="Toàn đội Ethan cùng hô vang trong sự kiện nội bộ" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80'" width="1320" height="1806">
           </div>
         </article>
 
-        <article class="vcard" tabindex="0">
-          <p class="vcard-meta"><span class="vcard-num">02.</span> Kindness</p>
-          <h3 class="vcard-title">Tử tế</h3>
-          <p class="vcard-desc">Tôn trọng mọi người, góp ý để cùng xây dựng.</p>
-          <div class="vcard-media">
+        <article class="val-card" tabindex="0">
+          <p class="val-card-meta"><span class="val-card-num">02.</span> Kindness</p>
+          <h3 class="val-card-title">Tử tế</h3>
+          <p class="val-card-desc">Tôn trọng mọi người, góp ý để cùng xây dựng.</p>
+          <div class="val-card-media">
             <img src="assets/images/about/insight.webp" alt="Thành viên Ethan trao thành phẩm cho đồng đội" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80'" width="1600" height="1600">
           </div>
         </article>
 
-        <article class="vcard" tabindex="0">
-          <p class="vcard-meta"><span class="vcard-num">03.</span> Responsibility</p>
-          <h3 class="vcard-title">Trách nhiệm</h3>
-          <p class="vcard-desc">Cam kết với công việc và người đi cùng mình.</p>
-          <div class="vcard-media">
+        <article class="val-card" tabindex="0">
+          <p class="val-card-meta"><span class="val-card-num">03.</span> Responsibility</p>
+          <h3 class="val-card-title">Trách nhiệm</h3>
+          <p class="val-card-desc">Cam kết với công việc và người đi cùng mình.</p>
+          <div class="val-card-media">
             <img src="assets/images/about/trachnhiem.webp" alt="Buổi chụp sản phẩm tại studio Ethan" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80'" width="1066" height="1600">
           </div>
         </article>
@@ -3844,20 +3844,20 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
 
       <div class="values2-row">
 
-        <article class="vcard" tabindex="0">
-          <p class="vcard-meta"><span class="vcard-num">04.</span> Innovation</p>
-          <h3 class="vcard-title">Cải tiến</h3>
-          <p class="vcard-desc">Chủ động đổi mới, xem AI là công cụ mỗi ngày.</p>
-          <div class="vcard-media">
+        <article class="val-card" tabindex="0">
+          <p class="val-card-meta"><span class="val-card-num">04.</span> Innovation</p>
+          <h3 class="val-card-title">Cải tiến</h3>
+          <p class="val-card-desc">Chủ động đổi mới, xem AI là công cụ mỗi ngày.</p>
+          <div class="val-card-media">
             <img src="assets/images/about/caitien.webp" alt="Designer Ethan ứng dụng AI trong công việc sáng tạo" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&q=80'" width="1600" height="1200">
           </div>
         </article>
 
-        <article class="vcard" tabindex="0">
-          <p class="vcard-meta"><span class="vcard-num">05.</span> Resilience</p>
-          <h3 class="vcard-title">Bền bỉ</h3>
-          <p class="vcard-desc">Đủ chắc, đủ lì để vượt sóng gió.</p>
-          <div class="vcard-media">
+        <article class="val-card" tabindex="0">
+          <p class="val-card-meta"><span class="val-card-num">05.</span> Resilience</p>
+          <h3 class="val-card-title">Bền bỉ</h3>
+          <p class="val-card-desc">Đủ chắc, đủ lì để vượt sóng gió.</p>
+          <div class="val-card-media">
             <img src="assets/images/about/benbi.jpg" alt="Đội ngũ Ethan cùng nhau xem lại kết quả công việc" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=800&q=80'" width="1200" height="1600">
           </div>
         </article>
