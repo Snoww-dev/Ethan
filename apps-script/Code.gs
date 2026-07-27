@@ -30,11 +30,11 @@ var SUPPORT_EMAIL = 'support@ethanecom.com';   // form Liên hệ
 
 // Bạn nhận BẢN SAO NGẦM (BCC) MỌI email của cả 2 form để theo dõi — người nhận
 // chính KHÔNG thấy địa chỉ này. Để trống '' nếu không cần.
-var BCC_ALL       = 'snowcute2103@gmail.com';
+var BCC_ALL       = 'ethanecomweb@gmail.com';
 
 // ⓘ TEST đầu tiên: nếu hr@/support@ chưa có hộp thư thật, bạn vẫn nhận được
 //   bản BCC ở Gmail trên (đủ để xác nhận luồng chạy). Muốn test gọn hơn thì
-//   tạm đổi HR_EMAIL/SUPPORT_EMAIL = 'snowcute2103@gmail.com', xong đổi lại.
+//   tạm đổi HR_EMAIL/SUPPORT_EMAIL = 'ethanecomweb@gmail.com', xong đổi lại.
 
 var SENDER_NAME   = 'Website Ethan Ecom';       // tên hiển thị người gửi
 

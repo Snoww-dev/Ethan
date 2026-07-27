@@ -889,7 +889,7 @@
        TIÊN, FormSubmit gửi 1 mail "Activate Form" tới hộp thư đó — mở mail,
        bấm link kích hoạt; từ lần sau các submit tự động về inbox.
      ════════════════════════════════════════════════════════════ */
-  const TEST_EMAIL    = 'snowcute2103@gmail.com';
+  const TEST_EMAIL    = 'ethanecomweb@gmail.com';
   const CONTACT_EMAIL = TEST_EMAIL;   // production: 'support@ethanecom.com'
   const CAREERS_EMAIL = TEST_EMAIL;   // production: 'hr@ethanecom.com'
 

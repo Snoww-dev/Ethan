@@ -9,7 +9,7 @@ Mật khẩu Gmail không bao giờ nằm trong website — nó ở trên máy c
 2. Vào <https://script.google.com> → **New project**.
 3. Xoá code mẫu, dán toàn bộ [`Code.gs`](Code.gs).
 4. Sửa 2 dòng đầu `HR_EMAIL` / `SUPPORT_EMAIL`:
-   - **Khi test:** để `snowcute2103@gmail.com` (đã đặt sẵn) để tự nhận thử.
+   - **Khi test:** để `ethanecomweb@gmail.com` (đã đặt sẵn) để tự nhận thử.
    - **Production:** đổi thành `hr@ethanecom.com` / `support@ethanecom.com`.
 5. **Deploy ▸ New deployment**:
    - Type: **Web app**
@@ -33,9 +33,9 @@ const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfy.../exec';
 ## Gửi đồng thời cho HR và mail của bạn
 Trong `Code.gs`:
 - **Cả hai nhận ngang nhau** (thấy địa chỉ của nhau): ghi nhiều email ngăn cách dấu phẩy —
-  `var HR_EMAIL = 'hr@ethanecom.com, snowcute2103@gmail.com';`
+  `var HR_EMAIL = 'hr@ethanecom.com, ethanecomweb@gmail.com';`
 - **Bạn nhận bản sao ngầm (BCC)** để theo dõi, HR không thấy mail của bạn:
-  `var BCC_ALL = 'snowcute2103@gmail.com';` (áp dụng cho cả 2 form; để `''` nếu không cần).
+  `var BCC_ALL = 'ethanecomweb@gmail.com';` (áp dụng cho cả 2 form; để `''` nếu không cần).
 
 ## Ghi chú
 - Quota Gmail thường: ~100 email/ngày (dư cho form tuyển dụng).
