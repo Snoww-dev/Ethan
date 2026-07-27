@@ -252,19 +252,23 @@ function initHeader() {
       const scrolledDown = y > lastY && y > 120;   // đang kéo xuống, đã qua 120px
       const scrolledUp   = y < lastY - 8;           // kéo lên ít nhất 8px
 
+      /* ── ĐỌC layout TRƯỚC, ghi class SAU → tránh forced reflow mỗi frame cuộn.
+            Header là position:fixed nên toggle class .scrolled không dời smh/hero,
+            vì vậy đọc rect trước hay sau đều cho cùng giá trị. ── */
+      const overLight  = (smhFirst && !alwaysDark) ? smh.getBoundingClientRect().bottom > 80 : false;
+      const heroBottom = (isDarkHero && hero)      ? hero.getBoundingClientRect().bottom     : 0;
+
       hdr.classList.toggle('scrolled', scrolled);
       if (btt) btt.classList.toggle('show', y > 300);
 
       /* Light .smh at top: dark-text header over it, switch to light-text once past it */
       if (smhFirst && !alwaysDark) {
-        const overLight = smh.getBoundingClientRect().bottom > 80;
         hdr.classList.toggle('on-light', overLight);
         hdr.classList.toggle('on-dark', !overLight);
       }
 
       /* When on a dark hero and user scrolls past it */
       if (isDarkHero && hero) {
-        const heroBottom = hero.getBoundingClientRect().bottom;
         hdr.classList.toggle('past-hero', heroBottom < 0);
       }
 
