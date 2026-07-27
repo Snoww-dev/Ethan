@@ -1485,7 +1485,7 @@ html.smx-lock,body.smx-lock{overflow:hidden}
 
   /* Mobile: lưới thưa hơn nhiều → đỡ giật (mỗi đỉnh chạy Perlin noise nặng mỗi frame) */
   var IS_SMALL = (window.matchMedia && window.matchMedia('(max-width:768px)').matches) || window.innerWidth < 768;
-  var SIZE = 256, SEG = IS_SMALL ? 96 : 200;   /* kích thước vật lý giữ 256 cho khớp shader; lưới thưa trên mobile */
+  var SIZE = 256, SEG = IS_SMALL ? 128 : 200;   /* mobile 128 (khoá 30fps nên nhẹ hơn 96@60 cũ mà sóng đỡ gấp khúc) */
 
   var vertSrc = [
     'attribute vec3 position;',
@@ -1632,12 +1632,16 @@ html.smx-lock,body.smx-lock{overflow:hidden}
     gl.uniformMatrix4fv(locMV, false, new Float32Array(mv));
   }
 
+  /* Mobile: khoá ~30fps → nhịp ĐỀU (mượt hơn 40-55fps chập chờn lúc cuộn) và
+     nhường GPU/main-thread cho việc cuộn. Desktop chạy tự do. */
+  var FRAME_MS = IS_SMALL ? 33 : 0;
   var time = 0, last = 0, raf = 0, running = false;
   function frame(now){
     if(!running) return;
     raf = requestAnimationFrame(frame);
+    if(FRAME_MS && last && (now - last) < FRAME_MS) return;   /* bỏ bớt frame để giữ ~30fps đều */
     var dt = last ? Math.min((now - last) / 1000, 0.05) : 0.016; last = now;
-    time += dt * 0.5;                                  /* speed 0.5 như bản gốc */
+    time += dt * 0.5;                                  /* dt đo giữa 2 lần VẼ → mượt kể cả khi rớt frame */
     gl.uniform1f(locTime, time);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     gl.drawElements(gl.TRIANGLES, idxCount, gl.UNSIGNED_SHORT, 0);
