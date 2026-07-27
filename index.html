@@ -3340,7 +3340,7 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
   .wce-slide{flex:0 0 100%;min-width:0;display:flex;flex-direction:column-reverse;gap:24px;opacity:.25;transition:opacity .9s ease}
   .wce-slide.is-active{opacity:1}
   .wce-media{-webkit-user-select:none;user-select:none}
-  .wce-media img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+  .wce-media img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
   .wce-copy{display:flex;flex-direction:column;align-items:flex-start}
   .wce-slide-eyebrow{font-family:var(--font-heading);font-weight:var(--fw-regular);font-size:20px;line-height:1;letter-spacing:.22em;color:var(--navy,#16305C);text-transform:uppercase;margin:0;display:flex;align-items:baseline;gap:12px}
   .wce-slide-eyebrow::after{content:"";width:44px;height:1px;background:var(--navy,#16305C);align-self:center}
@@ -4652,8 +4652,8 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
 #stories .story-nav:active{transform:translateY(-50%) scale(.92)}
 #stories .story-nav:focus-visible{outline:2px solid #F4B41A;outline-offset:3px}
 #stories .story-nav svg{width:18px;height:18px;stroke:currentColor;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
-#stories .story-prev{left:-46px}
-#stories .story-next{right:-46px}
+#stories .story-prev{left:6px}
+#stories .story-next{right:6px}
 #stories .story-nav[disabled]{opacity:.3;cursor:default;pointer-events:none;box-shadow:0 5px 14px rgba(15,34,68,.14)}
 /* Thanh phân trang */
 #stories .story-dots{display:flex;justify-content:center;gap:8px;margin-top:26px}
@@ -4664,9 +4664,22 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
 #stories .story-dots button.active{background:#1E7FE0;width:44px}
 #stories .story-dots:empty{display:none}
 @media(max-width:1024px){
-  #stories .story-slider{padding:0}
+  /* Mobile/tablet: đưa nút ← → xuống thanh điều khiển dưới (prev · chấm · next) — chạm được */
+  #stories .story-slider{
+    padding:0;display:grid;align-items:center;row-gap:18px;
+    grid-template-columns:auto 1fr auto;
+    grid-template-areas:"view view view" "prev dots next";
+  }
+  #stories .story-viewport{grid-area:view}
   #stories .story-track{grid-auto-columns:calc((100% - 28px)/2)}   /* 2 thẻ / khung nhìn */
-  #stories .story-nav{display:none}
+  #stories .story-nav{
+    display:flex;position:static;transform:none;width:44px;height:44px;   /* touch target ≥44px */
+  }
+  #stories .story-nav:hover{transform:none}
+  #stories .story-nav:active{transform:scale(.92)}
+  #stories .story-prev{grid-area:prev;justify-self:start}
+  #stories .story-next{grid-area:next;justify-self:end}
+  #stories .story-dots{grid-area:dots;margin-top:0}
 }
 @media(max-width:640px){
   #stories .story-track{grid-auto-columns:86%;gap:16px}            /* 1 thẻ + hé lộ thẻ kế */
@@ -4693,9 +4706,6 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
     <!-- Cards — slider lướt ngang -->
     <div class="story-slider reveal">
       <div class="story-viewport">
-      <button class="story-nav story-prev" type="button" aria-label="Xem câu chuyện trước" disabled>
-        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
       <div class="story-track" role="list">
 
       <!-- Câu chuyện nổi bật — Over Limitation (Sự kiện) -->
@@ -4849,10 +4859,13 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
       </div>
 
       </div><!-- /.story-track -->
+      </div><!-- /.story-viewport -->
+      <button class="story-nav story-prev" type="button" aria-label="Xem câu chuyện trước" disabled>
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
       <button class="story-nav story-next" type="button" aria-label="Xem câu chuyện tiếp theo">
         <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
-      </div><!-- /.story-viewport -->
       <div class="story-dots" role="tablist" aria-label="Chọn trang câu chuyện"></div>
     </div><!-- /.story-slider -->
   </div>
