@@ -230,7 +230,8 @@
     color: var(--cp-cream-100);
     margin-bottom: 6px;
   }
-  .cp-field label .cp-req { color: var(--cp-error-light); }
+  .cp-field label .cp-req,
+  .cp-label .cp-req { color: var(--cp-error-light); }
 
   .cp-field input[type=text],
   .cp-field input[type=email],
@@ -290,7 +291,8 @@
   .cp-field.is-invalid .cp-msg { display: block; }
   .cp-msg.is-visible { display: block; }
   .cp-field.is-invalid input,
-  .cp-field.is-invalid select { border-color: var(--cp-error); }
+  .cp-field.is-invalid select,
+  .cp-field.is-invalid .cp-upload { border-color: var(--cp-error); }
 
   /* ── Upload CV ── */
   .cp-upload {
@@ -813,7 +815,7 @@
               </div>
 
               <div class="cp-field">
-                <span class="cp-label" id="cpCvLabel">Upload CV (PDF / DOC)</span>
+                <span class="cp-label" id="cpCvLabel">Upload CV (PDF / DOC) <span class="cp-req">*</span></span>
                 <div class="cp-upload" id="cpFileZone" role="button" tabindex="0" aria-labelledby="cpCvLabel">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" aria-hidden="true"><path d="M21.4 11.05 12.25 20.2a6 6 0 0 1-8.49-8.49l9.2-9.19a4 4 0 0 1 5.65 5.66l-9.2 9.19a2 2 0 0 1-2.82-2.83l8.49-8.48"/></svg>
                   <p>Kéo thả file vào đây hoặc <strong>chọn tệp</strong></p>
@@ -1009,12 +1011,19 @@
       if (e.key === 'Escape' && overlay.classList.contains('cp-open')) close();
     });
 
-    /* ── Upload CV ── */
+    /* ── Upload CV (bắt buộc) ── */
+    const cvField = fileZone.closest('.cp-field');
+    const FILE_MSG_SIZE = 'File vượt quá 5 MB hoặc sai định dạng. Chỉ nhận PDF, DOC, DOCX.';
+    const FILE_MSG_REQUIRED = 'Vui lòng đính kèm CV của bạn.';
+
     function setFile(file) {
       fileMsg.classList.remove('is-visible');
+      cvField.classList.remove('is-invalid');
       if (!file) return;
       if (file.size > MAX_SIZE || !OK_EXT.test(file.name)) {
+        fileMsg.textContent = FILE_MSG_SIZE;
         fileMsg.classList.add('is-visible');
+        cvField.classList.add('is-invalid');
         fileInput.value = '';
         fileChip.classList.remove('is-visible');
         return;
@@ -1068,6 +1077,17 @@
         f.classList.toggle('is-invalid', !valid);
         if (!valid) ok = false;
       });
+
+      if (!fileInput.files[0]) {
+        fileMsg.textContent = FILE_MSG_REQUIRED;
+        fileMsg.classList.add('is-visible');
+        cvField.classList.add('is-invalid');
+        ok = false;
+      } else {
+        fileMsg.classList.remove('is-visible');
+        cvField.classList.remove('is-invalid');
+      }
+
       if (!ok) return;
 
       const name    = document.getElementById('cpName').value.trim();
