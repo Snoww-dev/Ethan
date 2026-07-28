@@ -15,25 +15,25 @@
 
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<title>Ethan Tuyển Dụng | 15 vị trí đang mở & 9 dịch vụ Ethan Ecom</title>
-<meta name="description" content="Ethan tuyển dụng 15 vị trí tại Đồng Nai: Kinh doanh, Sản xuất, Thiết kế, Khối văn phòng. Gia nhập văn hoá Ethan – môi trường sáng tạo, phúc lợi hấp dẫn. Gửi CV: hr@ethanecom.com.">
+<title>Ethan Tuyển Dụng | 15 vị trí đang mở tại Đồng Nai</title>
+<meta name="description" content="Ethan tuyển dụng 15 vị trí tại Đồng Nai: Kinh doanh, Sản xuất, Thiết kế, Khối hỗ trợ. Gia nhập văn hoá Ethan – môi trường sáng tạo, phúc lợi hấp dẫn. Gửi CV: hr@ethanecom.com.">
 <meta name="keywords" content="Ethan tuyển dụng, tuyển dụng Ethan Ecom, việc làm Đồng Nai, việc làm e-commerce, tuyển dụng TikTok Shop, việc làm Gia Kiệm, văn hoá Ethan">
 <link rel="canonical" href="https://ethanecom.com/tuyen-dung">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ethan Ecom">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:title" content="Ethan Tuyển Dụng | 15 vị trí đang mở & 9 dịch vụ Ethan Ecom">
-<meta property="og:description" content="Ethan tuyển dụng 15 vị trí tại Đồng Nai: Kinh doanh, Sản xuất, Thiết kế, Khối văn phòng. Gia nhập văn hoá Ethan – môi trường sáng tạo, phúc lợi hấp dẫn. Gửi CV: hr@ethanecom.com.">
+<meta property="og:title" content="Ethan Tuyển Dụng | 15 vị trí đang mở tại Đồng Nai">
+<meta property="og:description" content="Ethan tuyển dụng 15 vị trí tại Đồng Nai: Kinh doanh, Sản xuất, Thiết kế, Khối hỗ trợ. Gia nhập văn hoá Ethan – môi trường sáng tạo, phúc lợi hấp dẫn. Gửi CV: hr@ethanecom.com.">
 <meta property="og:url" content="https://ethanecom.com/tuyen-dung">
 <meta property="og:image" content="https://ethanecom.com/assets/images/og/og-default.jpg">
 <meta property="og:image:secure_url" content="https://ethanecom.com/assets/images/og/og-default.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Ethan Tuyển Dụng | 15 vị trí đang mở & 9 dịch vụ Ethan Ecom">
+<meta property="og:image:alt" content="Ethan Tuyển Dụng | 15 vị trí đang mở tại Đồng Nai">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ethan Tuyển Dụng | 15 vị trí đang mở & 9 dịch vụ Ethan Ecom">
-<meta name="twitter:description" content="Ethan tuyển dụng 15 vị trí tại Đồng Nai: Kinh doanh, Sản xuất, Thiết kế, Khối văn phòng. Gia nhập văn hoá Ethan – môi trường sáng tạo, phúc lợi hấp dẫn. Gửi CV: hr@ethanecom.com.">
+<meta name="twitter:title" content="Ethan Tuyển Dụng | 15 vị trí đang mở tại Đồng Nai">
+<meta name="twitter:description" content="Ethan tuyển dụng 15 vị trí tại Đồng Nai: Kinh doanh, Sản xuất, Thiết kế, Khối hỗ trợ. Gia nhập văn hoá Ethan – môi trường sáng tạo, phúc lợi hấp dẫn. Gửi CV: hr@ethanecom.com.">
 <meta name="twitter:image" content="https://ethanecom.com/assets/images/og/og-default.jpg">
 
 <script type="application/ld+json">
@@ -615,6 +615,8 @@
 
 /* ── SERVICE CARDS (từ dich-vu) ── */
 .srv-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+a.srv-detail-card{display:block;text-decoration:none;color:inherit}
+.ph-job{background:linear-gradient(135deg,#1D3251 0%,#2a4a76 100%);height:340px}
 /* Grid: chỉ ẩn khi .armed (JS bật) → thả .dropped từng cái. Không có JS thì hiện bình thường (an toàn). */
 .srv-detail-grid.armed .srv-detail-card{opacity:0;transform:translateY(-30px) scale(.94);
   transition:opacity .5s var(--ease),transform .7s cubic-bezier(.34,1.42,.5,1),box-shadow .35s}
@@ -644,42 +646,6 @@
 .ph-ecom{background:linear-gradient(135deg,#0ea5e9 0%,#38bdf8 100%);height:360px}
 .ph-marketing{background:linear-gradient(135deg,#059669 0%,#10b981 100%);height:360px}
 .ph-tech{background:linear-gradient(135deg,#0d1e35 0%,#1D3251 100%);height:360px}
-
-/* ── SERVICE DETAIL OVERLAY (bấm card dịch vụ → chi tiết ảnh trái, nội dung phải) ── */
-.svd{position:fixed;inset:0;z-index:9998;background:#f7f8fb;display:none;overflow-y:auto;-webkit-overflow-scrolling:touch}
-.svd.open{display:block}
-body.svd-lock{overflow:hidden}
-.svd-close{position:fixed;top:20px;right:24px;z-index:12;width:46px;height:46px;border-radius:50%;border:1.5px solid #dde3ee;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--text);transition:all .2s;box-shadow:0 6px 20px rgba(15,34,68,.14)}
-.svd-close:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
-.svd-wrap{max-width:1320px;margin:0 auto;padding:72px 40px 88px;display:grid;grid-template-columns:minmax(320px,44%) 1fr;gap:56px;align-items:start}
-.svd-media{position:sticky;top:72px;border-radius:0;overflow:hidden;background:linear-gradient(135deg,#e9edf4,#cdd7e6);aspect-ratio:4/5;box-shadow:0 24px 60px -18px rgba(13,27,62,.28)}
-.svd-media img{width:100%;height:100%;object-fit:cover;display:block}
-.svd-title{font-family:var(--font-heading);font-size:clamp(30px,3.4vw,48px);font-weight:var(--fw-regular,400);text-transform:uppercase;color:var(--navy);line-height:1.15;margin:0 0 16px;text-wrap:balance}
-.svd-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-family:var(--font-text);font-style:italic;font-weight:var(--fw-semibold);font-size:var(--fs-md);color:#C9820B;margin-bottom:26px}
-.svd-meta .sep{color:#c3cbd8;font-style:normal}
-.svd-intro{font-size:var(--fs-md);line-height:1.75;color:var(--text);margin-bottom:20px}
-.svd-gains-lead{font-weight:var(--fw-bold);color:var(--navy);margin-bottom:10px;font-size:var(--fs-md)}
-.svd-gains{list-style:disc;padding-left:22px;display:flex;flex-direction:column;gap:10px;margin:0 0 30px}
-.svd-gains li{font-size:var(--fs-base);line-height:1.7;color:var(--text)}
-.svd-gains li strong{color:var(--navy)}
-.svd-apply{margin:2px 0 34px;text-transform:uppercase;letter-spacing:.06em}
-.svd-hr{border:0;border-top:1px solid #e3e8f0;margin:0 0 34px}
-.svd-h2{font-family:var(--font-heading);font-size:var(--fs-h2);font-weight:var(--fw-regular,400);text-transform:uppercase;color:var(--navy);margin:0 0 26px}
-.svd-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 40px}
-.svd-item .svd-ico{width:42px;height:42px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;border-radius:0}
-.svd-item .svd-ico svg{width:24px;height:24px;stroke-width:2}
-.svd-item h4{font-family:var(--font-heading);font-size:var(--fs-h4);font-weight:var(--fw-regular,400);text-transform:uppercase;color:var(--navy);margin:0 0 8px}
-.svd-item p{font-size:var(--fs-base);line-height:1.7;color:var(--text2,#5A6B82);margin:0}
-/* 4 tông màu icon (tím/cam/hồng/lục như mẫu) */
-.svd-item:nth-child(1) .svd-ico{background:#EEEBFF;color:#6C5CE7}
-.svd-item:nth-child(2) .svd-ico{background:#FFEDEA;color:#FF6B57}
-.svd-item:nth-child(3) .svd-ico{background:#FDE9F3;color:#E84393}
-.svd-item:nth-child(4) .svd-ico{background:#E8F8EF;color:#27AE60}
-@media(max-width:900px){
-  .svd-wrap{grid-template-columns:1fr;gap:32px;padding:76px 20px 60px}
-  .svd-media{position:static;aspect-ratio:4/3}
-  .svd-grid{grid-template-columns:1fr;gap:24px}
-}
 
 /* ── PROCESS ── */
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
@@ -1023,16 +989,6 @@ a.jcard{text-decoration:none;color:inherit}
   .apply-actions{flex-direction:column-reverse;gap:10px}
   .apply-actions .btn{width:100%;justify-content:center;min-height:48px}
 
-  /* Overlay chi tiết dịch vụ */
-  .svd-wrap{padding:68px 16px 48px;gap:24px}
-  .svd-close{top:12px;right:12px}
-  .svd-title{margin-bottom:12px}
-  .svd-meta{margin-bottom:18px}
-  .svd-hr{margin-bottom:24px}
-  .svd-h2{margin-bottom:18px}
-  .svd-gains{margin-bottom:22px}
-  .svd-apply{margin-bottom:26px}
-
   /* CTA cuối — nút full-width căn giữa, dễ chạm */
   .section--blue .btn{width:min(420px,100%);justify-content:center;text-align:center}
 
@@ -1101,9 +1057,9 @@ a.jcard{text-decoration:none;color:inherit}
       <span class="breadcrumb-sep">/</span>
       <span>Tuyển dụng</span>
     </nav>
-    <div class="page-hero-badge">★ Đang tuyển dụng · 15 vị trí mở · 9 dịch vụ chuyên sâu</div>
-    <h1 class="page-hero-title">Dịch vụ &amp; <em>Tuyển dụng</em><br>Ethan Ecom</h1>
-    <p class="page-hero-sub">Khám phá 9 dịch vụ E-commerce toàn diện và gia nhập đội ngũ sáng tạo, hỗ trợ máy tính, ăn trưa tại công ty, lương thưởng hấp dẫn.</p>
+    <div class="page-hero-badge">★ Đang tuyển dụng · 15 vị trí đang mở · Sản xuất in-house</div>
+    <h1 class="page-hero-title"><em>Tuyển dụng</em><br>Ethan Ecom</h1>
+    <p class="page-hero-sub">Gia nhập đội ngũ Ethan Ecom: 15 vị trí đang mở, hỗ trợ máy tính, ăn trưa tại công ty, lương thưởng hấp dẫn.</p>
   </div>
 </section>
 
@@ -1111,125 +1067,197 @@ a.jcard{text-decoration:none;color:inherit}
 <main id="main">
 
   <!-- ═══════════════════════════════════════
-       DỊCH VỤ — 9 dịch vụ chuyên sâu
+       VỊ TRÍ ĐANG TUYỂN — lưới 15 card
   ═══════════════════════════════════════ -->
   <section class="section" id="services">
     <div class="container">
       <div class="sh c reveal">
-        <div class="sl">Năng lực cốt lõi</div>
-        <h2 class="st">9 dịch vụ chuyên sâu</h2>
+        <div class="sl">Gia nhập đội ngũ</div>
+        <h2 class="st">15 vị trí đang tuyển</h2>
         <div class="divider c"></div>
-        <p class="ss">Mỗi dịch vụ được xây dựng từ kinh nghiệm thực chiến, tối ưu hoá cho thị trường quốc tế.</p>
+        <p class="ss">Bấm vào từng vị trí để xem mô tả chi tiết, lộ trình 30–60–90 ngày và ứng tuyển trực tiếp.</p>
       </div>
       <div class="srv-detail-grid">
 
-        <div class="srv-detail-card" id="web-dev">
+        <a class="srv-detail-card" href="tuyen-dung-seller-tmdt" aria-label="Xem chi tiết vị trí Seller TMĐT">
           <div class="srv-thumb">
-            <div class="img-ph ph-web" data-label="🌐  Web Development"><img loading="lazy" decoding="async" src="assets/images/services/web-development.webp" alt="Web Development" onerror="this.style.visibility='hidden'" width="1120" height="1680"></div>
+            <div class="img-ph ph-job" data-label="Seller TMĐT"><img loading="lazy" decoding="async" src="assets/images/team/seller-pod.webp" alt="Seller TMĐT tại Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
             <div class="srv-num">01</div>
           </div>
           <div class="srv-body">
-            <span class="srv-tag tag tag--blue">Technology</span>
-            <h3>Web Development</h3>
-            <p>Xây dựng hạ tầng thương mại điện tử chuyên nghiệp, tốc độ tối ưu và trải nghiệm người dùng quốc tế hàng đầu.</p>
+            <span class="srv-tag tag tag--green">Khối Kinh Doanh · SL: 05</span>
+            <h3>Seller TMĐT</h3>
+            <p>💰 8–15 triệu + thưởng doanh số · Xem chi tiết →</p>
           </div>
-        </div>
+        </a>
 
-        <div class="srv-detail-card" id="uiux">
+        <a class="srv-detail-card" href="tuyen-dung-video-creator" aria-label="Xem chi tiết vị trí Video Creator/Editor">
           <div class="srv-thumb">
-            <div class="img-ph ph-uiux" data-label="🎨  UI/UX Design"><img loading="lazy" decoding="async" src="assets/images/services/uiux-design.webp" alt="UI/UX Design" onerror="this.style.visibility='hidden'" width="1120" height="1680"></div>
+            <div class="img-ph ph-job" data-label="Video Creator/Editor"><img loading="lazy" decoding="async" src="assets/images/team/video-creator.webp" alt="Video Creator/Editor tại Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
             <div class="srv-num">02</div>
           </div>
           <div class="srv-body">
-            <span class="srv-tag tag tag--pink">Design</span>
-            <h3>UI/UX Design</h3>
-            <p>Thiết kế giao diện theo hành vi khách hàng quốc tế, tối đa hoá tỷ lệ chuyển đổi và trải nghiệm mua sắm.</p>
+            <span class="srv-tag tag tag--green">Khối Kinh Doanh · SL: 05</span>
+            <h3>Video Creator/Editor</h3>
+            <p>💰 8–12 triệu + thưởng hiệu quả video · Xem chi tiết →</p>
           </div>
-        </div>
+        </a>
 
-        <div class="srv-detail-card" id="graphic">
+        <a class="srv-detail-card" href="tuyen-dung-chuyen-vien-hr" aria-label="Xem chi tiết vị trí Chuyên viên HR">
           <div class="srv-thumb">
-            <div class="img-ph ph-graphic" data-label="✏️  Graphic Design"><img loading="lazy" decoding="async" src="assets/images/services/graphic-design.webp" alt="Graphic Design" onerror="this.style.visibility='hidden'" width="1120" height="1428"></div>
+            <div class="img-ph ph-job" data-label="Chuyên viên HR"><img loading="lazy" decoding="async" src="assets/images/team/hr.webp" alt="Chuyên viên HR tại Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
             <div class="srv-num">03</div>
           </div>
           <div class="srv-body">
-            <span class="srv-tag tag tag--green">Design</span>
-            <h3>Graphic Design</h3>
-            <p>Nhận diện thương hiệu và hình ảnh sản phẩm chuẩn thị hiếu phương Tây, nổi bật trên sàn quốc tế.</p>
+            <span class="srv-tag tag tag--blue">Khối hỗ trợ · SL: 01</span>
+            <h3>Chuyên viên HR</h3>
+            <p>💰 8–20 triệu theo năng lực · Xem chi tiết →</p>
           </div>
-        </div>
+        </a>
 
-        <div class="srv-detail-card" id="motion">
+        <a class="srv-detail-card" href="tuyen-dung-ke-toan-san-xuat" aria-label="Xem chi tiết vị trí Kế toán Sản xuất">
           <div class="srv-thumb">
-            <div class="img-ph ph-motion" data-label="🎬  Motion Graphics"><img loading="lazy" decoding="async" src="assets/images/services/motion-graphics.webp" alt="Motion Graphics" onerror="this.style.visibility='hidden'" width="1120" height="1680"></div>
+            <div class="img-ph ph-job" data-label="Kế toán Sản xuất"><img loading="lazy" decoding="async" src="assets/images/team/general-accountant.webp" alt="Kế toán Sản xuất tại Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
             <div class="srv-num">04</div>
           </div>
           <div class="srv-body">
-            <span class="srv-tag tag tag--purple">Media</span>
-            <h3>Motion Graphics</h3>
-            <p>Nội dung hình ảnh động ấn tượng cho chiến dịch quảng cáo số, thu hút ánh nhìn và tăng tương tác.</p>
+            <span class="srv-tag tag tag--blue">Khối hỗ trợ · SL: 01</span>
+            <h3>Kế toán Sản xuất</h3>
+            <p>💰 8–15 triệu theo năng lực · Xem chi tiết →</p>
           </div>
-        </div>
+        </a>
 
-        <div class="srv-detail-card">
+        <a class="srv-detail-card" href="tuyen-dung-designer-pod" aria-label="Xem chi tiết vị trí Designer POD">
           <div class="srv-thumb">
-            <div class="img-ph ph-photo" data-label="📸  Photography"><img loading="lazy" decoding="async" src="assets/images/services/photography.webp" alt="Photography" onerror="this.style.visibility='hidden'" width="1120" height="1680"></div>
+            <div class="img-ph ph-job" data-label="Designer POD"><img loading="lazy" decoding="async" src="assets/images/team/graphic-designer.webp" alt="Designer POD tại Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
             <div class="srv-num">05</div>
           </div>
           <div class="srv-body">
-            <span class="srv-tag tag tag--yellow">Media</span>
-            <h3>Photography</h3>
-            <p>Chụp ảnh sản phẩm chuyên nghiệp, thể hiện chất lượng chi tiết và giá trị hàng hoá đến từng pixel.</p>
+            <span class="srv-tag tag tag--pink">Khối Sản Xuất · Design · SL: Nhiều</span>
+            <h3>Designer POD</h3>
+            <p>💰 8–12 triệu + thưởng KPI · Xem chi tiết →</p>
           </div>
-        </div>
+        </a>
 
-        <div class="srv-detail-card">
+        <a class="srv-detail-card" href="tuyen-dung-designer-emb" aria-label="Xem chi tiết vị trí Designer EMB">
           <div class="srv-thumb">
-            <div class="img-ph ph-video" data-label="🎥  Video Production"><img loading="lazy" decoding="async" src="assets/images/services/video-production.webp" alt="Video Production" onerror="this.style.visibility='hidden'" width="1120" height="1681"></div>
+            <div class="img-ph ph-job" data-label="Designer EMB"><img loading="lazy" decoding="async" src="assets/images/team/embroidery-manager.webp" alt="Designer EMB tại Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
             <div class="srv-num">06</div>
           </div>
           <div class="srv-body">
-            <span class="srv-tag tag tag--red">Media</span>
-            <h3>Video Production</h3>
-            <p>Video ngắn TikTok/Reels tối ưu hoá cho viral engagement, kể câu chuyện thương hiệu cuốn hút.</p>
+            <span class="srv-tag tag tag--pink">Khối Sản Xuất · Design · SL: Nhiều</span>
+            <h3>Designer EMB</h3>
+            <p>💰 8–12 triệu + thưởng KPI · Xem chi tiết →</p>
           </div>
-        </div>
+        </a>
 
-        <div class="srv-detail-card" id="ecom">
+        <a class="srv-detail-card" href="tuyen-dung-qc-ca-hanh-chanh" aria-label="Xem chi tiết vị trí Nhân viên QC — Ca Hành chánh">
           <div class="srv-thumb">
-            <div class="img-ph ph-ecom" data-label="🛒  E-com Solutions"><img loading="lazy" decoding="async" src="assets/images/services/ecom-solutions.webp" alt="E-com Solutions" onerror="this.style.visibility='hidden'" width="1120" height="1680"></div>
+            <div class="img-ph ph-job" data-label="Nhân viên QC — Ca Hành chánh"><img loading="lazy" decoding="async" src="assets/images/team/quality-control.webp" alt="Nhân viên QC kiểm hàng tại xưởng Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
             <div class="srv-num">07</div>
           </div>
           <div class="srv-body">
-            <span class="srv-tag tag tag--blue">E-commerce</span>
-            <h3>E-com Solutions</h3>
-            <p>Giải pháp vận hành toàn diện trên Amazon, Etsy và TikTok Shop, từ setup đến tối ưu doanh số.</p>
+            <span class="srv-tag tag tag--yellow">Khối Sản Xuất · SL: 05</span>
+            <h3>Nhân viên QC — Ca Hành chánh</h3>
+            <p>💰 Từ 7 triệu + OT + thưởng · Xem chi tiết →</p>
           </div>
-        </div>
+        </a>
 
-        <div class="srv-detail-card" id="marketing">
+        <a class="srv-detail-card" href="tuyen-dung-qc-ca-dem" aria-label="Xem chi tiết vị trí Nhân viên QC — Ca Đêm">
           <div class="srv-thumb">
-            <div class="img-ph ph-marketing" data-label="📊  Digital Marketing"><img loading="lazy" decoding="async" src="assets/images/services/digital-marketing.webp" alt="Digital Marketing" onerror="this.style.visibility='hidden'" width="1120" height="1680"></div>
+            <div class="img-ph ph-job" data-label="Nhân viên QC — Ca Đêm"><img loading="lazy" decoding="async" src="assets/images/team/inspector.webp" alt="Nhân viên QC ca đêm tại xưởng Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
             <div class="srv-num">08</div>
           </div>
           <div class="srv-body">
-            <span class="srv-tag tag tag--green">Marketing</span>
-            <h3>Digital Marketing</h3>
-            <p>Chiến dịch quảng cáo đa kênh, tối ưu ngân sách thông minh và tăng trưởng doanh thu bền vững.</p>
+            <span class="srv-tag tag tag--yellow">Khối Sản Xuất · SL: 05 🌙</span>
+            <h3>Nhân viên QC — Ca Đêm</h3>
+            <p>💰 Từ 7 triệu + OT + thưởng · Xem chi tiết →</p>
           </div>
-        </div>
+        </a>
 
-        <div class="srv-detail-card">
+        <a class="srv-detail-card" href="tuyen-dung-dung-may-theu" aria-label="Xem chi tiết vị trí NV Đứng Máy Thêu — Ca Hành chánh">
           <div class="srv-thumb">
-            <div class="img-ph ph-tech" data-label="⚙️  Tech Optimization"><img loading="lazy" decoding="async" src="assets/images/services/tech-optimization.webp" alt="Tech Optimization" onerror="this.style.visibility='hidden'" width="1120" height="1681"></div>
+            <div class="img-ph ph-job" data-label="NV Đứng Máy Thêu — Ca Hành chánh"><img loading="lazy" decoding="async" src="assets/images/team/embroidery-technician.webp" alt="Nhân viên đứng máy thêu tại xưởng Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
             <div class="srv-num">09</div>
           </div>
           <div class="srv-body">
-            <span class="srv-tag tag tag--blue">Technology</span>
-            <h3>Tech Optimization</h3>
-            <p>Cập nhật công nghệ liên tục, nâng cấp hệ thống và tối ưu hiệu suất để luôn dẫn đầu thị trường.</p>
+            <span class="srv-tag tag tag--yellow">Khối Sản Xuất · SL: Nhiều</span>
+            <h3>NV Đứng Máy Thêu — Ca Hành chánh</h3>
+            <p>💰 Từ 7 triệu + OT + thưởng · Xem chi tiết →</p>
           </div>
-        </div>
+        </a>
+
+        <a class="srv-detail-card" href="tuyen-dung-dung-may-theu-ca-dem" aria-label="Xem chi tiết vị trí NV Đứng Máy Thêu — Ca Đêm">
+          <div class="srv-thumb">
+            <div class="img-ph ph-job" data-label="NV Đứng Máy Thêu — Ca Đêm"><img loading="lazy" decoding="async" src="assets/images/team/embroidery-technician1.webp" alt="Nhân viên đứng máy thêu ca đêm tại xưởng Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
+            <div class="srv-num">10</div>
+          </div>
+          <div class="srv-body">
+            <span class="srv-tag tag tag--yellow">Khối Sản Xuất · SL: Nhiều 🌙</span>
+            <h3>NV Đứng Máy Thêu — Ca Đêm</h3>
+            <p>💰 Từ 7 triệu + OT + thưởng · Xem chi tiết →</p>
+          </div>
+        </a>
+
+        <a class="srv-detail-card" href="tuyen-dung-van-hanh-may-laser" aria-label="Xem chi tiết vị trí NV Vận Hành Máy Laser">
+          <div class="srv-thumb">
+            <div class="img-ph ph-job" data-label="NV Vận Hành Máy Laser"><img loading="lazy" decoding="async" src="assets/images/team/laser.jpg" alt="Nhân viên vận hành máy laser tại xưởng Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
+            <div class="srv-num">11</div>
+          </div>
+          <div class="srv-body">
+            <span class="srv-tag tag tag--yellow">Khối Sản Xuất · SL: 01</span>
+            <h3>NV Vận Hành Máy Laser</h3>
+            <p>💰 Từ 7 triệu + OT + thưởng · Xem chi tiết →</p>
+          </div>
+        </a>
+
+        <a class="srv-detail-card" href="tuyen-dung-van-hanh-may-in-giay" aria-label="Xem chi tiết vị trí NV Vận Hành Máy In Giấy">
+          <div class="srv-thumb">
+            <div class="img-ph ph-job" data-label="NV Vận Hành Máy In Giấy"><img loading="lazy" decoding="async" src="assets/images/team/printer.webp" alt="Nhân viên vận hành máy in giấy tại xưởng Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
+            <div class="srv-num">12</div>
+          </div>
+          <div class="srv-body">
+            <span class="srv-tag tag tag--yellow">Khối Sản Xuất · SL: 01</span>
+            <h3>NV Vận Hành Máy In Giấy</h3>
+            <p>💰 Từ 7 triệu + OT + thưởng · Xem chi tiết →</p>
+          </div>
+        </a>
+
+        <a class="srv-detail-card" href="tuyen-dung-van-hanh-may-in-uv" aria-label="Xem chi tiết vị trí NV Vận Hành Máy In UV Phẳng">
+          <div class="srv-thumb">
+            <div class="img-ph ph-job" data-label="NV Vận Hành Máy In UV Phẳng"><img loading="lazy" decoding="async" src="assets/images/team/printer.webp" alt="Nhân viên vận hành máy in UV phẳng tại xưởng Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
+            <div class="srv-num">13</div>
+          </div>
+          <div class="srv-body">
+            <span class="srv-tag tag tag--yellow">Khối Sản Xuất · SL: 01</span>
+            <h3>NV Vận Hành Máy In UV Phẳng</h3>
+            <p>💰 Từ 7 triệu + OT + thưởng · Xem chi tiết →</p>
+          </div>
+        </a>
+
+        <a class="srv-detail-card" href="tuyen-dung-quan-ly-kho" aria-label="Xem chi tiết vị trí NV Quản lý Kho NVL">
+          <div class="srv-thumb">
+            <div class="img-ph ph-job" data-label="NV Quản lý Kho NVL"><img loading="lazy" decoding="async" src="assets/images/team/inspector.webp" alt="Nhân viên quản lý kho nguyên vật liệu tại Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
+            <div class="srv-num">14</div>
+          </div>
+          <div class="srv-body">
+            <span class="srv-tag tag tag--yellow">Khối Sản Xuất · SL: 01</span>
+            <h3>NV Quản lý Kho NVL</h3>
+            <p>💰 8–10 triệu + OT + thưởng · Xem chi tiết →</p>
+          </div>
+        </a>
+
+        <a class="srv-detail-card" href="tuyen-dung-chuyen-vien-it-ai" aria-label="Xem chi tiết vị trí Chuyên viên IT — Ứng dụng AI">
+          <div class="srv-thumb">
+            <div class="img-ph ph-job" data-label="Chuyên viên IT — Ứng dụng AI"><img loading="lazy" decoding="async" src="assets/images/team/web-developer.jpg" alt="Chuyên viên IT ứng dụng AI tại Ethan Ecom" onerror="this.style.visibility='hidden'"></div>
+            <div class="srv-num">15</div>
+          </div>
+          <div class="srv-body">
+            <span class="srv-tag tag tag--blue">Khối hỗ trợ · SL: 01</span>
+            <h3>Chuyên viên IT — Ứng dụng AI</h3>
+            <p>💰 8–20 triệu + thưởng hiệu quả · Xem chi tiết →</p>
+          </div>
+        </a>
 
       </div>
     </div>
@@ -1713,25 +1741,6 @@ a.jcard{text-decoration:none;color:inherit}
   </div>
 </div>
 
-<!-- SERVICE DETAIL OVERLAY -->
-<div class="svd" id="svdOverlay" role="dialog" aria-modal="true" aria-labelledby="svdTitle" hidden>
-  <button class="svd-close" id="svdClose" aria-label="Đóng chi tiết dịch vụ">✕</button>
-  <div class="svd-wrap">
-    <div class="svd-media"><img loading="lazy" decoding="async" id="svdImg" alt="Ảnh minh hoạ dịch vụ Ethan Ecom"></div>
-    <div class="svd-content">
-      <h2 class="svd-title" id="svdTitle"></h2>
-      <div class="svd-meta" id="svdMeta"></div>
-      <p class="svd-intro" id="svdIntro"></p>
-      <p class="svd-gains-lead">Thế mạnh của Ethan Ecom:</p>
-      <ul class="svd-gains" id="svdGains"></ul>
-      <button type="button" class="btn btn--blue svd-apply" id="svdApply">Ứng tuyển ngay</button>
-      <hr class="svd-hr">
-      <h3 class="svd-h2">Chi tiết dịch vụ</h3>
-      <div class="svd-grid" id="svdGrid"></div>
-    </div>
-  </div>
-</div>
-
 <!-- Shared JS (must be last) -->
 <script src="assets/js/shared.js?v=housef07"></script>
 <script>
@@ -1892,147 +1901,6 @@ applyForm.addEventListener('submit', function(e){
     showApplySuccess();
   }
 });
-
-// ══ SERVICE DETAIL OVERLAY — bấm card dịch vụ → trang chi tiết ══
-var SVD_DATA = [
-  { meta:['In-house','Technology','Ethan Ecom'],
-    intro:'Chúng tôi xây dựng hạ tầng thương mại điện tử chuyên nghiệp: website tốc độ cao, chuẩn SEO và trải nghiệm mua sắm tối ưu cho khách hàng quốc tế. Mỗi dòng code đều hướng đến một mục tiêu — chuyển đổi.',
-    gains:[['Hiệu suất hàng đầu','Core Web Vitals đạt chuẩn, tải trang nhanh trên mọi thiết bị.'],
-           ['Chuẩn quốc tế','thiết kế theo hành vi người dùng Mỹ/EU, sẵn sàng đa ngôn ngữ.'],
-           ['Tích hợp sâu','kết nối trực tiếp Amazon, Etsy, TikTok Shop và hệ thống vận hành nội bộ.']],
-    items:[['Website TMĐT tốc độ cao','Nền tảng bán hàng nhanh, ổn định, sẵn sàng scale mùa cao điểm.'],
-           ['Landing page tối ưu chuyển đổi','Thiết kế theo phễu, thử nghiệm liên tục để tăng tỷ lệ đặt hàng.'],
-           ['Tích hợp Amazon, Etsy, TikTok Shop','Đồng bộ sản phẩm, tồn kho và đơn hàng đa sàn tự động.'],
-           ['Responsive & Mobile-first','Trải nghiệm mượt trên mọi màn hình, ưu tiên thiết bị di động.']] },
-  { meta:['In-house','Design','Ethan Ecom'],
-    intro:'Giao diện đẹp chưa đủ — phải bán được hàng. Chúng tôi thiết kế theo hành vi khách hàng quốc tế, tối đa hoá tỷ lệ chuyển đổi và giữ chân người mua qua từng điểm chạm.',
-    gains:[['Data-driven','mọi quyết định thiết kế dựa trên nghiên cứu người dùng và số liệu thật.'],
-           ['Hệ thống hoá','design system đồng bộ giúp phát triển nhanh, nhất quán mọi kênh.'],
-           ['Tối ưu liên tục','A/B testing định kỳ để cải thiện chuyển đổi từng phần trăm.']],
-    items:[['Research & User Journey Mapping','Vẽ hành trình mua hàng để tìm đúng điểm rơi chuyển đổi.'],
-           ['Wireframe & Prototype','Thử nghiệm ý tưởng nhanh trước khi phát triển chính thức.'],
-           ['Design System & Component Library','Bộ thành phần tái sử dụng, đồng nhất thương hiệu.'],
-           ['A/B Testing & Conversion Optimization','Đo lường và cải thiện trải nghiệm liên tục.']] },
-  { meta:['In-house','Design','Ethan Ecom'],
-    intro:'Nhận diện thương hiệu và hình ảnh sản phẩm chuẩn thị hiếu phương Tây — giúp sản phẩm nổi bật giữa hàng nghìn đối thủ trên sàn quốc tế.',
-    gains:[['Am hiểu thị trường Mỹ','phong cách hình ảnh đúng gu khách hàng bản địa.'],
-           ['Sản xuất in-house','từ ý tưởng đến file in hoàn thiện, kiểm soát chất lượng 100%.'],
-           ['Đồng bộ đa kênh','một bộ nhận diện chạy xuyên suốt website, sàn TMĐT và mạng xã hội.']],
-    items:[['Brand Identity & Logo Design','Xây dựng bộ nhận diện chuyên nghiệp, khác biệt.'],
-           ['Amazon/Etsy Product Images','Hình ảnh listing chuẩn quy định, tăng tỷ lệ click.'],
-           ['Packaging & Label Design','Bao bì đúng chuẩn in ấn, nâng trải nghiệm mở hộp.'],
-           ['Social Media Graphics','Ấn phẩm mạng xã hội thu hút, đúng nhận diện.']] },
-  { meta:['In-house','Media','Ethan Ecom'],
-    intro:'Nội dung hình ảnh động ấn tượng cho chiến dịch quảng cáo số — thu hút ánh nhìn trong 3 giây đầu và tăng tương tác vượt trội.',
-    gains:[['Storytelling ngắn gọn','truyền tải thông điệp trọn vẹn trong vài giây đầu tiên.'],
-           ['Tối ưu cho quảng cáo','format chuẩn từng nền tảng, tỷ lệ xem hết video cao.'],
-           ['Sản xuất nhanh','quy trình in-house rút ngắn thời gian ra creative mới.']],
-    items:[['Animated Logo & Brand Elements','Nhận diện chuyển động độc quyền cho thương hiệu.'],
-           ['Product Demo Animations','Trình diễn tính năng sản phẩm trực quan, dễ hiểu.'],
-           ['Social Media Animations','Nội dung động bắt trend cho TikTok, Instagram.'],
-           ['Ad Creative Animations','Creative quảng cáo đổi mới liên tục, chống nhàm chán.']] },
-  { meta:['In-house','Media','Ethan Ecom'],
-    intro:'Chụp ảnh sản phẩm chuyên nghiệp trong studio nội bộ — thể hiện chất lượng chi tiết và giá trị hàng hoá đến từng pixel.',
-    gains:[['Studio nội bộ','chủ động ánh sáng, bối cảnh và tiến độ chụp.'],
-           ['Chuẩn từng sàn','đúng quy cách hình ảnh của Amazon, Etsy, TikTok Shop.'],
-           ['Hậu kỳ tinh tế','màu sắc trung thực, tôn chất liệu sản phẩm.']],
-    items:[['Product Photography (Studio & Lifestyle)','Ảnh studio sắc nét và lifestyle giàu cảm xúc.'],
-           ['Amazon Main & Infographic Images','Ảnh chính chuẩn quy định và infographic thuyết phục.'],
-           ['Etsy Listing Photos','Bộ ảnh listing đồng bộ, tăng tỷ lệ chuyển đổi.'],
-           ['Post-processing & Retouching','Hậu kỳ chuyên sâu, giữ trọn chi tiết chất liệu.']] },
-  { meta:['In-house','Media','Ethan Ecom'],
-    intro:'Video ngắn TikTok/Reels tối ưu cho viral engagement — kể câu chuyện thương hiệu cuốn hút và chuyển hoá lượt xem thành đơn hàng.',
-    gains:[['Hiểu thuật toán','cấu trúc video giữ chân người xem ngay từ giây đầu.'],
-           ['Ekip in-house','quay dựng khép kín, ra video mới liên tục mỗi tuần.'],
-           ['Đo lường rõ ràng','tối ưu theo tỷ lệ xem hết và tỷ lệ chuyển đổi thực tế.']],
-    items:[['TikTok Shop Product Videos','Video bán hàng trực tiếp trên TikTok Shop US.'],
-           ['Instagram Reels & Stories','Nội dung ngắn giữ nhịp hiện diện thương hiệu.'],
-           ['Amazon A+ Content Videos','Video trang sản phẩm tăng độ tin cậy khi mua.'],
-           ['Brand Story & Company Videos','Câu chuyện thương hiệu truyền cảm hứng.']] },
-  { meta:['In-house','E-commerce','Ethan Ecom'],
-    intro:'Giải pháp vận hành toàn diện trên Amazon, Etsy và TikTok Shop — từ setup tài khoản đến tối ưu doanh số cho từng listing.',
-    gains:[['Kinh nghiệm thực chiến','trực tiếp vận hành đa sàn tại thị trường Mỹ.'],
-           ['Tự chủ sản xuất','in-house (thêu, in giấy, in 3D) giúp kiểm soát chất lượng và biên lợi nhuận.'],
-           ['Quy trình chuẩn','từ nghiên cứu sản phẩm đến chăm sóc khách hàng sau bán.']],
-    items:[['Amazon Store Setup & SEO','Xây dựng và tối ưu store chuẩn thuật toán tìm kiếm.'],
-           ['Etsy Shop Optimization','Tối ưu listing, tag và SEO nội sàn.'],
-           ['TikTok Shop US Launch','Khai mở kênh bán tăng trưởng nhanh nhất hiện nay.'],
-           ['Inventory & Order Management','Quản lý tồn kho, đơn hàng mượt mà, chính xác.']] },
-  { meta:['In-house','Marketing','Ethan Ecom'],
-    intro:'Chiến dịch quảng cáo đa kênh với ngân sách tối ưu thông minh — tăng trưởng doanh thu bền vững thay vì đốt tiền theo trend.',
-    gains:[['Đa kênh đồng bộ','Amazon PPC, TikTok Ads và social chạy cùng một chiến lược.'],
-           ['Tối ưu theo dữ liệu','quyết định ngân sách dựa trên hiệu quả hoàn vốn thực tế.'],
-           ['Báo cáo minh bạch','số liệu rõ ràng, đo được hiệu quả từng đồng chi tiêu.']],
-    items:[['Amazon PPC & Sponsored Ads','Đấu thầu từ khoá hiệu quả, tối ưu chi phí quảng cáo.'],
-           ['TikTok Ads & Spark Ads','Khuếch đại nội dung viral thành doanh số.'],
-           ['Social Media Marketing','Nuôi dưỡng cộng đồng và độ nhận biết thương hiệu.'],
-           ['Analytics & Performance Reporting','Theo dõi hiệu quả chiến dịch theo thời gian thực.']] },
-  { meta:['In-house','Technology','Ethan Ecom'],
-    intro:'Cập nhật công nghệ liên tục, nâng cấp hệ thống và tối ưu hiệu suất — để vận hành luôn nhanh hơn, ổn định hơn đối thủ.',
-    gains:[['Chủ động nâng cấp','rà soát hệ thống định kỳ, không chờ sự cố xảy ra.'],
-           ['Hiệu suất đo được','benchmark trước/sau mỗi lần tối ưu.'],
-           ['Bảo mật & ổn định','giám sát liên tục, sao lưu dữ liệu an toàn.']],
-    items:[['Website Performance Audit','Rà soát toàn diện tốc độ và trải nghiệm.'],
-           ['Core Web Vitals Optimization','Đạt chuẩn Google, cải thiện SEO tự nhiên.'],
-           ['E-commerce Platform Migration','Chuyển đổi nền tảng an toàn, không gián đoạn bán hàng.'],
-           ['API Integration & Automation','Kết nối hệ thống, tự động hoá quy trình vận hành.']] }
-];
-var SVD_ICONS = [
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>',
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>',
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>',
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>'
-];
-(function(){
-  var overlay = document.getElementById('svdOverlay');
-  if (!overlay) return;
-  var cards = document.querySelectorAll('.srv-detail-grid .srv-detail-card');
-  var closeBtn = document.getElementById('svdClose');
-  var applyBtn = document.getElementById('svdApply');
-  var svdTrigger = null;
-
-  // Nút "Ứng tuyển ngay" trong chi tiết dịch vụ → mở popup ứng tuyển (modal z-index 9999 > overlay 9998)
-  applyBtn.addEventListener('click', function(){
-    openModal(document.getElementById('svdTitle').textContent);
-  });
-
-  function openSvd(i, card){
-    var d = SVD_DATA[i]; if (!d) return;
-    var img = card.querySelector('.srv-thumb img');
-    var title = card.querySelector('.srv-body h3');
-    var el = document.getElementById('svdImg');
-    el.src = img ? img.src : ''; el.alt = title ? title.textContent : '';
-    document.getElementById('svdTitle').textContent = title ? title.textContent : '';
-    document.getElementById('svdMeta').innerHTML = d.meta.map(function(m){ return '<span>'+m+'</span>'; }).join('<span class="sep">/</span>');
-    document.getElementById('svdIntro').textContent = d.intro;
-    document.getElementById('svdGains').innerHTML = d.gains.map(function(g){
-      return '<li><strong>'+g[0]+':</strong> '+g[1]+'</li>'; }).join('');
-    document.getElementById('svdGrid').innerHTML = d.items.map(function(it, k){
-      return '<div class="svd-item"><div class="svd-ico">'+SVD_ICONS[k%4]+'</div><h4>'+it[0]+'</h4><p>'+it[1]+'</p></div>'; }).join('');
-    svdTrigger = document.activeElement;
-    overlay.hidden = false; overlay.classList.add('open');
-    overlay.scrollTop = 0;
-    document.body.classList.add('svd-lock');
-    closeBtn.focus();
-  }
-  function closeSvd(){
-    overlay.classList.remove('open'); overlay.hidden = true;
-    document.body.classList.remove('svd-lock');
-    if (svdTrigger && svdTrigger.focus) { svdTrigger.focus(); svdTrigger = null; }
-  }
-  cards.forEach(function(card, i){
-    card.setAttribute('role','button'); card.setAttribute('tabindex','0');
-    card.setAttribute('aria-label','Xem chi tiết dịch vụ');
-    card.addEventListener('click', function(){ openSvd(i, card); });
-    card.addEventListener('keydown', function(e){
-      if (e.key==='Enter' || e.key===' ' || e.key==='Spacebar'){ e.preventDefault(); openSvd(i, card); }
-    });
-  });
-  closeBtn.addEventListener('click', closeSvd);
-  document.addEventListener('keydown', function(e){
-    if (e.key==='Escape' && overlay.classList.contains('open')) closeSvd();
-  });
-})();
 
 // ── Emoji reaction trên card "Người Ethan nói gì về Ethan?" — pop nút + emoji tung lên trong card ──
 (function(){
@@ -2271,7 +2139,7 @@ var SVD_ICONS = [
   } else { armIntro(); }
 })();
 
-/* ── GRID 9 dịch vụ: thả từng card vào vị trí lần lượt khi cuộn tới ── */
+/* ── GRID 15 vị trí: thả từng card vào vị trí lần lượt khi cuộn tới ── */
 (function(){
   var grid = document.querySelector('#services .srv-detail-grid');
   if (!grid) return;
@@ -2287,7 +2155,7 @@ var SVD_ICONS = [
     es.forEach(function(e){
       if (!e.isIntersecting || played) return;
       played = true; io.disconnect();
-      var START = 160, STAGGER = 150;   // thả từng card, lần lượt 1→9
+      var START = 160, STAGGER = 110;   // thả từng card, lần lượt 1→15
       cards.forEach(function(c, i){
         setTimeout(function(){ c.classList.add('dropped'); }, START + i*STAGGER);
       });
