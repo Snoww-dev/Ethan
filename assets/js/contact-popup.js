@@ -99,7 +99,7 @@
     position: relative;
     background: var(--cp-panel);
     border: 1px solid var(--cp-cream-400);
-    padding: 24px 40px;
+    padding: 32px 44px;
   }
   .cp-inner::before {
     content: '';
@@ -179,8 +179,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6px 32px;
-    margin-top: 10px;
-    padding: 7px 16px;
+    margin-top: 16px;
+    padding: 10px 20px;
     background: var(--cp-cream-50);
     border: 1px solid var(--cp-border);
   }
@@ -208,7 +208,7 @@
   }
 
   /* ── Form ── */
-  .cp-form { margin-top: 14px; }
+  .cp-form { margin-top: 22px; }
 
   .cp-grid {
     display: grid;
@@ -216,7 +216,7 @@
     gap: 0 20px;
   }
 
-  .cp-field { margin-bottom: 9px; }
+  .cp-field { margin-bottom: 16px; display: flex; flex-direction: column; }
 
   .cp-field label,
   .cp-label {
@@ -262,7 +262,7 @@
     border-color: var(--cp-navy-400);
     box-shadow: 0 0 0 3px rgba(220, 230, 240, 0.35);
   }
-  .cp-field textarea { min-height: 80px; resize: vertical; }
+  .cp-field textarea { min-height: 80px; resize: vertical; flex: 1; }
   .cp-field select { cursor: pointer; }
 
   /* Select với mũi tên riêng */
@@ -296,7 +296,7 @@
   .cp-upload {
     border: 1px dashed var(--cp-cream-400);
     background: var(--cp-cream-50);
-    padding: 15px 18px;
+    padding: 20px 20px;
     text-align: center;
     cursor: pointer;
     transition: border-color 0.25s ease, background 0.25s ease;
@@ -368,7 +368,7 @@
   }
 
   /* ── Submit ── */
-  .cp-actions { margin-top: 12px; }
+  .cp-actions { margin-top: 20px; }
 
   .cp-submit {
     display: inline-flex;
