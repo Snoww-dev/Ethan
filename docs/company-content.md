@@ -111,24 +111,28 @@ Mô tả ngắn thương hiệu: *"Ethan Ecom – nơi khơi nguồn sáng tạo
 
 ---
 
-## Vị trí tuyển dụng (Careers — 14 vị trí)
+## Vị trí tuyển dụng (Careers — 14 vị trí, cập nhật 2026-07-28)
 
-| Vị trí | Bộ phận | SL | Chế độ Lương / Thu nhập cơ bản |
-|--------|---------|----|---------------------------------|
-| Leader TikTokShop US | E-commerce | Không giới hạn | Up to 20 Triệu + KPI |
-| Seller POD & Dropship | E-commerce | Không giới hạn | Up to 15 Triệu + KPI |
-| Nhân viên Nhân sự (HR) | HR & Admin | 1 | Từ 9 Triệu + Thưởng |
-| Nhân viên Internet Marketing | Online Marketing | 10 | Từ 8 Triệu + Thưởng KPI (tới 30 Tr) |
-| Video Creator/Editor | Media & Production | 10 | Từ 8 Triệu + Thưởng KPI (tới 30 Tr) |
-| Nhân viên Web Developer | Tech & IT | 3 | 8 - 12 Triệu |
-| Graphic Designer | Creative Design | 10 | Từ 8 Triệu + Thưởng KPI (tới 30 Tr) |
-| Quản lý xưởng thêu | Production | 1 | Từ 8 Triệu + Bonus |
-| Nhân viên kỹ thuật thêu | Production | 4 | Từ 7 Triệu + Bonus |
-| Nhân viên kiểm hàng | Production | 2 | Từ 6 Triệu + Bonus |
-| Nhân viên QC | Production | 4 | Từ 7 Triệu + Bonus |
-| Nhân viên Kỹ thuật máy laser | Production | Không giới hạn | Từ 7 Triệu + Bonus |
-| Nhân viên Kế toán tổng hợp | Finance | 2 | Từ 7 Triệu + Thưởng |
-| Nhân viên Vận hành máy in | Production | 2 | Từ 8 Triệu + Bonus |
+> Nguồn chi tiết từng JD: `tools/tuyen-dung-jobs.json` (mỗi vị trí 1 trang riêng `tuyen-dung-<slug>.html`, sinh bằng `tools/gen-tuyen-dung.py`).
+
+| Vị trí | Mã | Khối / Bộ phận | SL | Lương | Trang |
+|--------|----|----------------|----|-------|-------|
+| Seller TMĐT (E-commerce Seller) | KD-SELLER | Khối Kinh Doanh | 05 | 8–15 Tr + thưởng doanh số | tuyen-dung-seller-tmdt |
+| Chuyên viên HR — Đào tạo, Tuyển dụng & Văn hoá | HR-01 | Dùng chung — HR | 01 | 8–20 Tr | tuyen-dung-chuyen-vien-hr |
+| Kế toán Sản xuất (Giá thành) | ACC-PROD-01 | Dùng chung — Kế toán | 01 | 8–15 Tr | tuyen-dung-ke-toan-san-xuat |
+| Designer POD (Paper Print) | SX2-DESIGN-01 | SX2 Giấy / Design POD | Nhiều | 8–12 Tr + KPI | tuyen-dung-designer-pod |
+| Designer EMB (Digitizing Thêu) | SX1-DESIGN-01 | SX1 Thêu / Design EMB | Nhiều | 8–12 Tr + KPI | tuyen-dung-designer-emb |
+| Nhân viên QC (Kiểm hàng) — Ca Hành chánh | SX-QC-DAY | Bộ phận QC | 05 | Từ 7 Tr + OT + thưởng | tuyen-dung-qc-ca-hanh-chanh |
+| Nhân viên QC (Kiểm hàng) — Ca Đêm (18:00–1:00) | SX-QC-NIGHT | Bộ phận QC | 05 | Từ 7 Tr + OT + thưởng | tuyen-dung-qc-ca-dem |
+| NV Đứng Máy Thêu — Ca Hành chánh | SX1-VANHANH-DAY | SX1 Thêu | Nhiều | Từ 7 Tr + OT + thưởng | tuyen-dung-dung-may-theu |
+| NV Đứng Máy Thêu — Ca Đêm (18:00–1:00) | SX1-VANHANH-NIGHT | SX1 Thêu | Nhiều | Từ 7 Tr + OT + thưởng | tuyen-dung-dung-may-theu-ca-dem |
+| NV Vận Hành Máy Laser | SX-LASER-01 | Cắt/Khắc Laser | 01 | Từ 7 Tr + OT + thưởng | tuyen-dung-van-hanh-may-laser |
+| NV Vận Hành Máy In Giấy | SX2-INGIAY-01 | SX2 Giấy | 01 | Từ 7 Tr + OT + thưởng | tuyen-dung-van-hanh-may-in-giay |
+| NV Vận Hành Máy In UV Phẳng (UV Flatbed) | SX-UVFLATBED-01 | Bộ phận In UV | 01 | Từ 7 Tr + OT + thưởng | tuyen-dung-van-hanh-may-in-uv |
+| NV Quản lý Kho Nguyên Vật Liệu | SX-KHO-01 | Kho NVL | 01 | 8–10 Tr + OT + thưởng | tuyen-dung-quan-ly-kho |
+| Chuyên viên IT — Nghiên cứu & Ứng dụng AI | IT-AI-01 | Dùng chung — IT | 01 | 8–20 Tr + thưởng hiệu quả | tuyen-dung-chuyen-vien-it-ai |
+
+Ứng tuyển: CV về **hr@ethanecom.com** (tiêu đề `[Tên Vị Trí] - [Họ tên]`); khối văn phòng/thiết kế thêm kênh fanpage Ethan Ecom, khối sản xuất thêm gọi/Zalo **0967 473 979**. Địa điểm: 61/1G Võ Dõng (2), Thống Nhất, Đồng Nai. Giờ hành chánh 7:30–17:00 T2–T7; ca đêm 18:00–1:00. Thử việc 1 tháng.
 
 **Văn hoá tuyển dụng (thông điệp thật):** **"ETHAN KHÔNG PHẢI NƠI DÀNH CHO TẤT CẢ MỌI NGƯỜI."**
 - *Bạn sẽ phát triển ở Ethan nếu:* học vì thích chứ không vì bị ép; tự tìm cách mới khi cách cũ hết hiệu quả; chấp nhận KPI tính theo **lợi nhuận thực**; nhạy cảm với xu hướng thị trường Mỹ; xem **AI là công cụ, dùng mỗi ngày**.

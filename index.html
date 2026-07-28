@@ -5325,27 +5325,27 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
   ];
 
   var JOBS = [
-    { num:"01", name:"Quality Control", img:"assets/images/team/quality-control.webp",
-      desc:"Kiểm soát chất lượng sản phẩm trước khi xuất kho, đảm bảo mỗi đơn hàng đến tay khách hàng đều đạt chuẩn cao nhất." },
-    { num:"02", name:"General Accountant", img:"assets/images/team/general-accountant.webp",
-      desc:"Phụ trách kế toán tổng hợp, quản lý sổ sách, báo cáo tài chính và dòng tiền cho hoạt động thương mại điện tử." },
-    { num:"03", name:"Seller POD", img:"assets/images/team/seller-pod.webp",
-      desc:"Khai phá các ngách sản phẩm tiềm năng. Nắm bắt xu hướng nhanh nhạy và mở rộng thị trường trên Amazon và Etsy." },
-    { num:"04", name:"Embroidery Technician", img:"assets/images/team/embroidery-technician.webp",
-      desc:"Vận hành máy thêu, xử lý file thiết kế và đảm bảo tiến độ sản xuất cho các đơn hàng thêu cá nhân hóa." },
-    { num:"05", name:"Graphic Designer", img:"assets/images/team/graphic-designer.webp",
-      desc:"Họa sĩ vẽ nên linh hồn thương hiệu. Thiết kế hình ảnh sản phẩm chuẩn thị hiếu quốc tế, giúp sản phẩm Ethan nổi bật giữa đại dương TikTok Shop, Etsy và Amazon." },
-    { num:"06", name:"Web Developer", img:"assets/images/team/web-developer.jpg",
-      desc:"Xây dựng và tối ưu hệ thống website, công cụ nội bộ phục vụ vận hành bán hàng đa kênh." },
-    { num:"07", name:"Video Creator", img:"assets/images/team/video-creator.webp",
-      desc:"Sản xuất video ngắn cho sản phẩm và thương hiệu, bắt kịp xu hướng nội dung trên các nền tảng quốc tế." },
-    { num:"08", name:"Leader TikTokShop US", img:"assets/images/team/leader-tiktokshop.webp",
-      desc:"Dẫn dắt đội ngũ vận hành kênh TikTok Shop thị trường Mỹ, xây dựng chiến lược tăng trưởng doanh số." },
-    { num:"09", name:"Internet Marketing", img:"assets/images/team/internet-marketing.jpg",
-      desc:"Lên kế hoạch và triển khai các chiến dịch quảng cáo, tối ưu hiệu quả tiếp cận khách hàng quốc tế." }
+    { num:"01", name:"Seller TMĐT", img:"assets/images/team/seller-pod.webp", href:"tuyen-dung-seller-tmdt",
+      desc:"Tự chủ vận hành gian hàng TikTok Shop, Etsy, Amazon thị trường Mỹ — từ ý tưởng sản phẩm, listing đến quảng cáo và chăm sóc khách hàng." },
+    { num:"02", name:"Designer POD", img:"assets/images/team/graphic-designer.webp", href:"tuyen-dung-designer-pod",
+      desc:"Thiết kế sản phẩm in ấn (áo, cốc, poster, giấy in...) đúng thị hiếu khách hàng Mỹ, đúng chuẩn kỹ thuật để đưa vào sản xuất và đăng bán." },
+    { num:"03", name:"Designer EMB", img:"assets/images/team/embroidery-manager.webp", href:"tuyen-dung-designer-emb",
+      desc:"Digitize thiết kế thành file thêu chuẩn, tối ưu đường chỉ và mật độ mũi thêu cho máy thêu công nghiệp — quyết định chất lượng sản phẩm thêu." },
+    { num:"04", name:"NV Đứng Máy Thêu", img:"assets/images/team/embroidery-technician.webp", href:"tuyen-dung-dung-may-theu",
+      desc:"Vận hành máy thêu vi tính: lên khung, canh chỉnh, thay chỉ — đảm bảo mũi thêu đẹp, đúng file thiết kế. Có ca hành chánh và ca đêm." },
+    { num:"05", name:"Nhân viên QC", img:"assets/images/team/quality-control.webp", href:"tuyen-dung-qc-ca-hanh-chanh",
+      desc:"Kiểm soát chất lượng hàng in, khắc, thêu trước khi đóng gói xuất hàng — không cần kinh nghiệm, được đào tạo từ đầu. Có ca hành chánh và ca đêm." },
+    { num:"06", name:"Vận Hành Máy In Giấy", img:"assets/images/team/printer.webp", href:"tuyen-dung-van-hanh-may-in-giay",
+      desc:"Vận hành máy in giấy cho các dòng thiệp, wrapping paper, suncatcher... đúng file, đúng màu sắc và đúng tiến độ sản xuất." },
+    { num:"07", name:"Vận Hành Máy Laser", img:"assets/images/team/laser.jpg", href:"tuyen-dung-van-hanh-may-laser",
+      desc:"Cắt/khắc laser trên gỗ, mica, da, giấy — chỉnh thông số theo từng chất liệu, sản phẩm ra đúng kích thước và độ sắc nét yêu cầu." },
+    { num:"08", name:"Chuyên viên HR", img:"assets/images/team/hr.webp", href:"tuyen-dung-chuyen-vien-hr",
+      desc:"Xây dựng văn hoá doanh nghiệp, tuyển dụng và onboarding — đồng hành cùng đội ngũ đang tăng trưởng nhanh của Ethan." },
+    { num:"09", name:"Chuyên viên IT — AI", img:"assets/images/team/web-developer.jpg", href:"tuyen-dung-chuyen-vien-it-ai",
+      desc:"Nghiên cứu và triển khai Claude, ChatGPT, Gemini vào quy trình từng bộ phận — mục tiêu tăng hiệu suất làm việc 2–3 lần." }
   ];
 
-  var current = 2; // mặc định: 03. Seller POD
+  var current = 0; // mặc định: 01. Seller TMĐT
 
   var CHECK = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">'
     + '<circle cx="9" cy="9" r="8.25" stroke="#35618D" stroke-width="1.2"/>'
@@ -5372,7 +5372,7 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
       + '<ul class="job__benefits">'
         + BENEFITS.map(function(b){ return '<li>' + CHECK + '<span>' + b + '</span></li>'; }).join('')
       + '</ul>'
-      + '<a class="btn-apply" href="tuyen-dung">Ứng tuyển ngay'
+      + '<a class="btn-apply" href="' + (j.href || 'tuyen-dung') + '">Ứng tuyển ngay'
         + '<svg width="22" height="16" viewBox="0 0 22 16" fill="none" aria-hidden="true"><path d="M14 1l7 7-7 7M21 8H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
       + '</a>';
     playFade(visualEl); playFade(colEl);

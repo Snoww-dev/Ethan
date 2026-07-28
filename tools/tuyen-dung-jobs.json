@@ -1,0 +1,958 @@
+{
+  "shared": {
+    "hours_day": "7:30 – 17:00, Thứ 2 – Thứ 7 (nghỉ trưa 1h30)",
+    "hours_night": "Ca 3: 18:00 – 1:00 sáng hôm sau, Thứ 2 – Thứ 7",
+    "probation": "1 tháng",
+    "email": "hr@ethanecom.com",
+    "zalo": "0967 473 979",
+    "company": "Công Ty TNHH Phát Triển Công Nghệ Ethan"
+  },
+  "jobs": [
+    {
+      "slug": "tuyen-dung-seller-tmdt",
+      "title": "Seller TMĐT (E-commerce Seller)",
+      "display": "Seller TMĐT",
+      "heroHtml": "Seller <em>TMĐT</em><br>Khối Kinh Doanh",
+      "code": "KD-SELLER",
+      "count": "05",
+      "deptKey": "kd",
+      "deptLabel": "Kinh doanh",
+      "block": "Khối Kinh Doanh",
+      "reportTo": "Team Leader / Manager phụ trách đội",
+      "location": "VP/Xưởng Ethanecom — 61/1G Võ Dõng 2, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại văn phòng",
+      "salary": "Thoả thuận theo năng lực — khung 8–15 triệu/tháng + thưởng theo doanh số/lợi nhuận",
+      "salaryCard": "8–15 triệu + thưởng doanh số",
+      "salaryMin": 8000000,
+      "salaryMax": 15000000,
+      "metaDesc": "Ethan Ecom tuyển 05 Seller TMĐT tại Thống Nhất, Đồng Nai — lương 8–15 triệu + thưởng doanh số. Tự chủ vận hành gian hàng TikTok Shop, Etsy, Amazon thị trường Mỹ. CV: hr@ethanecom.com.",
+      "context": "Ethanecom là công ty thương mại điện tử xuyên biên giới, tập trung thị trường Mỹ với các dòng sản phẩm POD, thêu công nghiệp (Embroidery) và in nhựa 3D trên các sàn TMĐT quốc tế (TikTok Shop, Etsy, Amazon, eBay, Shopify...). Công ty đang mở rộng đội ngũ Seller — người tự chủ vận hành một gian hàng từ A–Z, thực sự làm chủ kết quả kinh doanh của mình.",
+      "objective": "Vận hành và phát triển doanh số cho gian hàng TMĐT được giao: từ lên ý tưởng sản phẩm, tối ưu listing, chạy quảng cáo đến chăm sóc khách hàng — đảm bảo chỉ tiêu doanh thu và chất lượng gian hàng (rating ≥ 4.8).",
+      "duties": [
+        "Lên ý tưởng sản phẩm, nghiên cứu xu hướng & đối thủ (spy idea) phù hợp thị trường Mỹ",
+        "Đăng tải và tối ưu listing (tiêu đề, hình ảnh, mô tả, từ khoá SEO) trên sàn được giao",
+        "Lên kế hoạch và phối hợp chạy quảng cáo (Ads/GMV Max), theo dõi ROI/ROAS và tối ưu ngân sách",
+        "Định hướng nội dung media (video, hình ảnh) — phối hợp đội Media/Design",
+        "Chăm sóc khách hàng, xử lý đơn hàng, đánh giá, hoàn/trả để giữ điểm gian hàng ổn định",
+        "Theo dõi chỉ số kinh doanh (doanh thu, lợi nhuận, tỷ lệ chuyển đổi) và báo cáo định kỳ cho Team Leader",
+        "Phối hợp đội Sản Xuất / Design / Fulfillment để đảm bảo sản phẩm đúng tiến độ, đúng chất lượng"
+      ],
+      "requirements": [
+        "Sử dụng thành thạo các công cụ AI: Claude, Gemini, ChatGPT...",
+        "Học nhanh công cụ/phần mềm mới",
+        "Đọc hiểu tiếng Anh cơ bản (từ khoá, tên sản phẩm, giao tiếp đơn giản)",
+        "Chủ động, ham học, chịu được nhịp độ thay đổi nhanh của TMĐT quốc tế",
+        "Có trách nhiệm với kết quả, không ngại thử — sai — làm lại",
+        "Có kinh nghiệm TMĐT ít nhất 6 tháng trở lên"
+      ],
+      "preferred": [
+        "Có gu thẩm mỹ, cảm nhận hình ảnh/video tốt",
+        "Biết phân tích số liệu cơ bản (Excel/Google Sheets)",
+        "Từng tự vận hành hoặc quản lý độc lập một gian hàng/kênh bán hàng"
+      ],
+      "fitPairs": [
+        ["Ham học, sẵn sàng học cái mới từ đầu", "Muốn vào làm được ngay, ngại học"],
+        ["Chủ động, dám nhận trách nhiệm với kết quả kinh doanh", "Chờ được giao việc, né trách nhiệm khi kết quả chưa tốt"],
+        ["Thích nhịp độ nhanh, thay đổi liên tục của TMĐT quốc tế", "Cần môi trường ổn định, ít thay đổi"],
+        ["Thích làm việc nhóm nhưng vẫn tự chủ được phần việc của mình", "Chỉ quen làm theo hướng dẫn, không tự ra quyết định"],
+        ["Muốn gắn bó, phát triển thành Seller/Trưởng nhóm lâu dài", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Nắm quy trình vận hành sàn (upload, SEO, CSKH), làm quen 1 gian hàng cùng Team Leader",
+        "Tự chủ vận hành 1 gian hàng nhỏ, bắt đầu tự lên ý tưởng sản phẩm & tối ưu quảng cáo",
+        "Đạt chỉ tiêu doanh thu/chỉ số gian hàng cơ bản, được giao thêm gian hàng hoặc ngách sản phẩm mới"
+      ],
+      "kpis": [
+        "Doanh thu / lợi nhuận của gian hàng được giao theo tháng",
+        "Điểm đánh giá gian hàng (rating) ≥ 4.8",
+        "Tốc độ ra sản phẩm/listing mới (số lượng/tuần)",
+        "ROI/ROAS quảng cáo đạt mục tiêu của đội"
+      ],
+      "perks": [
+        "Lương cứng + thưởng theo doanh số/lợi nhuận đội; BHXH theo quy định",
+        "Thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Đào tạo bài bản A–Z về TMĐT quốc tế (SEO, quảng cáo, chăm sóc khách hàng, ứng dụng AI)",
+        "Lộ trình phát triển rõ ràng lên Seller cấp cao/Trưởng nhóm",
+        "Môi trường \"One Team One Goal\" — tập thể tử tế, đào tạo bài bản, ghi nhận xứng đáng"
+      ],
+      "emailTitle": "Seller TMĐT - Họ tên",
+      "applyChannel": "fanpage",
+      "img": "assets/images/team/seller-pod.webp",
+      "imgAlt": "Seller TMĐT tại Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-chuyen-vien-hr",
+      "title": "Chuyên viên HR — Đào tạo, Tuyển dụng & Văn hoá Doanh nghiệp",
+      "display": "Chuyên viên HR",
+      "heroHtml": "Chuyên viên <em>HR</em><br>Đào tạo & Văn hoá",
+      "code": "HR-01",
+      "count": "01",
+      "deptKey": "office",
+      "deptLabel": "Văn phòng",
+      "block": "Phòng ban dùng chung — HR",
+      "reportTo": "Ban giám đốc (CEO)",
+      "location": "VP Ethanecom — 61/1G Võ Dõng 2, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại văn phòng",
+      "salary": "Thoả thuận theo năng lực — khung 8–20 triệu/tháng",
+      "salaryCard": "8–20 triệu theo năng lực",
+      "salaryMin": 8000000,
+      "salaryMax": 20000000,
+      "metaDesc": "Ethan Ecom tuyển Chuyên viên HR (đào tạo, tuyển dụng & văn hoá doanh nghiệp) tại Thống Nhất, Đồng Nai — lương 8–20 triệu. Trực tiếp xây bộ máy HR từ đầu. CV: hr@ethanecom.com.",
+      "context": "Ethanecom đang tăng trưởng nhanh về quy mô nhân sự, liên tục tuyển dụng cho nhiều bộ phận. Công ty cần một đầu mối phụ trách đào tạo và văn hoá doanh nghiệp — đảm bảo nhân viên mới hiểu đúng nội quy, quy định và giá trị cốt lõi của Ethan ngay từ ngày đầu, đồng thời giữ gìn tinh thần gắn kết khi đội ngũ mở rộng.",
+      "objective": "Xây dựng và lan toả văn hoá doanh nghiệp Ethan, đồng thời đảm nhiệm các hoạt động nhân sự cốt lõi — tuyển dụng, quản lý hồ sơ, đánh giá hiệu suất và quan hệ nhân viên — để vận hành bộ phận HR hiệu quả, chuyên nghiệp.",
+      "duties": [
+        "Hiểu rõ văn hoá doanh nghiệp của Ethan, training nội bộ và hướng dẫn nhân viên mới về nội quy, quy định và văn hoá công ty",
+        "Hỗ trợ tuyển dụng: đăng tin, sàng lọc hồ sơ, sắp xếp phỏng vấn, phối hợp đánh giá và lựa chọn ứng viên phù hợp",
+        "Quản lý hồ sơ nhân viên (hợp đồng, thông tin cá nhân, quá trình công tác...) — đầy đủ, chính xác và bảo mật",
+        "Hỗ trợ đánh giá hiệu suất định kỳ, tổng hợp kết quả và cung cấp phản hồi mang tính xây dựng",
+        "Xử lý các vấn đề quan hệ nhân viên, hỗ trợ giải quyết mâu thuẫn/vướng mắc phát sinh",
+        "Quản lý page Ethan Ecom — lên nội dung, đăng bài tuyển dụng và văn hoá công ty, tương tác với ứng viên/nhân viên",
+        "Tổ chức hoạt động gắn kết nội bộ (team building, khảo sát mức độ hài lòng nhân viên...)",
+        "Hỗ trợ các công tác hành chính nhân sự khác khi cần (chấm công, chính sách, quy trình nghỉ việc...)"
+      ],
+      "requirements": [
+        "Hiểu về tâm lý học hành vi; giao tiếp tốt, khả năng xử lý vấn đề tốt",
+        "Tốt nghiệp Cao đẳng/Đại học chuyên ngành Quản trị nhân sự, Tâm lý học, Quản trị kinh doanh hoặc liên quan",
+        "Tối thiểu 1 năm kinh nghiệm ở vị trí HR Generalist/tuyển dụng/đào tạo",
+        "Hiểu biết cơ bản về Luật Lao động Việt Nam",
+        "Thành thạo tin học văn phòng (Word, Excel, PowerPoint)",
+        "Trung thực, cẩn thận, bảo mật thông tin nhân sự; chủ động xây dựng và gìn giữ văn hoá công ty"
+      ],
+      "preferred": [
+        "Có kinh nghiệm tuyển dụng và tổ chức đào tạo/onboarding tại doanh nghiệp quy mô tương đương",
+        "Từng làm việc ở công ty tăng trưởng nhanh, nhiều biến động nhân sự",
+        "Biết ứng dụng AI để xây dựng tài liệu/nội dung đào tạo",
+        "Biết quản lý fanpage/mạng xã hội, có gu nội dung",
+        "Có kiến thức cơ bản về lương, thưởng, phúc lợi (C&B)"
+      ],
+      "fitPairs": [
+        ["Thấu hiểu, kiên nhẫn khi hướng dẫn người khác", "Ngại tiếp xúc, thiếu kiên nhẫn khi phải giải thích nhiều lần"],
+        ["Chủ động xây dựng quy trình đào tạo từ đầu", "Chỉ quen làm theo quy trình có sẵn"],
+        ["Xử lý xung đột khéo léo, công tâm", "Né tránh mâu thuẫn, ngại đứng ra giải quyết"],
+        ["Tin và sống với văn hoá tập thể \"One Team One Goal\"", "Xem văn hoá công ty là hình thức, không quan trọng"],
+        ["Muốn gắn bó, xây dựng đội ngũ lâu dài", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Nắm toàn bộ nội quy, quy định, văn hoá và cơ cấu tổ chức hiện tại; tham gia quan sát 1–2 buổi onboarding",
+        "Tự chủ trì chương trình onboarding cho nhân viên mới; hoàn thiện tài liệu đào tạo văn hoá",
+        "Có quy trình onboarding chuẩn hoá, đo lường được mức độ hoà nhập nhân viên mới; báo cáo định kỳ cho Ban giám đốc"
+      ],
+      "kpis": [
+        "Tỷ lệ nhân viên mới hoàn thành onboarding đúng tiến độ",
+        "Thời gian tuyển dụng trung bình (time-to-hire) và tỷ lệ ứng viên giữ được sau thử việc",
+        "Mức độ hài lòng/hoà nhập của nhân viên mới (qua khảo sát)",
+        "Tỷ lệ hồ sơ nhân viên đầy đủ, cập nhật đúng hạn",
+        "Tỷ lệ nghỉ việc trong giai đoạn thử việc (turnover)",
+        "Số buổi đào tạo/nội dung văn hoá được tổ chức theo tháng/quý"
+      ],
+      "perks": [
+        "Lương theo năng lực + thưởng; BHXH theo quy định",
+        "Thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Được trực tiếp xây dựng văn hoá và bộ máy HR công ty từ đầu",
+        "Lộ trình phát triển lên HR Generalist cấp cao/Trưởng phòng Nhân sự",
+        "Môi trường \"One Team One Goal\" — tập thể tử tế, đào tạo bài bản, ghi nhận xứng đáng"
+      ],
+      "emailTitle": "HR Đào tạo & Văn hoá - Họ tên",
+      "applyChannel": "fanpage",
+      "img": "assets/images/team/hr.webp",
+      "imgAlt": "Chuyên viên HR tại Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-ke-toan-san-xuat",
+      "title": "Kế toán Sản xuất (Giá thành)",
+      "display": "Kế toán Sản xuất",
+      "heroHtml": "Kế toán <em>Sản xuất</em><br>(Giá thành)",
+      "code": "ACC-PROD-01",
+      "count": "01",
+      "deptKey": "office",
+      "deptLabel": "Văn phòng",
+      "block": "Phòng ban dùng chung — Kế toán (phối hợp chặt với Khối Sản Xuất)",
+      "reportTo": "Ban giám đốc",
+      "location": "VP/Xưởng Ethanecom — 61/1G Võ Dõng 2, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại văn phòng",
+      "salary": "Thoả thuận theo năng lực — khung 8–15 triệu/tháng",
+      "salaryCard": "8–15 triệu theo năng lực",
+      "salaryMin": 8000000,
+      "salaryMax": 15000000,
+      "metaDesc": "Ethan Ecom tuyển Kế toán Sản xuất (Giá thành) tại Thống Nhất, Đồng Nai — lương 8–15 triệu. Tính giá thành, kiểm soát định mức NVL mảng thêu, in giấy, in 3D. CV: hr@ethanecom.com.",
+      "context": "Ngoài kết nối với các đối tác fulfill bên ngoài, Ethanecom còn tự sản xuất một số dòng sản phẩm POD (thêu công nghiệp, in giấy, in nhựa 3D). Công ty cần kiểm soát chặt giá thành và định mức nguyên vật liệu để đảm bảo tính đúng lợi nhuận thực tế của mảng tự sản xuất.",
+      "objective": "Tính đúng giá thành và kiểm soát chặt nguyên vật liệu để công ty nắm rõ lãi/lỗ thật của từng sản phẩm tự sản xuất.",
+      "duties": [
+        "Tính giá thành sản phẩm theo đơn và theo từng dòng sản xuất (thêu / giấy / nhựa 3D)",
+        "Quản lý định mức nguyên vật liệu (chỉ thêu, mực, phôi, nhựa...) và theo dõi hao hụt",
+        "Phối hợp bộ phận kho/nguyên vật liệu: theo dõi nhập – xuất – tồn, kiểm kê định kỳ",
+        "Phân tích chi phí sản xuất, đề xuất phương án tiết giảm và giảm hao hụt",
+        "Cung cấp số liệu giá vốn cho Kế toán Tổng hợp",
+        "Phối hợp Khối Sản Xuất để cập nhật định mức khi có thay đổi quy trình/nguyên vật liệu"
+      ],
+      "requirements": [
+        "Tốt nghiệp chuyên ngành Kế toán/Tài chính",
+        "Tối thiểu 2 năm kinh nghiệm kế toán, ưu tiên kế toán sản xuất/giá thành",
+        "Hiểu quy trình sản xuất và cách tính giá thành; biết quản lý kho",
+        "Excel tốt, tỉ mỉ với con số và định mức",
+        "Trung thực, cẩn thận, có tinh thần bảo mật",
+        "Biết sử dụng công cụ AI: Claude, Gemini, ChatGPT... để hỗ trợ công việc"
+      ],
+      "preferred": [
+        "Kinh nghiệm trong ngành in ấn/thêu/gia công hoặc sản xuất hàng loạt",
+        "Từng xây hệ thống định mức và tính giá thành từ đầu",
+        "Biết phần mềm kế toán (MISA/Fast...) và quản lý kho"
+      ],
+      "fitPairs": [
+        ["Tỉ mỉ, kiên trì với định mức và số liệu chi tiết", "Ngại việc lặp đi lặp lại, thiếu kiên nhẫn với chi tiết nhỏ"],
+        ["Chủ động đi xưởng, quan sát thực tế sản xuất", "Chỉ muốn làm việc trên số liệu, ngại tiếp xúc hiện trường"],
+        ["Phối hợp tốt với đội sản xuất để hiểu quy trình thực tế", "Làm việc độc lập, ít trao đổi liên phòng ban"],
+        ["Trung thực, cẩn thận khi kiểm kê và báo cáo", "Qua loa khi đối chiếu số liệu"],
+        ["Muốn gắn bó, phát triển chuyên sâu về kế toán giá thành/sản xuất", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Nắm quy trình sản xuất của các mảng (thêu/giấy/nhựa 3D); lập bảng định mức NVL theo hiện trạng",
+        "Thiết lập cách tính giá thành theo đơn; thực hiện kiểm kê kho lần đầu",
+        "Báo cáo giá thành & hao hụt định kỳ kèm đề xuất tối ưu chi phí"
+      ],
+      "kpis": [
+        "Độ chính xác của giá thành tính ra so với thực tế",
+        "Tỷ lệ hao hụt nguyên vật liệu nằm trong định mức",
+        "Tiến độ và độ chính xác của kiểm kê kho",
+        "Thời gian cung cấp số liệu giá vốn cho Kế toán Tổng hợp"
+      ],
+      "perks": [
+        "Lương theo năng lực + thưởng; BHXH theo quy định",
+        "Thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Vai trò then chốt giúp công ty nắm rõ lợi nhuận thật của mảng tự sản xuất",
+        "Lộ trình phát triển chuyên sâu về kế toán giá thành"
+      ],
+      "emailTitle": "Kế toán Sản xuất - Họ tên",
+      "applyChannel": "fanpage",
+      "img": "assets/images/team/general-accountant.webp",
+      "imgAlt": "Kế toán Sản xuất tại Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-designer-pod",
+      "title": "Designer POD (Paper Print / Đồ hoạ in ấn)",
+      "display": "Designer POD",
+      "heroHtml": "Designer <em>POD</em><br>Đồ hoạ in ấn",
+      "code": "SX2-DESIGN-01",
+      "count": "Nhiều",
+      "deptKey": "design",
+      "deptLabel": "Thiết kế",
+      "block": "Khối Sản Xuất — SX2 Giấy / Design POD",
+      "reportTo": "Tổ trưởng Thiết kế / CPO (Giám đốc Sản xuất)",
+      "location": "VP/Xưởng Ethanecom — 61/1G Võ Dõng 2, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại văn phòng/xưởng",
+      "salary": "Thoả thuận theo năng lực — khung 8–12 triệu/tháng + thưởng KPI",
+      "salaryCard": "8–12 triệu + thưởng KPI",
+      "salaryMin": 8000000,
+      "salaryMax": 12000000,
+      "metaDesc": "Ethan Ecom tuyển Designer POD (đồ hoạ in ấn) tại Thống Nhất, Đồng Nai — lương 8–12 triệu + KPI. Thiết kế áo, cốc, poster cho thị trường Mỹ. CV/portfolio: hr@ethanecom.com.",
+      "context": "Ethanecom là công ty thương mại điện tử xuyên biên giới, kinh doanh sản phẩm POD (Print On Demand) trên các sàn TMĐT quốc tế tại thị trường Mỹ. Đội ngũ Design POD là người trực tiếp tạo ra hình ảnh/thiết kế cho từng sản phẩm — yếu tố quyết định sức hút của sản phẩm với khách hàng Mỹ.",
+      "objective": "Sáng tạo và sản xuất thiết kế in ấn (áo, cốc, poster, giấy in...) hấp dẫn, đúng thị hiếu thị trường Mỹ, đúng chuẩn kỹ thuật để đưa vào sản xuất và đăng bán.",
+      "duties": [
+        "Lên ý tưởng và thiết kế sản phẩm in ấn (áo thun, cốc, poster, thiệp/giấy in...) cho thị trường Mỹ",
+        "Nghiên cứu xu hướng, đối thủ và thị hiếu khách hàng để tạo ý tưởng thiết kế mới",
+        "Chuẩn bị file thiết kế đúng chuẩn kỹ thuật (kích thước, màu sắc, độ phân giải) để đưa vào in/sản xuất",
+        "Chỉnh sửa thiết kế theo phản hồi từ đội Kinh doanh hoặc yêu cầu khách hàng",
+        "Phối hợp đội Kinh doanh và Sản xuất để đảm bảo thiết kế ra đúng tiến độ, đúng số lượng",
+        "Cập nhật xu hướng thiết kế, màu sắc, phối hợp ứng dụng AI để tăng tốc độ ra mẫu"
+      ],
+      "requirements": [
+        "Thành thạo Photoshop, Illustrator (hoặc phần mềm thiết kế tương đương)",
+        "Có gu thẩm mỹ, sáng tạo, cảm nhận màu sắc và bố cục tốt",
+        "Biết ứng dụng AI hỗ trợ thiết kế (tạo ý tưởng, tạo ảnh AI...)",
+        "Cẩn thận, có trách nhiệm với deadline",
+        "Chủ động học hỏi, cập nhật xu hướng thiết kế mới"
+      ],
+      "preferred": [
+        "Biết vẽ tay/vẽ digital",
+        "Có kinh nghiệm thiết kế cho sản phẩm in ấn/POD thị trường nước ngoài",
+        "Hiểu quy trình in ấn (DTF, sublimation, UV...) để tối ưu file phù hợp công nghệ in"
+      ],
+      "fitPairs": [
+        ["Sáng tạo, chủ động cập nhật xu hướng và công cụ mới", "Ngại thử phong cách mới, chỉ làm theo khuôn cũ"],
+        ["Cẩn thận với chi tiết kỹ thuật file (size, màu, độ phân giải)", "Chủ quan, bỏ qua chuẩn kỹ thuật khi bàn giao file"],
+        ["Chịu được tần suất ra mẫu nhanh, khối lượng lớn", "Cần nhiều thời gian để hoàn thiện một thiết kế"],
+        ["Đón nhận phản hồi, chỉnh sửa nhanh không tự ái", "Khó tiếp thu góp ý, làm việc một mình"],
+        ["Muốn gắn bó, phát triển chuyên sâu về thiết kế POD", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Nắm quy trình thiết kế – bàn giao file – sản xuất, làm quen bộ nhận diện và các dòng sản phẩm hiện có",
+        "Tự chủ ra thiết kế theo yêu cầu đúng tiến độ, bắt đầu tự đề xuất ý tưởng mới",
+        "Đạt chỉ tiêu số lượng và chất lượng thiết kế, thiết kế có sản phẩm bán chạy"
+      ],
+      "kpis": [
+        "Số lượng thiết kế hoàn thành đúng deadline",
+        "Tỷ lệ thiết kế được duyệt ngay lần đầu (ít chỉnh sửa lại)",
+        "Đóng góp vào tỷ lệ ra đơn của sản phẩm thiết kế",
+        "Không để lỗi kỹ thuật file khi bàn giao sản xuất"
+      ],
+      "perks": [
+        "Lương theo năng lực + thưởng KPI; BHXH theo quy định; hỗ trợ ăn trưa",
+        "Thưởng lễ/Tết, lương tháng 13, du lịch hàng năm; hỗ trợ máy tính làm việc",
+        "Đào tạo bài bản, lộ trình phát triển lên Designer cấp cao/Tổ trưởng Thiết kế",
+        "Môi trường \"One Team One Goal\" — tập thể tử tế, đào tạo bài bản, ghi nhận xứng đáng"
+      ],
+      "emailTitle": "Designer POD - Họ tên",
+      "applyChannel": "fanpage",
+      "portfolio": true,
+      "img": "assets/images/team/graphic-designer.webp",
+      "imgAlt": "Designer POD tại Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-designer-emb",
+      "title": "Designer EMB (Digitizing Thêu)",
+      "display": "Designer EMB",
+      "heroHtml": "Designer <em>EMB</em><br>Digitizing Thêu",
+      "code": "SX1-DESIGN-01",
+      "count": "Nhiều",
+      "deptKey": "design",
+      "deptLabel": "Thiết kế",
+      "block": "Khối Sản Xuất — SX1 Thêu / Design EMB",
+      "reportTo": "Tổ trưởng Thiết kế / CPO (Giám đốc Sản xuất)",
+      "location": "VP/Xưởng Ethanecom — 61/1G Võ Dõng 2, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại văn phòng/xưởng",
+      "salary": "Thoả thuận theo năng lực — khung 8–12 triệu/tháng + thưởng KPI",
+      "salaryCard": "8–12 triệu + thưởng KPI",
+      "salaryMin": 8000000,
+      "salaryMax": 12000000,
+      "metaDesc": "Ethan Ecom tuyển Designer EMB (digitizing thêu) tại Thống Nhất, Đồng Nai — lương 8–12 triệu + KPI. Digitize file thêu DST/PES cho máy thêu công nghiệp. CV/portfolio: hr@ethanecom.com.",
+      "context": "Ethanecom kinh doanh các sản phẩm thêu công nghiệp/custom embroidery cho thị trường Mỹ. Đội ngũ Design EMB là người chuyển hình ảnh/ý tưởng thành file thêu (digitizing) để đưa vào sản xuất trên máy thêu công nghiệp — quyết định trực tiếp chất lượng và độ chính xác của sản phẩm thêu.",
+      "objective": "Digitize thiết kế thành file thêu chuẩn, tối ưu đường chỉ và mật độ thêu để sản phẩm ra xưởng đẹp, đúng kỹ thuật, hạn chế lỗi/hao chỉ.",
+      "duties": [
+        "Digitize hình ảnh/thiết kế thành file thêu (DST, PES...) bằng phần mềm chuyên dụng",
+        "Tính toán đường chỉ, mật độ mũi thêu, thứ tự thêu phù hợp từng loại vải/chất liệu",
+        "Phối hợp xưởng thêu để test mẫu, canh chỉnh file trước khi sản xuất hàng loạt",
+        "Tối ưu file thêu để giảm lỗi, giảm hao chỉ, tăng tốc độ thêu",
+        "Chỉnh sửa file theo phản hồi từ đội Kinh doanh hoặc yêu cầu khách hàng",
+        "Cập nhật xu hướng thiết kế thêu, phối hợp ứng dụng AI để tăng tốc độ dựng ý tưởng ban đầu"
+      ],
+      "requirements": [
+        "Biết sử dụng phần mềm digitizing thêu (Wilcom, Hatch, Brother PE-Design, Tajima... hoặc tương đương)",
+        "Hiểu về loại vải, chỉ thêu và ảnh hưởng của chúng đến chất lượng mũi thêu",
+        "Có gu thẩm mỹ, tỉ mỉ, cẩn thận với chi tiết nhỏ",
+        "Biết ứng dụng AI hỗ trợ dựng ý tưởng/hình ảnh ban đầu trước khi digitize",
+        "Cẩn thận, có trách nhiệm với deadline"
+      ],
+      "preferred": [
+        "Đã từng digitize cho sản phẩm thêu công nghiệp/custom embroidery thị trường nước ngoài",
+        "Biết vẽ tay/vẽ digital, hiểu nguyên lý thiết kế đồ hoạ",
+        "Từng vận hành hoặc phối hợp trực tiếp với máy thêu công nghiệp"
+      ],
+      "fitPairs": [
+        ["Tỉ mỉ, kiên nhẫn với từng mũi thêu, chi tiết nhỏ", "Ngại việc đòi hỏi độ chính xác cao, dễ qua loa"],
+        ["Chủ động phối hợp với xưởng để test và chỉnh mẫu", "Chỉ làm việc trên máy tính, ngại tiếp xúc thực tế sản xuất"],
+        ["Sẵn sàng học công cụ/phần mềm digitizing mới", "Ngại học công cụ mới, quen làm theo một cách duy nhất"],
+        ["Đón nhận phản hồi, chỉnh sửa nhanh không tự ái", "Khó tiếp thu góp ý, làm việc một mình"],
+        ["Muốn gắn bó, phát triển chuyên sâu về thiết kế thêu", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Nắm quy trình digitizing – test mẫu – sản xuất, làm quen các dòng sản phẩm thêu hiện có",
+        "Tự chủ digitize theo yêu cầu đúng tiến độ, giảm dần số lần phải chỉnh sửa mẫu",
+        "Đạt chỉ tiêu số lượng và chất lượng file thêu, tỷ lệ lỗi khi sản xuất ở mức thấp"
+      ],
+      "kpis": [
+        "Số lượng file thêu hoàn thành đúng deadline",
+        "Tỷ lệ file thêu đạt chuẩn ngay lần test đầu (ít phải chỉnh lại)",
+        "Tỷ lệ lỗi/hao chỉ khi sản xuất hàng loạt",
+        "Thời gian trung bình từ nhận thiết kế đến khi có file thêu hoàn chỉnh"
+      ],
+      "perks": [
+        "Lương theo năng lực + thưởng KPI; BHXH theo quy định; hỗ trợ ăn trưa",
+        "Thưởng lễ/Tết, lương tháng 13, du lịch hàng năm; hỗ trợ máy tính làm việc",
+        "Đào tạo bài bản về digitizing, lộ trình phát triển lên Designer cấp cao/Tổ trưởng Thiết kế",
+        "Môi trường \"One Team One Goal\" — tập thể tử tế, đào tạo bài bản, ghi nhận xứng đáng"
+      ],
+      "emailTitle": "Designer EMB - Họ tên",
+      "applyChannel": "fanpage",
+      "portfolio": true,
+      "img": "assets/images/team/embroidery-manager.webp",
+      "imgAlt": "Designer EMB tại Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-qc-ca-hanh-chanh",
+      "title": "Nhân viên QC (Kiểm hàng) — Ca Hành chánh",
+      "display": "Nhân viên QC — Ca Hành chánh",
+      "heroHtml": "Nhân viên <em>QC</em><br>Ca Hành chánh",
+      "code": "SX-QC-DAY",
+      "count": "05",
+      "deptKey": "sx",
+      "deptLabel": "Sản xuất",
+      "block": "Khối Sản Xuất — Bộ phận QC",
+      "reportTo": "Tổ trưởng QC / Quản lý xưởng",
+      "location": "Xưởng Ethanecom — 61/1G Võ Dõng, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại xưởng",
+      "salary": "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn trưa",
+      "salaryCard": "Từ 7 triệu + OT + thưởng",
+      "salaryMin": 7000000,
+      "salaryMax": 0,
+      "metaDesc": "Ethan Ecom tuyển 05 Nhân viên QC (kiểm hàng) ca hành chánh tại Thống Nhất, Đồng Nai — từ 7 triệu + OT + thưởng. Không cần kinh nghiệm, đào tạo từ đầu. CV: hr@ethanecom.com.",
+      "context": "Ethanecom tự sản xuất nhiều dòng sản phẩm (thêu, in giấy, in nhựa 3D...) cho thị trường Mỹ. Bộ phận QC là bước kiểm soát cuối cùng, đảm bảo chỉ những sản phẩm đạt chuẩn mới được đóng gói và xuất hàng.",
+      "objective": "Đảm bảo sản phẩm đạt chuẩn chất lượng trước khi đóng gói, hạn chế tối đa lỗi đến tay khách hàng.",
+      "duties": [
+        "Kiểm tra chất lượng hàng in, khắc, thêu trước khi đóng gói xuất hàng",
+        "Phát hiện, phân loại lỗi (in lem, thêu lỗi, sai màu, sai kích thước...) và báo cáo tổ trưởng",
+        "Phối hợp bộ phận sản xuất để xử lý/làm lại hàng lỗi kịp tiến độ",
+        "Ghi nhận số liệu lỗi hàng ngày để theo dõi và cải thiện chất lượng",
+        "Đảm bảo hàng đạt chuẩn được đóng gói đúng quy cách trước khi giao vận chuyển"
+      ],
+      "requirements": [
+        "Không yêu cầu kinh nghiệm — được đào tạo từ đầu",
+        "Mắt tốt, tỉ mỉ, cẩn thận",
+        "Có trách nhiệm, trung thực khi báo cáo lỗi",
+        "Chịu được cường độ kiểm hàng liên tục"
+      ],
+      "preferred": [
+        "Đã từng làm QC/kiểm hàng ngành in ấn, may mặc, thêu",
+        "Nhanh nhẹn, quen với môi trường xưởng sản xuất"
+      ],
+      "fitPairs": [
+        ["Tỉ mỉ, để ý chi tiết nhỏ", "Dễ bỏ sót, làm qua loa"],
+        ["Trung thực khi phát hiện lỗi, dù số lượng nhiều", "Ngại báo lỗi vì sợ mất lòng"],
+        ["Chịu được nhịp độ kiểm hàng liên tục, khối lượng lớn", "Dễ mất tập trung khi làm việc lặp lại"],
+        ["Muốn gắn bó lâu dài, có thể lên Tổ trưởng QC", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Nắm tiêu chuẩn chất lượng của từng dòng sản phẩm, làm quen quy trình kiểm hàng",
+        "Tự chủ kiểm hàng đạt tốc độ chuẩn, giảm tỷ lệ bỏ sót lỗi",
+        "Đạt năng suất kiểm hàng ổn định, có thể hướng dẫn người mới"
+      ],
+      "kpis": [
+        "Tỷ lệ lỗi lọt ra ngoài sau khâu QC",
+        "Số lượng hàng kiểm/ngày đạt chuẩn năng suất",
+        "Độ chính xác khi phân loại lỗi"
+      ],
+      "perks": [
+        "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn trưa",
+        "Đầy đủ chế độ theo luật lao động, thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Được đào tạo từ đầu, lộ trình phát triển lên Tổ trưởng QC"
+      ],
+      "emailTitle": "Nhân viên QC (Kiểm hàng) — Ca Hành chánh - Họ tên",
+      "applyChannel": "zalo",
+      "img": "assets/images/team/quality-control.webp",
+      "imgAlt": "Nhân viên QC kiểm hàng tại xưởng Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-qc-ca-dem",
+      "title": "Nhân viên QC (Kiểm hàng) — Ca Đêm",
+      "display": "Nhân viên QC — Ca Đêm",
+      "heroHtml": "Nhân viên <em>QC</em><br>Ca Đêm",
+      "code": "SX-QC-NIGHT",
+      "count": "05",
+      "deptKey": "sx",
+      "deptLabel": "Sản xuất",
+      "block": "Khối Sản Xuất — Bộ phận QC",
+      "reportTo": "Tổ trưởng QC / Quản lý xưởng",
+      "location": "Xưởng Ethanecom — 61/1G Võ Dõng, Thống Nhất, Đồng Nai",
+      "hours": "night",
+      "type": "Toàn thời gian (Full-time), làm tại xưởng",
+      "salary": "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn ca",
+      "salaryCard": "Từ 7 triệu + OT + thưởng",
+      "salaryMin": 7000000,
+      "salaryMax": 0,
+      "metaDesc": "Ethan Ecom tuyển 05 Nhân viên QC (kiểm hàng) ca đêm 18:00–1:00 tại Thống Nhất, Đồng Nai — từ 7 triệu + OT + thưởng. Không cần kinh nghiệm. CV: hr@ethanecom.com.",
+      "context": "Ethanecom tự sản xuất nhiều dòng sản phẩm (thêu, in giấy, in nhựa 3D...) cho thị trường Mỹ. Bộ phận QC ca đêm đảm bảo hàng sản xuất trong ca vẫn đạt chuẩn chất lượng trước khi bàn giao ca sáng hôm sau.",
+      "objective": "Đảm bảo sản phẩm sản xuất trong ca đêm đạt chuẩn chất lượng trước khi đóng gói, hạn chế tối đa lỗi đến tay khách hàng.",
+      "duties": [
+        "Kiểm tra chất lượng hàng in, khắc, thêu trước khi đóng gói xuất hàng trong ca",
+        "Phát hiện, phân loại lỗi (in lem, thêu lỗi, sai màu, sai kích thước...) và báo cáo tổ trưởng",
+        "Phối hợp bộ phận sản xuất trong ca để xử lý/làm lại hàng lỗi kịp tiến độ",
+        "Ghi nhận số liệu lỗi trong ca, bàn giao rõ ràng cho ca kế tiếp",
+        "Đảm bảo hàng đạt chuẩn được đóng gói đúng quy cách trước khi giao vận chuyển"
+      ],
+      "requirements": [
+        "Không yêu cầu kinh nghiệm — được đào tạo từ đầu",
+        "Mắt tốt, tỉ mỉ, cẩn thận",
+        "Có trách nhiệm, trung thực khi báo cáo lỗi",
+        "Sắp xếp được sinh hoạt phù hợp để làm ca đêm ổn định"
+      ],
+      "preferred": [
+        "Đã từng làm QC/kiểm hàng ngành in ấn, may mặc, thêu",
+        "Đã quen làm ca đêm"
+      ],
+      "fitPairs": [
+        ["Tỉ mỉ, để ý chi tiết nhỏ", "Dễ bỏ sót, làm qua loa"],
+        ["Trung thực khi phát hiện lỗi, dù số lượng nhiều", "Ngại báo lỗi vì sợ mất lòng"],
+        ["Chịu được nhịp độ kiểm hàng liên tục, khối lượng lớn", "Dễ mất tập trung khi làm việc lặp lại"],
+        ["Muốn gắn bó lâu dài, có thể lên Tổ trưởng QC", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Nắm tiêu chuẩn chất lượng của từng dòng sản phẩm, làm quen quy trình kiểm hàng ca đêm",
+        "Tự chủ kiểm hàng đạt tốc độ chuẩn, giảm tỷ lệ bỏ sót lỗi",
+        "Đạt năng suất kiểm hàng ổn định, bàn giao ca rõ ràng, có thể hướng dẫn người mới"
+      ],
+      "kpis": [
+        "Tỷ lệ lỗi lọt ra ngoài sau khâu QC",
+        "Số lượng hàng kiểm/ca đạt chuẩn năng suất",
+        "Độ chính xác khi phân loại lỗi và bàn giao ca"
+      ],
+      "perks": [
+        "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn ca",
+        "Đầy đủ chế độ theo luật lao động, thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Được đào tạo từ đầu, lộ trình phát triển lên Tổ trưởng QC"
+      ],
+      "emailTitle": "Nhân viên QC (Kiểm hàng) — Ca Đêm - Họ tên",
+      "applyChannel": "zalo",
+      "img": "assets/images/team/inspector.webp",
+      "imgAlt": "Nhân viên QC ca đêm tại xưởng Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-dung-may-theu",
+      "title": "Nhân viên Đứng Máy Thêu — Ca Hành chánh",
+      "display": "NV Đứng Máy Thêu — Ca Hành chánh",
+      "heroHtml": "Nhân viên <em>Đứng Máy Thêu</em><br>Ca Hành chánh",
+      "code": "SX1-VANHANH-DAY",
+      "count": "Nhiều",
+      "deptKey": "sx",
+      "deptLabel": "Sản xuất",
+      "block": "Khối Sản Xuất — SX1 Thêu",
+      "reportTo": "Tổ trưởng Thêu / Quản lý xưởng",
+      "location": "Xưởng Ethanecom — 61/1G Võ Dõng, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại xưởng",
+      "salary": "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn trưa",
+      "salaryCard": "Từ 7 triệu + OT + thưởng",
+      "salaryMin": 7000000,
+      "salaryMax": 0,
+      "metaDesc": "Ethan Ecom tuyển Nhân viên Đứng Máy Thêu ca hành chánh tại Thống Nhất, Đồng Nai — từ 7 triệu + OT + thưởng. Chưa có kinh nghiệm được đào tạo. CV: hr@ethanecom.com.",
+      "context": "Ethanecom kinh doanh các sản phẩm thêu công nghiệp/custom embroidery cho thị trường Mỹ. Nhân viên đứng máy thêu trực tiếp vận hành máy thêu vi tính để sản xuất sản phẩm ra xưởng.",
+      "objective": "Vận hành máy thêu ổn định, đúng kỹ thuật, đúng tiến độ, đảm bảo mũi thêu đẹp và đúng file thiết kế.",
+      "duties": [
+        "Vận hành máy thêu vi tính: lên khung, canh chỉnh, thay chỉ, theo dõi máy chạy",
+        "Xử lý sự cố đơn giản khi máy dừng, đứt chỉ, lệch khung",
+        "Phối hợp QC để đảm bảo chất lượng mũi thêu đúng chuẩn",
+        "Vệ sinh, bảo trì cơ bản máy thêu sau mỗi ca làm việc",
+        "Ghi nhận sản lượng và báo cáo tổ trưởng"
+      ],
+      "requirements": [
+        "Ưu tiên có kinh nghiệm vận hành máy thêu; chưa có sẽ được đào tạo",
+        "Cẩn thận, chịu khó, có sức khoẻ tốt để đứng máy nhiều giờ",
+        "Có trách nhiệm, tuân thủ quy trình an toàn lao động"
+      ],
+      "preferred": [
+        "Đã từng đứng máy thêu công nghiệp",
+        "Hiểu biết cơ bản về loại vải/chỉ thêu"
+      ],
+      "fitPairs": [
+        ["Cẩn thận, tuân thủ đúng quy trình vận hành máy", "Chủ quan, bỏ qua các bước kiểm tra an toàn"],
+        ["Chịu khó học và làm quen máy thêu nhanh", "Ngại học kỹ thuật mới, chỉ muốn làm việc đơn giản"],
+        ["Có trách nhiệm với sản phẩm, báo lỗi kịp thời", "Che giấu lỗi, đợi người khác phát hiện"],
+        ["Muốn gắn bó lâu dài, có thể lên tổ trưởng/kỹ thuật viên", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Thành thạo thao tác lên khung, thay chỉ, canh chỉnh máy thêu cơ bản",
+        "Vận hành ổn định nhiều khung/máy cùng lúc, giảm tỷ lệ lỗi mũi thêu",
+        "Đạt năng suất chuẩn của xưởng, có thể xử lý độc lập sự cố thường gặp"
+      ],
+      "kpis": [
+        "Sản lượng hoàn thành/ca đạt chuẩn năng suất",
+        "Tỷ lệ lỗi mũi thêu, đứt chỉ trong quá trình vận hành",
+        "Thời gian dừng máy do sự cố"
+      ],
+      "perks": [
+        "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn trưa",
+        "Đầy đủ chế độ theo luật lao động, thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Được đào tạo bài bản, lộ trình phát triển lên kỹ thuật viên/tổ trưởng"
+      ],
+      "emailTitle": "Nhân viên Đứng Máy Thêu — Ca Hành chánh - Họ tên",
+      "applyChannel": "zalo",
+      "img": "assets/images/team/embroidery-technician.webp",
+      "imgAlt": "Nhân viên đứng máy thêu tại xưởng Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-dung-may-theu-ca-dem",
+      "title": "Nhân viên Đứng Máy Thêu — Ca Đêm",
+      "display": "NV Đứng Máy Thêu — Ca Đêm",
+      "heroHtml": "Nhân viên <em>Đứng Máy Thêu</em><br>Ca Đêm",
+      "code": "SX1-VANHANH-NIGHT",
+      "count": "Nhiều",
+      "deptKey": "sx",
+      "deptLabel": "Sản xuất",
+      "block": "Khối Sản Xuất — SX1 Thêu",
+      "reportTo": "Tổ trưởng Thêu / Quản lý xưởng",
+      "location": "Xưởng Ethanecom — 61/1G Võ Dõng, Thống Nhất, Đồng Nai",
+      "hours": "night",
+      "type": "Toàn thời gian (Full-time), làm tại xưởng",
+      "salary": "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn ca",
+      "salaryCard": "Từ 7 triệu + OT + thưởng",
+      "salaryMin": 7000000,
+      "salaryMax": 0,
+      "metaDesc": "Ethan Ecom tuyển Nhân viên Đứng Máy Thêu ca đêm 18:00–1:00 tại Thống Nhất, Đồng Nai — từ 7 triệu + OT + thưởng. Chưa có kinh nghiệm được đào tạo. CV: hr@ethanecom.com.",
+      "context": "Ethanecom kinh doanh các sản phẩm thêu công nghiệp/custom embroidery cho thị trường Mỹ. Ca đêm giúp xưởng thêu duy trì sản lượng liên tục để kịp tiến độ giao hàng.",
+      "objective": "Vận hành máy thêu ổn định trong ca đêm, đúng kỹ thuật, đúng tiến độ, bàn giao ca rõ ràng.",
+      "duties": [
+        "Vận hành máy thêu vi tính: lên khung, canh chỉnh, thay chỉ, theo dõi máy chạy",
+        "Xử lý sự cố đơn giản khi máy dừng, đứt chỉ, lệch khung",
+        "Phối hợp QC ca đêm để đảm bảo chất lượng mũi thêu đúng chuẩn",
+        "Vệ sinh, bảo trì cơ bản máy thêu sau ca; bàn giao tình trạng máy cho ca kế tiếp",
+        "Ghi nhận sản lượng trong ca và báo cáo tổ trưởng"
+      ],
+      "requirements": [
+        "Ưu tiên có kinh nghiệm vận hành máy thêu; chưa có sẽ được đào tạo",
+        "Cẩn thận, chịu khó, có sức khoẻ tốt để đứng máy nhiều giờ vào ban đêm",
+        "Sắp xếp được sinh hoạt phù hợp để làm ca đêm ổn định"
+      ],
+      "preferred": [
+        "Đã từng đứng máy thêu công nghiệp",
+        "Đã quen làm ca đêm"
+      ],
+      "fitPairs": [
+        ["Cẩn thận, tuân thủ đúng quy trình vận hành máy", "Chủ quan, bỏ qua các bước kiểm tra an toàn"],
+        ["Chịu khó học và làm quen máy thêu nhanh", "Ngại học kỹ thuật mới, chỉ muốn làm việc đơn giản"],
+        ["Có trách nhiệm với sản phẩm, báo lỗi kịp thời", "Che giấu lỗi, đợi người khác phát hiện"],
+        ["Muốn gắn bó lâu dài, có thể lên tổ trưởng/kỹ thuật viên", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Thành thạo thao tác lên khung, thay chỉ, canh chỉnh máy thêu cơ bản trong ca đêm",
+        "Vận hành ổn định nhiều khung/máy cùng lúc, giảm tỷ lệ lỗi mũi thêu",
+        "Đạt năng suất chuẩn của xưởng, bàn giao ca rõ ràng, xử lý độc lập sự cố thường gặp"
+      ],
+      "kpis": [
+        "Sản lượng hoàn thành/ca đạt chuẩn năng suất",
+        "Tỷ lệ lỗi mũi thêu, đứt chỉ trong quá trình vận hành",
+        "Chất lượng bàn giao ca cho ca sáng hôm sau"
+      ],
+      "perks": [
+        "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn ca",
+        "Đầy đủ chế độ theo luật lao động, thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Được đào tạo bài bản, lộ trình phát triển lên kỹ thuật viên/tổ trưởng"
+      ],
+      "emailTitle": "Nhân viên Đứng Máy Thêu — Ca Đêm - Họ tên",
+      "applyChannel": "zalo",
+      "img": "assets/images/team/embroidery-technician1.webp",
+      "imgAlt": "Nhân viên đứng máy thêu ca đêm tại xưởng Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-van-hanh-may-laser",
+      "title": "Nhân viên Vận Hành Máy Laser",
+      "display": "NV Vận Hành Máy Laser",
+      "heroHtml": "Nhân viên Vận Hành<br><em>Máy Laser</em>",
+      "code": "SX-LASER-01",
+      "count": "01",
+      "deptKey": "sx",
+      "deptLabel": "Sản xuất",
+      "block": "Khối Sản Xuất — Bộ phận Cắt/Khắc Laser",
+      "reportTo": "Tổ trưởng Sản xuất / Quản lý xưởng",
+      "location": "Xưởng Ethanecom — 61/1G Võ Dõng, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại xưởng",
+      "salary": "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn trưa",
+      "salaryCard": "Từ 7 triệu + OT + thưởng",
+      "salaryMin": 7000000,
+      "salaryMax": 0,
+      "metaDesc": "Ethan Ecom tuyển Nhân viên Vận Hành Máy Laser tại Thống Nhất, Đồng Nai — từ 7 triệu + OT + thưởng. Cắt/khắc gỗ, mica, da, giấy cho thị trường Mỹ. CV: hr@ethanecom.com.",
+      "context": "Ethanecom sản xuất nhiều dòng sản phẩm cần cắt/khắc theo yêu cầu khách hàng Mỹ. Máy laser là công đoạn tạo hình/khắc chi tiết cho nhiều loại chất liệu khác nhau.",
+      "objective": "Vận hành máy cắt/khắc laser đúng thông số, đúng chất liệu, đảm bảo sản phẩm ra đúng kích thước và độ sắc nét yêu cầu.",
+      "duties": [
+        "Vận hành máy khắc/cắt laser: cài đặt thông số, canh chỉnh phôi, chạy máy",
+        "Điều chỉnh thông số phù hợp với từng loại chất liệu (gỗ, mica, da, giấy...)",
+        "Kiểm tra sản phẩm sau khi cắt/khắc, phối hợp QC xử lý lỗi",
+        "Bảo trì, vệ sinh máy laser định kỳ",
+        "Tuân thủ quy trình an toàn lao động khi vận hành máy"
+      ],
+      "requirements": [
+        "Kinh nghiệm vận hành máy laser tối thiểu 1 năm",
+        "Biết chỉnh thông số theo từng chất liệu",
+        "Cẩn thận, có trách nhiệm, tuân thủ an toàn lao động"
+      ],
+      "preferred": [
+        "Từng làm trong xưởng cắt/khắc laser, quảng cáo, quà tặng",
+        "Biết xử lý file cắt/khắc cơ bản (CorelDRAW, Illustrator...)"
+      ],
+      "fitPairs": [
+        ["Cẩn thận, tuân thủ đúng quy trình vận hành máy", "Chủ quan, bỏ qua các bước kiểm tra an toàn"],
+        ["Chịu khó học và làm quen máy laser nhanh", "Ngại học kỹ thuật mới, chỉ muốn làm việc đơn giản"],
+        ["Có trách nhiệm với sản phẩm, báo lỗi kịp thời", "Che giấu lỗi, đợi người khác phát hiện"],
+        ["Muốn gắn bó lâu dài, có thể lên tổ trưởng/kỹ thuật viên", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Thành thạo cài đặt thông số cơ bản cho các chất liệu phổ biến của xưởng",
+        "Vận hành ổn định, tự xử lý được các lỗi cắt/khắc thường gặp",
+        "Đạt năng suất chuẩn, có thể hỗ trợ đào tạo người mới"
+      ],
+      "kpis": [
+        "Sản lượng hoàn thành/ngày đạt chuẩn năng suất",
+        "Tỷ lệ lỗi cắt/khắc (sai kích thước, cháy xém, lệch hình)",
+        "Thời gian dừng máy do sự cố kỹ thuật"
+      ],
+      "perks": [
+        "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn trưa",
+        "Đầy đủ chế độ theo luật lao động, thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Được đào tạo bài bản, lộ trình phát triển lên kỹ thuật viên/tổ trưởng"
+      ],
+      "emailTitle": "Nhân viên Vận Hành Máy Laser - Họ tên",
+      "applyChannel": "zalo",
+      "img": "assets/images/team/laser.jpg",
+      "imgAlt": "Nhân viên vận hành máy laser tại xưởng Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-van-hanh-may-in-giay",
+      "title": "Nhân viên Vận Hành Máy In Giấy",
+      "display": "NV Vận Hành Máy In Giấy",
+      "heroHtml": "Nhân viên Vận Hành<br><em>Máy In Giấy</em>",
+      "code": "SX2-INGIAY-01",
+      "count": "01",
+      "deptKey": "sx",
+      "deptLabel": "Sản xuất",
+      "block": "Khối Sản Xuất — SX2 Giấy",
+      "reportTo": "Tổ trưởng Sản xuất / Quản lý xưởng",
+      "location": "Xưởng Ethanecom — 61/1G Võ Dõng, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại xưởng",
+      "salary": "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn trưa",
+      "salaryCard": "Từ 7 triệu + OT + thưởng",
+      "salaryMin": 7000000,
+      "salaryMax": 0,
+      "metaDesc": "Ethan Ecom tuyển Nhân viên Vận Hành Máy In Giấy tại Thống Nhất, Đồng Nai — từ 7 triệu + OT + thưởng. In thiệp, wrapping paper, suncatcher cho thị trường Mỹ. CV: hr@ethanecom.com.",
+      "context": "Ethanecom sản xuất các dòng sản phẩm giấy in (thiệp, wrapping paper, suncatcher...) cho thị trường Mỹ. Máy in giấy là công đoạn tạo ra bản in trước khi cắt/gia công thành phẩm.",
+      "objective": "Vận hành máy in giấy ổn định, đúng file, đúng màu sắc và đúng tiến độ sản xuất.",
+      "duties": [
+        "Vận hành máy in giấy: nhận file, canh chỉnh, cài đặt thông số, chạy máy",
+        "Kiểm tra bản in trong suốt quá trình chạy máy (màu sắc, độ nét, canh lề)",
+        "Bảo trì, vệ sinh máy in định kỳ",
+        "Phối hợp QC xử lý lỗi bản in",
+        "Ghi nhận sản lượng và báo cáo tổ trưởng"
+      ],
+      "requirements": [
+        "Kinh nghiệm vận hành máy in trên 1 năm",
+        "Cẩn thận, có trách nhiệm",
+        "Biết xử lý sự cố cơ bản khi máy in gặp lỗi"
+      ],
+      "preferred": [
+        "Từng vận hành máy in offset/kỹ thuật số ngành in ấn",
+        "Hiểu cơ bản về màu sắc, hệ màu in (CMYK)"
+      ],
+      "fitPairs": [
+        ["Cẩn thận, tuân thủ đúng quy trình vận hành máy", "Chủ quan, bỏ qua các bước kiểm tra an toàn"],
+        ["Chịu khó học và làm quen máy in giấy nhanh", "Ngại học kỹ thuật mới, chỉ muốn làm việc đơn giản"],
+        ["Có trách nhiệm với sản phẩm, báo lỗi kịp thời", "Che giấu lỗi, đợi người khác phát hiện"],
+        ["Muốn gắn bó lâu dài, có thể lên tổ trưởng/kỹ thuật viên", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Thành thạo cài đặt thông số, nhận và xử lý file in cơ bản của xưởng",
+        "Vận hành ổn định, tự xử lý được các lỗi bản in thường gặp",
+        "Đạt năng suất chuẩn, có thể hỗ trợ đào tạo người mới"
+      ],
+      "kpis": [
+        "Sản lượng hoàn thành/ngày đạt chuẩn năng suất",
+        "Tỷ lệ lỗi bản in (lem màu, lệch, mờ nét)",
+        "Thời gian dừng máy do sự cố kỹ thuật"
+      ],
+      "perks": [
+        "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn trưa",
+        "Đầy đủ chế độ theo luật lao động, thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Được đào tạo bài bản, lộ trình phát triển lên kỹ thuật viên/tổ trưởng"
+      ],
+      "emailTitle": "Nhân viên Vận Hành Máy In Giấy - Họ tên",
+      "applyChannel": "zalo",
+      "img": "assets/images/team/printer.webp",
+      "imgAlt": "Nhân viên vận hành máy in giấy tại xưởng Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-van-hanh-may-in-uv",
+      "title": "Nhân viên Vận Hành Máy In UV Phẳng (UV Flatbed)",
+      "display": "NV Vận Hành Máy In UV Phẳng",
+      "heroHtml": "Nhân viên Vận Hành<br><em>Máy In UV Phẳng</em>",
+      "code": "SX-UVFLATBED-01",
+      "count": "01",
+      "deptKey": "sx",
+      "deptLabel": "Sản xuất",
+      "block": "Khối Sản Xuất — Bộ phận In UV",
+      "reportTo": "Tổ trưởng Sản xuất / Quản lý xưởng",
+      "location": "Xưởng Ethanecom — 61/1G Võ Dõng, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại xưởng",
+      "salary": "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn trưa",
+      "salaryCard": "Từ 7 triệu + OT + thưởng",
+      "salaryMin": 7000000,
+      "salaryMax": 0,
+      "metaDesc": "Ethan Ecom tuyển Nhân viên Vận Hành Máy In UV Phẳng (UV Flatbed) tại Thống Nhất, Đồng Nai — từ 7 triệu + OT + thưởng. In trực tiếp lên nhựa, gỗ, mica, kim loại. CV: hr@ethanecom.com.",
+      "context": "Ethanecom sản xuất nhiều dòng sản phẩm cần in trực tiếp lên các chất liệu cứng (nhựa, gỗ, mica, kim loại...) cho thị trường Mỹ. Máy in UV phẳng là công đoạn in trực tiếp lên bề mặt sản phẩm.",
+      "objective": "Vận hành máy in UV phẳng đúng thông số, đúng chất liệu, đảm bảo bản in sắc nét và bám màu tốt.",
+      "duties": [
+        "Vận hành máy in UV phẳng: xử lý file in, canh bàn in, cài đặt thông số, chạy máy",
+        "Kiểm tra chất lượng bản in trên nhiều loại chất liệu (nhựa, gỗ, kim loại, mica...)",
+        "Bảo trì, vệ sinh máy in UV định kỳ",
+        "Phối hợp QC xử lý lỗi bản in",
+        "Ghi nhận sản lượng và báo cáo tổ trưởng"
+      ],
+      "requirements": [
+        "Kinh nghiệm in UV tối thiểu 2 năm, thành thạo máy UV phẳng",
+        "Hiểu xử lý file in cho từng loại chất liệu",
+        "Cẩn thận, có trách nhiệm"
+      ],
+      "preferred": [
+        "Từng làm tổ trưởng/nhóm trưởng vận hành máy in UV",
+        "Biết xử lý file thiết kế cơ bản (Photoshop/Illustrator)"
+      ],
+      "fitPairs": [
+        ["Cẩn thận, tuân thủ đúng quy trình vận hành máy", "Chủ quan, bỏ qua các bước kiểm tra an toàn"],
+        ["Chịu khó học và làm quen máy in UV phẳng nhanh", "Ngại học kỹ thuật mới, chỉ muốn làm việc đơn giản"],
+        ["Có trách nhiệm với sản phẩm, báo lỗi kịp thời", "Che giấu lỗi, đợi người khác phát hiện"],
+        ["Muốn gắn bó lâu dài, có thể lên tổ trưởng/kỹ thuật viên", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Thành thạo quy trình xử lý file, cài đặt thông số cho các chất liệu phổ biến của xưởng",
+        "Vận hành ổn định, tự xử lý được các lỗi bản in thường gặp",
+        "Đạt năng suất chuẩn, có thể hỗ trợ đào tạo người mới"
+      ],
+      "kpis": [
+        "Sản lượng hoàn thành/ngày đạt chuẩn năng suất",
+        "Tỷ lệ lỗi bản in (lem màu, bong tróc, lệch hình)",
+        "Thời gian dừng máy do sự cố kỹ thuật"
+      ],
+      "perks": [
+        "Thu nhập từ 7 triệu + OT + Thưởng + Trợ cấp ăn trưa",
+        "Đầy đủ chế độ theo luật lao động, thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Được đào tạo bài bản, lộ trình phát triển lên kỹ thuật viên/tổ trưởng"
+      ],
+      "emailTitle": "Nhân viên Vận Hành Máy In UV Phẳng (UV Flatbed) - Họ tên",
+      "applyChannel": "zalo",
+      "img": "assets/images/team/printer.webp",
+      "imgAlt": "Nhân viên vận hành máy in UV phẳng tại xưởng Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-quan-ly-kho",
+      "title": "Nhân viên Quản lý Kho Nguyên Vật Liệu",
+      "display": "NV Quản lý Kho NVL",
+      "heroHtml": "Nhân viên Quản lý<br><em>Kho Nguyên Vật Liệu</em>",
+      "code": "SX-KHO-01",
+      "count": "01",
+      "deptKey": "sx",
+      "deptLabel": "Sản xuất",
+      "block": "Khối Sản Xuất — Kho Nguyên Vật Liệu",
+      "reportTo": "CPO (Giám đốc Sản xuất) / Quản lý xưởng",
+      "location": "Xưởng Ethanecom — 61/1G Võ Dõng, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại xưởng",
+      "salary": "Thoả thuận theo năng lực — khung 8–10 triệu/tháng + OT + Thưởng",
+      "salaryCard": "8–10 triệu + OT + thưởng",
+      "salaryMin": 8000000,
+      "salaryMax": 10000000,
+      "metaDesc": "Ethan Ecom tuyển Nhân viên Quản lý Kho Nguyên Vật Liệu tại Thống Nhất, Đồng Nai — lương 8–10 triệu + OT + thưởng. Quản lý nhập–xuất–tồn chỉ thêu, mực in, phôi. CV: hr@ethanecom.com.",
+      "context": "Ethanecom tự sản xuất nhiều dòng sản phẩm (thêu, in giấy, in nhựa 3D...) sử dụng nhiều loại nguyên vật liệu khác nhau (chỉ thêu, mực in, phôi, nhựa...). Công ty cần một đầu mối chuyên trách quản lý kho để nguyên vật liệu luôn đủ, đúng và không thất thoát.",
+      "objective": "Quản lý nhập – xuất – tồn nguyên vật liệu chính xác, đảm bảo sản xuất không bị gián đoạn vì thiếu vật tư.",
+      "duties": [
+        "Quản lý nhập – xuất – tồn nguyên vật liệu (chỉ thêu, mực in, phôi, nhựa...) hằng ngày",
+        "Kiểm kê kho định kỳ, đối chiếu số liệu thực tế với sổ sách",
+        "Lập kế hoạch đề xuất nhập hàng dựa trên nhu cầu sản xuất, tránh thiếu hụt hoặc tồn kho dư thừa",
+        "Sắp xếp, bảo quản nguyên vật liệu khoa học, đúng quy cách",
+        "Phối hợp Kế toán Sản xuất để cung cấp số liệu tồn kho phục vụ tính giá thành",
+        "Theo dõi hạn sử dụng và chất lượng nguyên vật liệu tồn kho"
+      ],
+      "requirements": [
+        "Có kinh nghiệm quản lý kho tối thiểu 1 năm",
+        "Cẩn thận, trung thực, có trách nhiệm với hàng hoá/tài sản công ty",
+        "Biết sử dụng Excel/phần mềm quản lý kho cơ bản",
+        "Có sức khoẻ tốt, chịu được việc kiểm đếm và di chuyển hàng hoá"
+      ],
+      "preferred": [
+        "Từng quản lý kho ngành sản xuất/in ấn/may mặc",
+        "Biết sử dụng phần mềm quản lý kho (ERP, Excel nâng cao...)"
+      ],
+      "fitPairs": [
+        ["Cẩn thận, có hệ thống khi sắp xếp và ghi chép", "Xuề xoà, ghi chép qua loa"],
+        ["Trung thực tuyệt đối với hàng hoá, số liệu tồn kho", "Dễ nhầm lẫn hoặc thiếu minh bạch khi kiểm kê"],
+        ["Chủ động dự trù, tránh để xưởng thiếu vật tư", "Bị động, chỉ xử lý khi đã xảy ra thiếu hụt"],
+        ["Phối hợp tốt với sản xuất và kế toán", "Làm việc một mình, ít trao đổi liên phòng ban"],
+        ["Muốn gắn bó, phát triển thành người quản lý kho/chuỗi cung ứng", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Nắm toàn bộ danh mục nguyên vật liệu, rà soát và chuẩn hoá lại số liệu tồn kho hiện có",
+        "Vận hành ổn định quy trình nhập – xuất – tồn, thực hiện kiểm kê định kỳ đầu tiên",
+        "Thiết lập quy trình dự trù/đặt hàng chủ động, báo cáo tồn kho định kỳ cho Ban giám đốc"
+      ],
+      "kpis": [
+        "Độ chính xác khi kiểm kê (số liệu thực tế khớp sổ sách)",
+        "Tỷ lệ thất thoát/hao hụt nguyên vật liệu",
+        "Số lần sản xuất bị gián đoạn do thiếu vật tư"
+      ],
+      "perks": [
+        "Lương theo năng lực + OT + Thưởng; BHXH theo quy định",
+        "Thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Cơ hội xây dựng quy trình quản lý kho bài bản ngay từ đầu"
+      ],
+      "emailTitle": "Nhân viên Quản lý Kho Nguyên Vật Liệu - Họ tên",
+      "applyChannel": "zalo",
+      "img": "assets/images/team/inspector.webp",
+      "imgAlt": "Nhân viên quản lý kho nguyên vật liệu tại Ethan Ecom"
+    },
+    {
+      "slug": "tuyen-dung-chuyen-vien-it-ai",
+      "title": "Chuyên viên IT — Nghiên cứu & Ứng dụng AI",
+      "display": "Chuyên viên IT — Ứng dụng AI",
+      "heroHtml": "Chuyên viên IT<br><em>Nghiên cứu &amp; Ứng dụng AI</em>",
+      "code": "IT-AI-01",
+      "count": "01",
+      "deptKey": "office",
+      "deptLabel": "Văn phòng",
+      "block": "Phòng ban dùng chung — IT",
+      "reportTo": "Ban giám đốc (CEO)",
+      "location": "VP Ethanecom — 61/1G Võ Dõng, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại văn phòng",
+      "salary": "Thoả thuận theo năng lực — khung 8–20 triệu/tháng + thưởng theo hiệu quả tối ưu hoá",
+      "salaryCard": "8–20 triệu + thưởng hiệu quả",
+      "salaryMin": 8000000,
+      "salaryMax": 20000000,
+      "metaDesc": "Ethan Ecom tuyển Chuyên viên IT — Nghiên cứu & Ứng dụng AI tại Thống Nhất, Đồng Nai — lương 8–20 triệu. Triển khai Claude, ChatGPT, Gemini vào vận hành toàn công ty. CV: hr@ethanecom.com.",
+      "context": "Ethanecom xác định AI là công cụ bắt buộc trong vận hành toàn công ty — từ kinh doanh, sản xuất, thiết kế đến vận hành nội bộ. Công ty cần một chuyên viên đầu mối liên tục nghiên cứu, thử nghiệm và triển khai các công cụ AI mới nhất vào công việc thực tế của từng bộ phận.",
+      "objective": "Nghiên cứu, thử nghiệm và ứng dụng các công cụ AI hàng đầu (Claude, ChatGPT, Gemini...) vào quy trình làm việc thực tế của các phòng ban, giúp tăng hiệu suất 2–3 lần; đồng thời đào tạo, cập nhật cách làm mới cho nhân sự khi có công cụ hoặc tính năng AI hiệu quả hơn.",
+      "duties": [
+        "Nghiên cứu, theo dõi và đánh giá các công cụ AI nổi bật (Claude, ChatGPT, Gemini và các nền tảng mới) để tìm ứng dụng phù hợp cho từng bộ phận",
+        "Ứng dụng trực tiếp AI vào quy trình làm việc của các vị trí trong công ty (kinh doanh, sản xuất, thiết kế, vận hành...) — hướng tới tăng hiệu suất 2–3 lần",
+        "Xây dựng quy trình/kịch bản gen video AI hàng loạt phục vụ nội dung quảng bá sản phẩm",
+        "Onboarding, training nội bộ cho nhân sự khi có cách làm mới hoặc công cụ AI hiệu suất tốt hơn",
+        "Xây dựng tài liệu hướng dẫn, quy trình chuẩn (SOP) sử dụng AI cho từng bộ phận",
+        "Theo dõi, cập nhật liên tục các tính năng/công cụ AI mới, đánh giá mức độ phù hợp để triển khai kịp thời",
+        "Đo lường hiệu quả sau khi áp dụng AI (thời gian tiết kiệm, chất lượng đầu ra) và báo cáo Ban giám đốc"
+      ],
+      "requirements": [
+        "Sử dụng thành thạo các công cụ AI phổ biến: Claude, ChatGPT, Gemini...",
+        "Biết gen video AI hàng loạt",
+        "Học nhanh, chủ động cập nhật liên tục các ứng dụng/tính năng AI mới",
+        "Có khả năng đào tạo, hướng dẫn lại cho người khác dễ hiểu",
+        "Tư duy tối ưu quy trình, biết phân tích công việc để tìm điểm áp dụng AI hiệu quả",
+        "Chủ động, bắt nhịp nhanh với tốc độ thay đổi của công nghệ AI"
+      ],
+      "preferred": [
+        "Có kinh nghiệm về IT/tự động hoá quy trình (automation, n8n, Zapier...)",
+        "Từng triển khai AI cho doanh nghiệp hoặc đội nhóm thực tế, không chỉ dùng cá nhân",
+        "Hiểu biết về TMĐT/marketing để áp dụng AI đúng ngữ cảnh kinh doanh",
+        "Biết lập trình cơ bản (Python, các công cụ no-code) để xây dựng automation"
+      ],
+      "fitPairs": [
+        ["Ham học, luôn tò mò thử công cụ AI mới nhất", "Chỉ dùng AI ở mức cơ bản, ngại thử nghiệm"],
+        ["Thích chia sẻ, hướng dẫn lại cho người khác", "Giữ kiến thức cho riêng mình, ngại đào tạo"],
+        ["Tư duy hệ thống, thích tối ưu quy trình", "Chỉ làm theo việc được giao, không chủ động cải tiến"],
+        ["Bắt nhịp nhanh, không ngại thay đổi liên tục", "Cần môi trường ổn định, ít thay đổi"],
+        ["Muốn gắn bó, trở thành đầu tàu AI của công ty", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Nắm quy trình làm việc hiện tại của các phòng ban chủ chốt (Kinh doanh, Sản xuất, Design), khảo sát điểm có thể áp dụng AI",
+        "Triển khai thí điểm AI cho 1–2 bộ phận, đo lường hiệu suất trước/sau, xây dựng tài liệu hướng dẫn đầu tiên",
+        "Nhân rộng ứng dụng AI ra toàn công ty, có quy trình training/onboarding AI chuẩn hoá, báo cáo hiệu quả tổng thể"
+      ],
+      "kpis": [
+        "Số quy trình/bộ phận đã áp dụng AI thành công",
+        "Mức tăng hiệu suất đo được sau khi áp dụng AI (thời gian, số lượng đầu ra)",
+        "Số buổi đào tạo/onboarding AI được tổ chức",
+        "Tốc độ cập nhật và triển khai công cụ/tính năng AI mới"
+      ],
+      "perks": [
+        "Lương theo năng lực + thưởng theo hiệu quả tối ưu hoá mang lại; BHXH theo quy định",
+        "Thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Được trực tiếp xây dựng chiến lược AI của công ty từ đầu, tiếp cận công cụ AI mới nhất",
+        "Môi trường \"One Team One Goal\" — tập thể tử tế, đào tạo bài bản, ghi nhận xứng đáng"
+      ],
+      "emailTitle": "Chuyên viên AI - Họ tên",
+      "applyChannel": "fanpage",
+      "img": "assets/images/team/web-developer.jpg",
+      "imgAlt": "Chuyên viên IT ứng dụng AI tại Ethan Ecom"
+    }
+  ]
+}
