@@ -3,7 +3,7 @@
 Trang hồ sơ năng lực (employer branding GĐ1 → B2B → nhà đầu tư) cho **Ethan Ecom** — công ty TMĐT xuyên biên giới, tự chủ sản xuất in-house (POD/thêu/in), thị trường trọng tâm Mỹ. Tone: chuyên nghiệp + truyền cảm hứng. Ngôn ngữ mặc định: **Tiếng Việt** (font phải hỗ trợ đầy đủ dấu).
 
 ## Content data — tra khi build section (đừng nạp sẵn)
-- **Thông tin công ty** (info, vision, mission, 5 core values, brand story, timeline, 9 dịch vụ, cơ cấu tổ chức, 14 vị trí tuyển dụng, phúc lợi): `@docs/company-content.md`
+- **Thông tin công ty** (info, vision, mission, 5 core values, brand story, timeline, 9 dịch vụ, cơ cấu tổ chức, 15 vị trí tuyển dụng, phúc lợi): `@docs/company-content.md`
 - **Nội dung Home page** (13 section + animation gợi ý): `@docs/home-content.md`
 - **Sitemap + SEO metadata từng trang**: `@docs/sitemap-seo.md`
 

@@ -111,15 +111,16 @@ Mô tả ngắn thương hiệu: *"Ethan Ecom – nơi khơi nguồn sáng tạo
 
 ---
 
-## Vị trí tuyển dụng (Careers — 14 vị trí, cập nhật 2026-07-28)
+## Vị trí tuyển dụng (Careers — 15 vị trí, cập nhật 2026-07-28)
 
 > Nguồn chi tiết từng JD: `tools/tuyen-dung-jobs.json` (mỗi vị trí 1 trang riêng `tuyen-dung-<slug>.html`, sinh bằng `tools/gen-tuyen-dung.py`).
 
 | Vị trí | Mã | Khối / Bộ phận | SL | Lương | Trang |
 |--------|----|----------------|----|-------|-------|
 | Seller TMĐT (E-commerce Seller) | KD-SELLER | Khối Kinh Doanh | 05 | 8–15 Tr + thưởng doanh số | tuyen-dung-seller-tmdt |
-| Chuyên viên HR — Đào tạo, Tuyển dụng & Văn hoá | HR-01 | Dùng chung — HR | 01 | 8–20 Tr | tuyen-dung-chuyen-vien-hr |
-| Kế toán Sản xuất (Giá thành) | ACC-PROD-01 | Dùng chung — Kế toán | 01 | 8–15 Tr | tuyen-dung-ke-toan-san-xuat |
+| Video Creator/Editor (Media) | KD-MEDIA | Khối Kinh Doanh | 05 | 8–12 Tr + thưởng hiệu quả video | tuyen-dung-video-creator |
+| Chuyên viên HR — Đào tạo, Tuyển dụng & Văn hoá | HR-01 | Khối hỗ trợ — HR | 01 | 8–20 Tr | tuyen-dung-chuyen-vien-hr |
+| Kế toán Sản xuất (Giá thành) | ACC-PROD-01 | Khối hỗ trợ — Kế toán | 01 | 8–15 Tr | tuyen-dung-ke-toan-san-xuat |
 | Designer POD (Paper Print) | SX2-DESIGN-01 | SX2 Giấy / Design POD | Nhiều | 8–12 Tr + KPI | tuyen-dung-designer-pod |
 | Designer EMB (Digitizing Thêu) | SX1-DESIGN-01 | SX1 Thêu / Design EMB | Nhiều | 8–12 Tr + KPI | tuyen-dung-designer-emb |
 | Nhân viên QC (Kiểm hàng) — Ca Hành chánh | SX-QC-DAY | Bộ phận QC | 05 | Từ 7 Tr + OT + thưởng | tuyen-dung-qc-ca-hanh-chanh |
@@ -130,7 +131,7 @@ Mô tả ngắn thương hiệu: *"Ethan Ecom – nơi khơi nguồn sáng tạo
 | NV Vận Hành Máy In Giấy | SX2-INGIAY-01 | SX2 Giấy | 01 | Từ 7 Tr + OT + thưởng | tuyen-dung-van-hanh-may-in-giay |
 | NV Vận Hành Máy In UV Phẳng (UV Flatbed) | SX-UVFLATBED-01 | Bộ phận In UV | 01 | Từ 7 Tr + OT + thưởng | tuyen-dung-van-hanh-may-in-uv |
 | NV Quản lý Kho Nguyên Vật Liệu | SX-KHO-01 | Kho NVL | 01 | 8–10 Tr + OT + thưởng | tuyen-dung-quan-ly-kho |
-| Chuyên viên IT — Nghiên cứu & Ứng dụng AI | IT-AI-01 | Dùng chung — IT | 01 | 8–20 Tr + thưởng hiệu quả | tuyen-dung-chuyen-vien-it-ai |
+| Chuyên viên IT — Nghiên cứu & Ứng dụng AI | IT-AI-01 | Khối hỗ trợ — IT | 01 | 8–20 Tr + thưởng hiệu quả | tuyen-dung-chuyen-vien-it-ai |
 
 Ứng tuyển: CV về **hr@ethanecom.com** (tiêu đề `[Tên Vị Trí] - [Họ tên]`); khối văn phòng/thiết kế thêm kênh fanpage Ethan Ecom, khối sản xuất thêm gọi/Zalo **0967 473 979**. Địa điểm: 61/1G Võ Dõng (2), Thống Nhất, Đồng Nai. Giờ hành chánh 7:30–17:00 T2–T7; ca đêm 18:00–1:00. Thử việc 1 tháng.
 

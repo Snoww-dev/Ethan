@@ -82,6 +82,81 @@
       "imgAlt": "Seller TMĐT tại Ethan Ecom"
     },
     {
+      "slug": "tuyen-dung-video-creator",
+      "title": "Video Creator/Editor (Media) — Khối Kinh Doanh",
+      "display": "Video Creator/Editor",
+      "heroHtml": "Video <em>Creator/Editor</em><br>Khối Kinh Doanh",
+      "code": "KD-MEDIA",
+      "count": "05",
+      "deptKey": "kd",
+      "deptLabel": "Kinh doanh",
+      "block": "Khối Kinh Doanh",
+      "reportTo": "Team Leader / Manager phụ trách đội",
+      "location": "VP/Xưởng Ethanecom — 61/1G Võ Dõng 2, Thống Nhất, Đồng Nai",
+      "hours": "day",
+      "type": "Toàn thời gian (Full-time), làm tại văn phòng",
+      "salary": "Thoả thuận theo năng lực — khung 8–12 triệu/tháng + thưởng theo hiệu quả video",
+      "salaryCard": "8–12 triệu + thưởng hiệu quả video",
+      "salaryMin": 8000000,
+      "salaryMax": 12000000,
+      "metaDesc": "Ethan Ecom tuyển 05 Video Creator/Editor tại Thống Nhất, Đồng Nai — lương 8–12 triệu + thưởng hiệu quả video. Sản xuất video AI quảng bá sản phẩm TikTok Shop, Etsy, Amazon. CV: hr@ethanecom.com.",
+      "context": "Ethanecom là công ty thương mại điện tử xuyên biên giới, tập trung thị trường Mỹ với các dòng sản phẩm POD, thêu công nghiệp (Embroidery) và in nhựa 3D trên các sàn TMĐT quốc tế (TikTok Shop, Etsy, Amazon, eBay, Shopify...). Video là kênh tiếp cận khách hàng chủ lực — công ty đang mở rộng đội ngũ Video Creator/Editor để sản xuất nội dung video quảng bá sản phẩm hấp dẫn, đúng insight khách hàng và bắt kịp xu hướng.",
+      "objective": "Sản xuất video quảng bá sản phẩm chất lượng, đúng insight và hành vi khách hàng mục tiêu — tạo điểm chạm hiệu quả, thúc đẩy tương tác và chuyển đổi trên các nền tảng TMĐT/mạng xã hội.",
+      "duties": [
+        "Lên ý tưởng, kịch bản video quảng bá sản phẩm bám sát insight và hành vi khách hàng",
+        "Quay và dựng video (thực tế hoặc ứng dụng AI) đúng chuẩn từng nền tảng (TikTok Shop, Etsy, Amazon...)",
+        "Biên tập video: cắt ghép, hiệu ứng, âm thanh, phụ đề — tối ưu hook 3 giây đầu và CTA",
+        "Nghiên cứu xu hướng (trend), âm nhạc, định dạng nội dung mới để áp dụng nhanh vào video sản phẩm",
+        "Phối hợp với Seller/Team Leader để bám sát đúng sản phẩm trọng tâm cần quảng bá từng giai đoạn",
+        "Theo dõi hiệu quả video (lượt xem, tương tác, tỷ lệ chuyển đổi) để tối ưu nội dung tiếp theo",
+        "Đảm bảo nội dung tuân thủ chính sách nền tảng, tránh vi phạm policy video"
+      ],
+      "requirements": [
+        "Sử dụng thành thạo công cụ AI để hỗ trợ công việc, biết gen video AI",
+        "Hiểu được tâm lý/hành vi của khách hàng",
+        "Tập trung vào sản phẩm muốn quảng bá",
+        "Tạo được điểm chạm của video tiếp cận hiệu quả với khách hàng",
+        "Tiếng Anh cơ bản đọc hiểu, biết nghiên cứu insight khách hàng đang cần gì và thích gì",
+        "Bắt nhịp trend nhanh để kết hợp quảng bá sản phẩm"
+      ],
+      "preferred": [
+        "Có kinh nghiệm dựng/edit video cho TikTok/Reels/Shorts",
+        "Biết quay dựng video thực tế lẫn ứng dụng AI video",
+        "Có gu thẩm mỹ, cảm nhận hình ảnh và âm thanh tốt",
+        "Từng làm việc trong ngành TMĐT/social commerce"
+      ],
+      "fitPairs": [
+        ["Sáng tạo, chủ động cập nhật trend/công cụ mới", "Ngại thử nội dung mới, chỉ làm theo khuôn cũ"],
+        ["Nhạy với insight, hành vi khách hàng", "Chỉ làm theo cảm tính, không quan tâm dữ liệu"],
+        ["Chịu được tần suất sản xuất video liên tục, nhiều video/ngày", "Cần nhiều thời gian để hoàn thiện một sản phẩm"],
+        ["Chủ động, dám thử — sai — làm lại nhanh", "Sợ sai, chờ chỉ đạo từng bước"],
+        ["Muốn gắn bó, phát triển chuyên sâu về Media/AI video", "Tìm việc tạm thời, nhảy việc liên tục"]
+      ],
+      "roadmap": [
+        "Nắm quy trình sản xuất video của đội, chuẩn hook/CTA/hashtag, làm quen công cụ AI gen video công ty dùng",
+        "Tự chủ ra đủ số lượng video/ngày theo chuẩn, bắt đầu tự nghiên cứu trend & insight khách hàng",
+        "Đạt chỉ tiêu số lượng và hiệu quả video (views, tương tác, tỷ lệ ra đơn)"
+      ],
+      "kpis": [
+        "Số lượng video sản xuất/ngày hoặc /tuần",
+        "Tỷ lệ video đạt hiệu quả (views/tương tác) theo chuẩn đội",
+        "Đóng góp vào tỷ lệ chuyển đổi/đơn hàng từ video",
+        "Tốc độ bắt trend và áp dụng vào nội dung"
+      ],
+      "perks": [
+        "Lương cứng + thưởng theo hiệu quả video/doanh số đội; BHXH theo quy định",
+        "Thưởng lễ/Tết, lương tháng 13, du lịch hàng năm",
+        "Đào tạo bài bản về sản xuất video AI, nghiên cứu insight khách hàng, xu hướng nền tảng",
+        "Lộ trình phát triển lên chuyên gia Media/AI video hoặc Trưởng nhóm Media",
+        "Môi trường \"One Team One Goal\" — tập thể tử tế, đào tạo bài bản, ghi nhận xứng đáng"
+      ],
+      "emailTitle": "Video Creator/Editor - Họ tên",
+      "applyChannel": "fanpage",
+      "portfolio": true,
+      "img": "assets/images/team/video-creator.webp",
+      "imgAlt": "Video Creator/Editor tại Ethan Ecom"
+    },
+    {
       "slug": "tuyen-dung-chuyen-vien-hr",
       "title": "Chuyên viên HR — Đào tạo, Tuyển dụng & Văn hoá Doanh nghiệp",
       "display": "Chuyên viên HR",
@@ -90,7 +165,7 @@
       "count": "01",
       "deptKey": "office",
       "deptLabel": "Văn phòng",
-      "block": "Phòng ban dùng chung — HR",
+      "block": "Khối hỗ trợ — HR",
       "reportTo": "Ban giám đốc (CEO)",
       "location": "VP Ethanecom — 61/1G Võ Dõng 2, Thống Nhất, Đồng Nai",
       "hours": "day",
@@ -168,7 +243,7 @@
       "count": "01",
       "deptKey": "office",
       "deptLabel": "Văn phòng",
-      "block": "Phòng ban dùng chung — Kế toán (phối hợp chặt với Khối Sản Xuất)",
+      "block": "Khối hỗ trợ — Kế toán (phối hợp chặt với Khối Sản Xuất)",
       "reportTo": "Ban giám đốc",
       "location": "VP/Xưởng Ethanecom — 61/1G Võ Dõng 2, Thống Nhất, Đồng Nai",
       "hours": "day",
@@ -890,7 +965,7 @@
       "count": "01",
       "deptKey": "office",
       "deptLabel": "Văn phòng",
-      "block": "Phòng ban dùng chung — IT",
+      "block": "Khối hỗ trợ — IT",
       "reportTo": "Ban giám đốc (CEO)",
       "location": "VP Ethanecom — 61/1G Võ Dõng, Thống Nhất, Đồng Nai",
       "hours": "day",

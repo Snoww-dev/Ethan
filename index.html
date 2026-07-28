@@ -5327,21 +5327,23 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
   var JOBS = [
     { num:"01", name:"Seller TMĐT", img:"assets/images/team/seller-pod.webp", href:"tuyen-dung-seller-tmdt",
       desc:"Tự chủ vận hành gian hàng TikTok Shop, Etsy, Amazon thị trường Mỹ — từ ý tưởng sản phẩm, listing đến quảng cáo và chăm sóc khách hàng." },
-    { num:"02", name:"Designer POD", img:"assets/images/team/graphic-designer.webp", href:"tuyen-dung-designer-pod",
+    { num:"02", name:"Video Creator/Editor", img:"assets/images/team/video-creator.webp", href:"tuyen-dung-video-creator",
+      desc:"Sản xuất video quảng bá sản phẩm (quay thực tế + AI) đúng insight khách hàng Mỹ — tối ưu hook 3 giây đầu, thúc đẩy tương tác và ra đơn." },
+    { num:"03", name:"Designer POD", img:"assets/images/team/graphic-designer.webp", href:"tuyen-dung-designer-pod",
       desc:"Thiết kế sản phẩm in ấn (áo, cốc, poster, giấy in...) đúng thị hiếu khách hàng Mỹ, đúng chuẩn kỹ thuật để đưa vào sản xuất và đăng bán." },
-    { num:"03", name:"Designer EMB", img:"assets/images/team/embroidery-manager.webp", href:"tuyen-dung-designer-emb",
+    { num:"04", name:"Designer EMB", img:"assets/images/team/embroidery-manager.webp", href:"tuyen-dung-designer-emb",
       desc:"Digitize thiết kế thành file thêu chuẩn, tối ưu đường chỉ và mật độ mũi thêu cho máy thêu công nghiệp — quyết định chất lượng sản phẩm thêu." },
-    { num:"04", name:"NV Đứng Máy Thêu", img:"assets/images/team/embroidery-technician.webp", href:"tuyen-dung-dung-may-theu",
+    { num:"05", name:"NV Đứng Máy Thêu", img:"assets/images/team/embroidery-technician.webp", href:"tuyen-dung-dung-may-theu",
       desc:"Vận hành máy thêu vi tính: lên khung, canh chỉnh, thay chỉ — đảm bảo mũi thêu đẹp, đúng file thiết kế. Có ca hành chánh và ca đêm." },
-    { num:"05", name:"Nhân viên QC", img:"assets/images/team/quality-control.webp", href:"tuyen-dung-qc-ca-hanh-chanh",
+    { num:"06", name:"Nhân viên QC", img:"assets/images/team/quality-control.webp", href:"tuyen-dung-qc-ca-hanh-chanh",
       desc:"Kiểm soát chất lượng hàng in, khắc, thêu trước khi đóng gói xuất hàng — không cần kinh nghiệm, được đào tạo từ đầu. Có ca hành chánh và ca đêm." },
-    { num:"06", name:"Vận Hành Máy In Giấy", img:"assets/images/team/printer.webp", href:"tuyen-dung-van-hanh-may-in-giay",
+    { num:"07", name:"Vận Hành Máy In Giấy", img:"assets/images/team/printer.webp", href:"tuyen-dung-van-hanh-may-in-giay",
       desc:"Vận hành máy in giấy cho các dòng thiệp, wrapping paper, suncatcher... đúng file, đúng màu sắc và đúng tiến độ sản xuất." },
-    { num:"07", name:"Vận Hành Máy Laser", img:"assets/images/team/laser.jpg", href:"tuyen-dung-van-hanh-may-laser",
+    { num:"08", name:"Vận Hành Máy Laser", img:"assets/images/team/laser.jpg", href:"tuyen-dung-van-hanh-may-laser",
       desc:"Cắt/khắc laser trên gỗ, mica, da, giấy — chỉnh thông số theo từng chất liệu, sản phẩm ra đúng kích thước và độ sắc nét yêu cầu." },
-    { num:"08", name:"Chuyên viên HR", img:"assets/images/team/hr.webp", href:"tuyen-dung-chuyen-vien-hr",
+    { num:"09", name:"Chuyên viên HR", img:"assets/images/team/hr.webp", href:"tuyen-dung-chuyen-vien-hr",
       desc:"Xây dựng văn hoá doanh nghiệp, tuyển dụng và onboarding — đồng hành cùng đội ngũ đang tăng trưởng nhanh của Ethan." },
-    { num:"09", name:"Chuyên viên IT — AI", img:"assets/images/team/web-developer.jpg", href:"tuyen-dung-chuyen-vien-it-ai",
+    { num:"10", name:"Chuyên viên IT — AI", img:"assets/images/team/web-developer.jpg", href:"tuyen-dung-chuyen-vien-it-ai",
       desc:"Nghiên cứu và triển khai Claude, ChatGPT, Gemini vào quy trình từng bộ phận — mục tiêu tăng hiệu suất làm việc 2–3 lần." }
   ];
 
@@ -5365,7 +5367,7 @@ document.querySelectorAll('.team-orbit .member').forEach(function(member){
     var j = JOBS[current];
     visualEl.innerHTML =
         '<img class="job__img" src="' + j.img + '" alt="Đội ngũ Ethan Ecom — vị trí ' + j.name + '" loading="lazy" decoding="async">'
-      + '<figcaption class="job__visual-caption">Ethan Ecom · Vị trí ' + j.num + '/09</figcaption>';
+      + '<figcaption class="job__visual-caption">Ethan Ecom · Vị trí ' + j.num + '/' + ('0' + JOBS.length).slice(-2) + '</figcaption>';
     colEl.innerHTML =
         '<h3 class="job__title">' + j.name + '</h3>'
       + '<p class="job__desc">' + j.desc + '</p>'
