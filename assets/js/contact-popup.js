@@ -99,7 +99,7 @@
     position: relative;
     background: var(--cp-panel);
     border: 1px solid var(--cp-cream-400);
-    padding: 52px 56px;
+    padding: 34px 38px;
   }
   .cp-inner::before {
     content: '';
@@ -112,13 +112,13 @@
   /* ── Close button ── */
   .cp-close {
     position: absolute;
-    top: 22px; right: 22px;
-    width: 44px; height: 44px;
+    top: 16px; right: 16px;
+    width: 36px; height: 36px;
     background: transparent;
     border: 1px solid rgba(241, 236, 226, 0.35);
     border-radius: 50%;
     color: var(--cp-cream-200);
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1;
     cursor: pointer;
     display: flex;
@@ -157,78 +157,77 @@
   .cp-title {
     font-family: var(--cp-font-display);
     font-weight: 400;
-    font-size: 50px;
-    line-height: 130%;
+    font-size: 24px;
+    line-height: 125%;
     text-transform: uppercase;
     color: #fff;
-    margin: 8px 0 0;
-  }
-
-  .cp-lead {
-    font-family: var(--cp-font-body);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 155%;
-    color: var(--cp-navy-100);
-    margin: 12px 0 0;
-    max-width: 60ch;
+    margin: 6px 0 0;
   }
 
   /* ── Contact strip (thẻ kem trên nền navy) ── */
   .cp-contact-strip {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 32px;
-    margin-top: 24px;
-    padding: 12px 24px;
+    gap: 4px 22px;
+    margin-top: 12px;
+    padding: 8px 16px;
     background: var(--cp-cream-50);
     border: 1px solid var(--cp-border);
   }
   .cp-contact-strip a {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     font-family: var(--cp-font-body);
-    font-size: 15px;
+    font-size: 13px;
     line-height: 150%;
     color: var(--cp-navy-600);
     text-decoration: none;
     transition: color 0.2s ease;
   }
   .cp-contact-strip a:hover { color: var(--cp-navy-400); }
-  .cp-contact-strip svg { width: 15px; height: 15px; stroke: var(--cp-cream-500); flex: none; }
+  .cp-contact-strip svg { width: 13px; height: 13px; stroke: var(--cp-cream-500); flex: none; }
   .cp-contact-strip span {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     font-family: var(--cp-font-body);
-    font-size: 15px;
+    font-size: 13px;
     line-height: 150%;
     color: var(--cp-navy-600);
   }
 
   /* ── Form ── */
-  .cp-form { margin-top: 34px; }
+  .cp-form { margin-top: 16px; }
+
+  /* Bố cục 2 cột kiểu tờ đơn: trái = upload CV, phải = các trường thông tin */
+  .cp-form-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
 
   .cp-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0 20px;
+    gap: 0 16px;
   }
 
-  .cp-field { margin-bottom: 22px; }
+  .cp-field { margin-bottom: 12px; }
+  .cp-field--last { margin-bottom: 0; }
 
   .cp-field label,
   .cp-label {
     display: block;
     font-family: var(--cp-font-display);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 130%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--cp-cream-100);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   .cp-field label .cp-req { color: var(--cp-error-light); }
 
@@ -245,7 +244,7 @@
     color: var(--cp-navy-800);
     background: var(--cp-cream-50);
     border: 1px solid var(--cp-border);
-    padding: 14px 16px;
+    padding: 10px 13px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     -webkit-appearance: none;
     appearance: none;
@@ -262,16 +261,16 @@
     border-color: var(--cp-navy-400);
     box-shadow: 0 0 0 3px rgba(220, 230, 240, 0.35);
   }
-  .cp-field textarea { min-height: 110px; resize: vertical; }
-  .cp-field select { cursor: pointer; }
+  .cp-field textarea { min-height: 60px; resize: vertical; }
+  .cp-field select { cursor: pointer; padding-right: 32px; }
 
   /* Select với mũi tên riêng */
   .cp-select-wrap { position: relative; }
   .cp-select-wrap::after {
     content: '';
     position: absolute;
-    right: 18px; top: 50%;
-    width: 8px; height: 8px;
+    right: 14px; top: 50%;
+    width: 7px; height: 7px;
     border-right: 1.5px solid var(--cp-navy-500);
     border-bottom: 1.5px solid var(--cp-navy-500);
     transform: translateY(-70%) rotate(45deg);
@@ -282,10 +281,10 @@
   .cp-msg {
     display: none;
     font-family: var(--cp-font-body);
-    font-size: 14px;
-    line-height: 150%;
+    font-size: 12.5px;
+    line-height: 145%;
     color: var(--cp-error-light);
-    margin: 6px 0 0;
+    margin: 4px 0 0;
   }
   .cp-field.is-invalid .cp-msg { display: block; }
   .cp-msg.is-visible { display: block; }
@@ -300,7 +299,7 @@
     gap: 2px;
     border: 1px dashed var(--cp-cream-400);
     background: var(--cp-cream-50);
-    padding: 20px 16px;
+    padding: 14px 10px;
     text-align: center;
     cursor: pointer;
     transition: border-color 0.25s ease, background 0.25s ease;
@@ -314,13 +313,13 @@
   .cp-upload input { display: none; }
   .cp-upload-avatar {
     position: relative;
-    width: 56px; height: 56px;
+    width: 44px; height: 44px;
     border-radius: 50%;
     background: var(--cp-cream-200);
     display: flex; align-items: center; justify-content: center;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
-  .cp-upload-avatar svg { width: 24px; height: 24px; stroke: var(--cp-navy-500); }
+  .cp-upload-avatar svg { width: 19px; height: 19px; stroke: var(--cp-navy-500); }
   .cp-upload-plus {
     position: absolute; right: -3px; top: -3px;
     width: 20px; height: 20px;
@@ -334,15 +333,15 @@
   .cp-upload-title {
     font-family: var(--cp-font-display);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 13.5px;
     line-height: 130%;
     color: var(--cp-navy-700);
     margin: 0;
   }
   .cp-upload-hint {
     font-family: var(--cp-font-body);
-    font-size: 13px;
-    line-height: 150%;
+    font-size: 11.5px;
+    line-height: 145%;
     color: var(--cp-navy-300);
     margin: 2px 0 0;
   }
@@ -350,12 +349,12 @@
     display: block;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 10px;
-    padding: 11px 16px;
+    margin-top: 8px;
+    padding: 9px 12px;
     text-align: center;
     font-family: var(--cp-font-display);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.02em;
     color: var(--cp-cream-200);
     background: transparent;
@@ -371,17 +370,17 @@
     display: none;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
-    margin-top: 12px;
-    padding: 12px 24px;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px 12px;
     background: var(--cp-navy-100);
     border: 1px solid var(--cp-navy-200);
   }
   .cp-upload-file.is-visible { display: flex; }
   .cp-upload-file span {
     font-family: var(--cp-font-body);
-    font-size: 15px;
-    line-height: 150%;
+    font-size: 12.5px;
+    line-height: 145%;
     color: var(--cp-navy-700);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -402,23 +401,30 @@
   }
 
   /* ── Submit ── */
-  .cp-actions { margin-top: 32px; }
+  .cp-actions {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
 
   .cp-submit {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     font-family: var(--cp-font-display);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 100%;
     text-transform: uppercase;
-    padding: 15px 38px;
+    padding: 12px 28px;
     background: var(--cp-cream-100);
     color: var(--cp-navy-800);
     border: 1px solid var(--cp-cream-100);
     cursor: pointer;
     transition: background 0.25s ease, border-color 0.25s ease;
+    flex: none;
   }
   .cp-submit .cp-arrow { transition: transform 0.25s ease; }
   .cp-submit:hover { background: #fff; border-color: #fff; }
@@ -428,22 +434,22 @@
 
   .cp-form-note {
     font-family: var(--cp-font-body);
-    font-size: 14px;
-    line-height: 150%;
+    font-size: 12.5px;
+    line-height: 145%;
     color: var(--cp-navy-200);
-    margin: 12px 0 0;
+    margin: 0;
   }
 
   /* ── Success ── */
   .cp-success {
     display: none;
-    margin-top: 28px;
-    padding: 20px 24px;
+    margin-top: 14px;
+    padding: 14px 18px;
     border: 1px solid var(--cp-success);
     background: #EDF3EF;
     color: var(--cp-success);
     font-family: var(--cp-font-body);
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
   }
   .cp-success.is-visible { display: block; }
@@ -451,11 +457,12 @@
 
   /* ── Tablet / mobile ── */
   @media (max-width: 1024px) {
-    .cp-inner { padding: 40px 24px; }
-    .cp-title { font-size: 27px; }
-    .cp-lead { font-size: 15px; }
+    .cp-inner { padding: 28px 22px; }
+    .cp-title { font-size: 21px; }
     .cp-grid { grid-template-columns: 1fr; }
-    .cp-submit { font-size: 17px; width: 100%; justify-content: center; }
+    .cp-form-grid { grid-template-columns: 1fr; }
+    .cp-actions { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .cp-submit { font-size: 15px; width: 100%; justify-content: center; }
   }
 
   @media (max-width: 540px) {
@@ -469,7 +476,7 @@
       max-width: 100%;
       padding: 8px;
     }
-    .cp-inner { padding: 34px 18px 28px; }
+    .cp-inner { padding: 34px 16px 20px; }
     .cp-eyebrow { padding-right: 48px; }
     .cp-eyebrow::after { flex: 0 0 24px; }
     .cp-eyebrow-extra { display: none; }
@@ -786,7 +793,6 @@
 
           <p class="cp-eyebrow">Ethan Ecom<span class="cp-eyebrow-extra"> · Tuyển dụng</span></p>
           <h2 class="cp-title" id="cpTitle">Kiến Tạo Tương Lai</h2>
-          <p class="cp-lead">Tại Ethan Ecom, chúng tôi không chỉ tìm kiếm nhân viên, chúng tôi tìm kiếm những cộng sự có cùng đam mê và khát vọng bứt phá giới hạn. Hãy để lại thông tin ngay.</p>
 
           <div class="cp-contact-strip">
             <a href="tel:+84967473979">
@@ -801,72 +807,80 @@
 
           <form class="cp-form" id="cpForm" novalidate>
 
-            <div class="cp-grid">
-              <div class="cp-field" data-field>
-                <label for="cpName">Họ và tên <span class="cp-req">*</span></label>
-                <input id="cpName" type="text" placeholder="Nguyễn Văn A" required autocomplete="name">
-                <p class="cp-msg">Vui lòng nhập họ và tên của bạn.</p>
-              </div>
-              <div class="cp-field" data-field>
-                <label for="cpEmail">Email liên lạc <span class="cp-req">*</span></label>
-                <input id="cpEmail" type="email" placeholder="you@example.com" required autocomplete="email">
-                <p class="cp-msg">Email chưa hợp lệ. Vui lòng kiểm tra lại.</p>
-              </div>
-            </div>
+            <div class="cp-form-grid">
 
-            <div class="cp-field" data-field>
-              <label for="cpPosition">Vị trí ứng tuyển <span class="cp-req">*</span></label>
-              <div class="cp-select-wrap">
-                <select id="cpPosition" required>
-                  <option value="" disabled selected>Chọn vị trí</option>
-                  <option value="tuyen-dung-seller-tmdt">Seller TMĐT &middot; Khối Kinh Doanh</option>
-                  <option value="tuyen-dung-video-creator">Video Creator/Editor &middot; Khối Kinh Doanh</option>
-                  <option value="tuyen-dung-chuyen-vien-hr">Chuyên viên HR &middot; Khối hỗ trợ</option>
-                  <option value="tuyen-dung-ke-toan-san-xuat">Kế toán Sản xuất &middot; Khối hỗ trợ</option>
-                  <option value="tuyen-dung-designer-pod">Designer POD &middot; Khối Sản Xuất · Design</option>
-                  <option value="tuyen-dung-designer-emb">Designer EMB &middot; Khối Sản Xuất · Design</option>
-                  <option value="tuyen-dung-qc-ca-hanh-chanh">Nhân viên QC — Ca Hành chánh &middot; Khối Sản Xuất</option>
-                  <option value="tuyen-dung-qc-ca-dem">Nhân viên QC — Ca Đêm &middot; Khối Sản Xuất</option>
-                  <option value="tuyen-dung-dung-may-theu">NV Đứng Máy Thêu — Ca Hành chánh &middot; Khối Sản Xuất</option>
-                  <option value="tuyen-dung-dung-may-theu-ca-dem">NV Đứng Máy Thêu — Ca Đêm &middot; Khối Sản Xuất</option>
-                  <option value="tuyen-dung-van-hanh-may-laser">NV Vận Hành Máy Laser &middot; Khối Sản Xuất</option>
-                  <option value="tuyen-dung-van-hanh-may-in-giay">NV Vận Hành Máy In Giấy &middot; Khối Sản Xuất</option>
-                  <option value="tuyen-dung-van-hanh-may-in-uv">NV Vận Hành Máy In UV Phẳng &middot; Khối Sản Xuất</option>
-                  <option value="tuyen-dung-quan-ly-kho">NV Quản lý Kho NVL &middot; Khối Sản Xuất</option>
-                  <option value="tuyen-dung-chuyen-vien-it-ai">Chuyên viên IT — Ứng dụng AI &middot; Khối hỗ trợ</option>
-                </select>
+              <!-- Cột trái: upload CV, gọn như một góc hồ sơ -->
+              <div class="cp-form-upload">
+                <span class="cp-label" id="cpCvLabel">CV (PDF / DOC)</span>
+                <div class="cp-upload" id="cpFileZone" role="button" tabindex="0" aria-labelledby="cpCvLabel">
+                  <span class="cp-upload-avatar" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 12 15 15"/></svg>
+                    <span class="cp-upload-plus">+</span>
+                  </span>
+                  <p class="cp-upload-title">Tải lên CV</p>
+                  <p class="cp-upload-hint">Tối đa 5MB</p>
+                  <input type="file" id="cpFile" accept=".pdf,.doc,.docx" aria-label="Chọn file CV">
+                </div>
+                <button type="button" class="cp-upload-btn" id="cpFileBtn">Chọn tệp CV</button>
+                <div class="cp-upload-file" id="cpFileChip">
+                  <span id="cpFileName"></span>
+                  <button type="button" id="cpFileRemove">Xoá</button>
+                </div>
+                <p class="cp-msg" id="cpFileMsg">File vượt quá 5 MB hoặc sai định dạng. Chỉ nhận PDF, DOC, DOCX.</p>
               </div>
-              <p class="cp-msg">Vui lòng chọn vị trí bạn muốn ứng tuyển.</p>
-            </div>
 
-            <div class="cp-field">
-              <label for="cpMsg">Lời nhắn</label>
-              <textarea id="cpMsg" placeholder="Giới thiệu ngắn về bản thân và lý do bạn muốn gia nhập Ethan…"></textarea>
-            </div>
+              <!-- Cột phải: thông tin ứng viên -->
+              <div class="cp-form-fields">
+                <div class="cp-grid">
+                  <div class="cp-field" data-field>
+                    <label for="cpName">Họ và tên <span class="cp-req">*</span></label>
+                    <input id="cpName" type="text" placeholder="Nguyễn Văn A" required autocomplete="name">
+                    <p class="cp-msg">Vui lòng nhập họ và tên của bạn.</p>
+                  </div>
+                  <div class="cp-field" data-field>
+                    <label for="cpEmail">Email liên lạc <span class="cp-req">*</span></label>
+                    <input id="cpEmail" type="email" placeholder="you@example.com" required autocomplete="email">
+                    <p class="cp-msg">Email chưa hợp lệ. Vui lòng kiểm tra lại.</p>
+                  </div>
+                </div>
 
-            <div class="cp-field">
-              <span class="cp-label" id="cpCvLabel">Upload CV (PDF / DOC)</span>
-              <div class="cp-upload" id="cpFileZone" role="button" tabindex="0" aria-labelledby="cpCvLabel">
-                <span class="cp-upload-avatar" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 12 15 15"/></svg>
-                  <span class="cp-upload-plus">+</span>
-                </span>
-                <p class="cp-upload-title">Tải lên CV</p>
-                <p class="cp-upload-hint">PDF / DOC · tối đa 5MB</p>
-                <input type="file" id="cpFile" accept=".pdf,.doc,.docx" aria-label="Chọn file CV">
+                <div class="cp-field" data-field>
+                  <label for="cpPosition">Vị trí ứng tuyển <span class="cp-req">*</span></label>
+                  <div class="cp-select-wrap">
+                    <select id="cpPosition" required>
+                      <option value="" disabled selected>Chọn vị trí</option>
+                      <option value="tuyen-dung-seller-tmdt">Seller TMĐT &middot; Khối Kinh Doanh</option>
+                      <option value="tuyen-dung-video-creator">Video Creator/Editor &middot; Khối Kinh Doanh</option>
+                      <option value="tuyen-dung-chuyen-vien-hr">Chuyên viên HR &middot; Khối hỗ trợ</option>
+                      <option value="tuyen-dung-ke-toan-san-xuat">Kế toán Sản xuất &middot; Khối hỗ trợ</option>
+                      <option value="tuyen-dung-designer-pod">Designer POD &middot; Khối Sản Xuất · Design</option>
+                      <option value="tuyen-dung-designer-emb">Designer EMB &middot; Khối Sản Xuất · Design</option>
+                      <option value="tuyen-dung-qc-ca-hanh-chanh">Nhân viên QC — Ca Hành chánh &middot; Khối Sản Xuất</option>
+                      <option value="tuyen-dung-qc-ca-dem">Nhân viên QC — Ca Đêm &middot; Khối Sản Xuất</option>
+                      <option value="tuyen-dung-dung-may-theu">NV Đứng Máy Thêu — Ca Hành chánh &middot; Khối Sản Xuất</option>
+                      <option value="tuyen-dung-dung-may-theu-ca-dem">NV Đứng Máy Thêu — Ca Đêm &middot; Khối Sản Xuất</option>
+                      <option value="tuyen-dung-van-hanh-may-laser">NV Vận Hành Máy Laser &middot; Khối Sản Xuất</option>
+                      <option value="tuyen-dung-van-hanh-may-in-giay">NV Vận Hành Máy In Giấy &middot; Khối Sản Xuất</option>
+                      <option value="tuyen-dung-van-hanh-may-in-uv">NV Vận Hành Máy In UV Phẳng &middot; Khối Sản Xuất</option>
+                      <option value="tuyen-dung-quan-ly-kho">NV Quản lý Kho NVL &middot; Khối Sản Xuất</option>
+                      <option value="tuyen-dung-chuyen-vien-it-ai">Chuyên viên IT — Ứng dụng AI &middot; Khối hỗ trợ</option>
+                    </select>
+                  </div>
+                  <p class="cp-msg">Vui lòng chọn vị trí bạn muốn ứng tuyển.</p>
+                </div>
+
+                <div class="cp-field cp-field--last">
+                  <label for="cpMsg">Lời nhắn</label>
+                  <textarea id="cpMsg" placeholder="Giới thiệu ngắn về bản thân và lý do bạn muốn gia nhập Ethan…"></textarea>
+                </div>
               </div>
-              <button type="button" class="cp-upload-btn" id="cpFileBtn">Chọn tệp CV</button>
-              <div class="cp-upload-file" id="cpFileChip">
-                <span id="cpFileName"></span>
-                <button type="button" id="cpFileRemove">Xoá</button>
-              </div>
-              <p class="cp-msg" id="cpFileMsg">File vượt quá 5 MB hoặc sai định dạng. Chỉ nhận PDF, DOC, DOCX.</p>
+
             </div>
 
             <div class="cp-actions">
               <button type="submit" class="cp-submit" id="cpSubmit">Gửi thông tin <span class="cp-arrow" aria-hidden="true">→</span></button>
-              <p class="cp-form-note">Thông tin của bạn được bảo mật và chỉ dùng cho mục đích tuyển dụng.</p>
-              <p class="cp-msg" id="cpFormErr" style="margin-top:10px"></p>
+              <p class="cp-form-note">Thông tin của bạn được bảo mật, chỉ dùng cho mục đích tuyển dụng.</p>
+              <p class="cp-msg" id="cpFormErr"></p>
             </div>
 
             <div class="cp-success" id="cpSuccess" role="status">
