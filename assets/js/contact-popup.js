@@ -164,6 +164,16 @@
     margin: 6px 0 0;
   }
 
+  .cp-lead {
+    font-family: var(--cp-font-body);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 145%;
+    color: var(--cp-navy-100);
+    margin: 6px 0 0;
+    max-width: 64ch;
+  }
+
   /* ── Contact strip (thẻ kem trên nền navy) ── */
   .cp-contact-strip {
     display: flex;
@@ -480,7 +490,7 @@
       max-width: 100%;
       padding: 8px;
     }
-    .cp-inner { padding: 34px 16px 20px; }
+    .cp-inner { padding: 30px 16px 16px; }
     .cp-eyebrow { padding-right: 48px; }
     .cp-eyebrow::after { flex: 0 0 24px; }
     .cp-eyebrow-extra { display: none; }
@@ -493,6 +503,20 @@
       background: var(--cp-panel);
       z-index: 10;
     }
+    /* Thu gọn thêm cho vừa 1 màn hình, không đổi nội dung/chữ */
+    .cp-lead { font-size: 12px; line-height: 130%; margin-top: 3px; }
+    .cp-contact-strip { padding: 5px 10px; margin-top: 7px; gap: 2px 14px; }
+    .cp-contact-strip a, .cp-contact-strip span { font-size: 12px; }
+    .cp-field { margin-bottom: 8px; }
+    .cp-field label, .cp-label { margin-bottom: 3px; }
+    .cp-field input[type=text], .cp-field input[type=email], .cp-field select { padding: 8px 12px; }
+    .cp-field textarea { min-height: 40px; padding: 8px 12px; }
+    .cp-actions { margin-top: 8px; }
+    .cp-upload-row { gap: 8px; }
+    .cp-upload { padding: 6px 10px; gap: 8px; }
+    .cp-upload-avatar { width: 30px; height: 30px; }
+    .cp-upload-avatar svg { width: 13px; height: 13px; }
+    .cp-upload-btn { padding: 0 12px; }
   }
 
   /* ── prefers-reduced-motion ── */
@@ -797,6 +821,7 @@
 
           <p class="cp-eyebrow">Ethan Ecom<span class="cp-eyebrow-extra"> · Tuyển dụng</span></p>
           <h2 class="cp-title" id="cpTitle">Kiến Tạo Tương Lai</h2>
+          <p class="cp-lead">Tại Ethan Ecom, chúng tôi không chỉ tìm kiếm nhân viên, chúng tôi tìm kiếm những cộng sự có cùng đam mê và khát vọng bứt phá giới hạn. Hãy để lại thông tin ngay.</p>
 
           <div class="cp-contact-strip">
             <a href="tel:+84967473979">
