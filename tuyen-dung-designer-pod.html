@@ -174,44 +174,6 @@
 .jd-cta-info{color:rgba(255,255,255,.78);margin:18px auto 10px;max-width:560px;font-size:var(--fs-base);line-height:1.8}
 .jd-cta-mail{color:rgba(255,255,255,.78);margin:0 auto 32px;max-width:560px;font-size:var(--fs-base);line-height:1.8}
 
-/* ── APPLY MODAL ── */
-.modal{display:none;position:fixed;inset:0;background:rgba(15,34,68,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:9999;align-items:center;justify-content:center;padding:24px}
-.modal.open{display:flex}
-.modal-panel{background:#fff;border-radius:0;width:100%;max-width:640px;max-height:90vh;overflow-y:auto;box-shadow:0 30px 80px rgba(15,34,68,.35),0 0 0 1px rgba(15,34,68,.05);transform-origin:center;animation:modal-pop .5s cubic-bezier(.34,1.56,.64,1) both}
-@keyframes modal-pop{from{opacity:0;transform:translateY(18px) scale(.94)}to{opacity:1;transform:translateY(0) scale(1)}}
-.modal-header{padding:26px 30px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
-.modal-header h3{font-family:var(--font-lead);font-size:var(--fs-h4);font-weight:var(--fw-semibold);color:var(--navy);line-height:1.3}
-.modal-header h3 span{color:var(--blue)}
-.modal-sub{font-size:var(--fs-base);color:var(--text2);margin-top:6px;line-height:1.5}
-.modal-x{width:36px;height:36px;border-radius:0;border:1.5px solid #dde3ee;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:var(--fs-base);transition:all .2s;background:#fff;flex-shrink:0;color:var(--text2)}
-.modal-x:hover{background:var(--gray);color:var(--navy);border-color:var(--blue)}
-.modal-body{padding:22px 30px 30px}
-.fg input.invalid,.fg textarea.invalid{border-color:#dc2626;box-shadow:0 0 0 3px rgba(220,38,38,.12)}
-.fg-err{display:block;color:#dc2626;font-size:var(--fs-caption);font-weight:var(--fw-semibold);margin-top:5px}
-.fg-err:empty{display:none}
-.upload-area.invalid{border-color:#dc2626!important}
-#cvError{color:#dc2626;font-size:var(--fs-caption);font-weight:var(--fw-semibold);margin-top:8px;display:none}
-#cvError.show{display:block}
-.modal.open .stg{opacity:0;animation:stg-up .5s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:calc(var(--d,0)*.08s + .1s)}
-@keyframes stg-up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){.modal-panel,.modal.open .stg{animation:none!important;opacity:1!important;transform:none!important}}
-.apply-grid{display:grid;grid-template-columns:1fr 2fr;gap:26px;align-items:start}
-.apply-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.apply-full{grid-column:1/-1}
-.apply-actions{grid-column:1/-1;display:flex;justify-content:flex-end;gap:12px;border-top:1px solid #eef1f5;margin-top:4px;padding-top:20px}
-.req{color:#e5484d}
-.tip{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#e7eef8;color:var(--blue);font-size:var(--fs-micro);font-weight:var(--fw-bold);cursor:help;position:relative;font-style:normal}
-.tip::after{content:attr(data-tip);position:absolute;bottom:130%;left:50%;transform:translateX(-50%) translateY(4px);background:var(--navy);color:#fff;font-size:var(--fs-caption);font-weight:var(--fw-medium);line-height:1.4;padding:7px 10px;border-radius:0;width:max-content;max-width:200px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:5;box-shadow:0 8px 24px rgba(15,34,68,.3)}
-.tip:hover::after{opacity:1;transform:translateX(-50%) translateY(0)}
-.upload-area{border:2px dashed #cdd8ea;border-radius:0;padding:22px 16px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;background:var(--gray);display:flex;flex-direction:column;align-items:center;gap:6px}
-.upload-area:hover{border-color:var(--blue);background:#f0f6ff}
-.cv-avatar{position:relative;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#e7eef8,#dbe6fb);display:flex;align-items:center;justify-content:center;color:var(--blue);margin-bottom:4px}
-.cv-plus{position:absolute;right:-4px;top:-4px;width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:var(--fs-base);font-weight:var(--fw-semibold);border:2px solid #fff;box-shadow:0 4px 12px rgba(30,127,224,.4)}
-.upload-area .cv-title{font-family:var(--font-lead);font-size:var(--fs-base);font-weight:var(--fw-semibold);color:var(--navy)}
-.upload-area .cv-hint{font-size:var(--fs-base);color:var(--text2)}
-.cv-filename{font-size:var(--fs-base);color:var(--blue);margin-top:10px;font-weight:var(--fw-semibold);word-break:break-all;text-align:center}
-.cv-add-btn{width:100%;justify-content:center;margin-top:12px}
-
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .jd-facts{grid-template-columns:repeat(2,1fr)}
@@ -230,12 +192,6 @@
 }
 @media(max-width:560px){
   .jd-facts{grid-template-columns:1fr}
-  .apply-grid{grid-template-columns:1fr}
-  .apply-two{grid-template-columns:1fr}
-  .modal{padding:12px}
-  .modal-body{padding:16px 18px 22px}
-  .modal-header{padding:20px 18px 0}
-  .modal-x{width:44px;height:44px}
 }
 </style>
 </head>
@@ -261,7 +217,7 @@
     <h1 class="page-hero-title">Designer <em>POD</em><br>Đồ hoạ in ấn</h1>
     <p class="page-hero-sub">Sáng tạo và sản xuất thiết kế in ấn (áo, cốc, poster, giấy in...) hấp dẫn, đúng thị hiếu thị trường Mỹ, đúng chuẩn kỹ thuật để đưa vào sản xuất và đăng bán.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px">
-      <button type="button" class="btn btn--yellow" onclick="openModal('Designer POD (Paper Print / Đồ hoạ in ấn)')">Ứng tuyển ngay →</button>
+      <button type="button" class="btn btn--yellow" onclick="window.ethanOpenApply && window.ethanOpenApply('tuyen-dung-designer-pod')">Ứng tuyển ngay →</button>
       <a href="tuyen-dung#jobs" class="btn btn--outline" style="background:rgba(255,255,255,.12);color:#fff">Xem vị trí khác</a>
     </div>
   </div>
@@ -457,7 +413,7 @@
         <p class="jd-cta-info">Gửi CV/portfolio về <strong style="color:#fff">hr@ethanecom.com</strong> hoặc inbox <a href="https://www.facebook.com/EthanEcom" target="_blank" rel="noopener" style="color:var(--yellow);text-decoration:none;font-weight:var(--fw-bold)">fanpage Ethan Ecom</a></p>
         <p class="jd-cta-mail">Tiêu đề email: <strong style="color:#fff">Designer POD - Họ tên</strong></p>
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-          <button type="button" class="btn btn--yellow" onclick="openModal('Designer POD (Paper Print / Đồ hoạ in ấn)')">Ứng tuyển ngay →</button>
+          <button type="button" class="btn btn--yellow" onclick="window.ethanOpenApply && window.ethanOpenApply('tuyen-dung-designer-pod')">Ứng tuyển ngay →</button>
           <a href="tuyen-dung#jobs" class="btn btn--outline" style="background:rgba(255,255,255,.12);color:#fff">← Xem tất cả vị trí</a>
         </div>
       </div>
@@ -469,234 +425,10 @@
 <!-- FOOTER (injected by shared.js) -->
 <div id="site-footer"></div>
 
-<!-- APPLICATION MODAL -->
-<div class="modal" id="applyModal">
-  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
-    <div class="modal-header stg" style="--d:0">
-      <div>
-        <h3 id="modalHeading">Ứng tuyển: <span id="modalJobTitle"></span></h3>
-        <p class="modal-sub">CV gửi về <strong>hr@ethanecom.com</strong> · tiêu đề <strong>Designer POD - Họ tên</strong></p>
-      </div>
-      <button class="modal-x" id="modalClose" aria-label="Đóng">✕</button>
-    </div>
-    <div class="modal-body">
-      <form id="applyForm" novalidate>
-        <div class="apply-grid">
-
-          <!-- LEFT: CV upload column -->
-          <div class="apply-upload-col stg" style="--d:1">
-            <div class="upload-area" id="uploadArea">
-              <div class="cv-avatar">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 12 15 15"/></svg>
-                <span class="cv-plus">+</span>
-              </div>
-              <p class="cv-title">Tải lên CV</p>
-              <p class="cv-hint">PDF / DOC · tối đa 5MB</p>
-              <input type="file" accept=".pdf,.doc,.docx" style="display:none" id="cvFile">
-            </div>
-            <div id="fileName" class="cv-filename" style="display:none"></div>
-            <button type="button" class="btn btn--outline btn--sm cv-add-btn" id="cvAddBtn">Chọn tệp CV</button>
-            <p id="cvError" role="alert"></p>
-          </div>
-
-          <!-- RIGHT: fields -->
-          <div class="apply-fields">
-            <div class="fg stg" style="--d:2">
-              <label for="aname">Họ và tên <span class="req">*</span></label>
-              <input type="text" id="aname" placeholder="Nguyễn Văn A" autocomplete="name" required>
-            </div>
-            <div class="fg stg" style="--d:3">
-              <label for="aemail">Email <span class="req">*</span></label>
-              <input type="email" id="aemail" placeholder="email@example.com" autocomplete="email" inputmode="email" required>
-            </div>
-            <div class="apply-two stg" style="--d:4">
-              <div class="fg" style="margin:0">
-                <label for="aphone">Số điện thoại</label>
-                <input type="tel" id="aphone" placeholder="+84 xxx xxx xxx" autocomplete="tel" inputmode="tel">
-              </div>
-              <div class="fg" style="margin:0">
-                <label for="aexp">Kinh nghiệm <span class="tip" data-tip="Tổng thời gian bạn đã làm ở vị trí tương đương.">i</span></label>
-                <select id="aexp">
-                  <option>Dưới 1 năm</option>
-                  <option>1–2 năm</option>
-                  <option>3–5 năm</option>
-                  <option>Trên 5 năm</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- FULL WIDTH: intro -->
-          <div class="fg apply-full stg" style="--d:5">
-            <label for="amsg">Giới thiệu bản thân ngắn gọn</label>
-            <textarea id="amsg" placeholder="Chia sẻ về kinh nghiệm, điểm mạnh và lý do bạn muốn gia nhập Ethan Ecom..." style="min-height:96px"></textarea>
-          </div>
-
-          <!-- ACTIONS -->
-          <div class="apply-actions stg" style="--d:6">
-            <button type="button" class="btn btn--ghost btn--sm" id="modalCancel">Huỷ</button>
-            <button type="submit" class="btn btn--blue">Gửi hồ sơ →</button>
-          </div>
-
-        </div>
-      </form>
-      <div id="applySuccess" style="display:none;text-align:center;padding:32px;background:#f0fdf4;border-radius:0;border:1.5px solid #bbf7d0;margin-top:8px">
-        <div style="font-size:var(--fs-h2)">🎉</div>
-        <h4 style="font-family:var(--font-lead);font-size:var(--fs-md);font-weight:var(--fw-semibold);color:#15803d;margin-top:12px">Gửi thành công!</h4>
-        <p style="font-size:var(--fs-base);color:#166534;margin-top:8px">Chúng tôi sẽ xem xét hồ sơ và liên hệ lại trong vòng 3–5 ngày làm việc.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Shared JS (must be last) -->
 <script src="assets/js/shared.js?v=housef07"></script>
-<script>
-/* ── PAGE-SPECIFIC JAVASCRIPT: apply modal ── */
-var applyModal   = document.getElementById('applyModal');
-var applyPanel   = applyModal.querySelector('.modal-panel');
-var applyForm    = document.getElementById('applyForm');
-var applySuccess = document.getElementById('applySuccess');
-var uploadArea   = document.getElementById('uploadArea');
-var cvFile       = document.getElementById('cvFile');
-var fileNameEl   = document.getElementById('fileName');
-var cvError      = document.getElementById('cvError');
-var applyTrigger = null;
-var MAX_CV = 5 * 1024 * 1024;                 // 5MB
-var CV_OK  = /\.(pdf|docx?)$/i;               // .pdf / .doc / .docx
 
-function fgSetError(el, msg){
-  el.classList.add('invalid'); el.setAttribute('aria-invalid','true');
-  var fg = el.closest('.fg'); if(!fg) return;
-  var err = fg.querySelector('.fg-err');
-  if(!err){ err=document.createElement('span'); err.className='fg-err'; err.id=el.id+'-err';
-            err.setAttribute('role','alert'); fg.appendChild(err); el.setAttribute('aria-describedby',err.id); }
-  err.textContent = msg;
-}
-function fgClearError(el){
-  el.classList.remove('invalid'); el.removeAttribute('aria-invalid');
-  var fg = el.closest('.fg'); if(!fg) return;
-  var err = fg.querySelector('.fg-err'); if(err) err.textContent='';
-}
-function showCvError(msg){ cvError.textContent=msg; cvError.classList.add('show'); uploadArea.classList.add('invalid'); }
-function clearCvError(){ cvError.textContent=''; cvError.classList.remove('show'); uploadArea.classList.remove('invalid'); }
-function validCv(file){
-  if(!file) return 'Vui lòng đính kèm CV (PDF hoặc DOC).';
-  if(!CV_OK.test(file.name)) return 'Định dạng không hợp lệ — chỉ nhận PDF, DOC hoặc DOCX.';
-  if(file.size > MAX_CV) return 'Tệp quá lớn — tối đa 5MB.';
-  return '';
-}
-
-function openModal(title) {
-  applyTrigger = document.activeElement;
-  document.getElementById('modalJobTitle').textContent = title;
-  applyModal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  applyForm.style.display = 'block';
-  applySuccess.style.display = 'none';
-  applyForm.reset();
-  fgClearError(document.getElementById('aname'));
-  fgClearError(document.getElementById('aemail'));
-  clearCvError();
-  fileNameEl.style.display = 'none'; fileNameEl.textContent = '';
-  setTimeout(function(){ var f=document.getElementById('aname'); if(f) f.focus(); }, 80);
-}
-function closeModal() {
-  applyModal.classList.remove('open');
-  document.body.style.overflow = '';
-  if (applyTrigger && applyTrigger.focus) { applyTrigger.focus(); applyTrigger = null; }
-}
-document.getElementById('modalClose').addEventListener('click', closeModal);
-document.getElementById('modalCancel').addEventListener('click', closeModal);
-applyModal.addEventListener('click', function(e){ if (e.target === e.currentTarget) closeModal(); });
-document.addEventListener('keydown', function(e){
-  if (e.key === 'Escape' && applyModal.classList.contains('open')) closeModal();
-});
-/* Focus trap inside the dialog */
-applyPanel.addEventListener('keydown', function(e){
-  if (e.key !== 'Tab') return;
-  var f = Array.prototype.filter.call(
-    applyPanel.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])'),
-    function(el){ return el.offsetParent !== null; });
-  if (!f.length) return;
-  var first=f[0], last=f[f.length-1];
-  if (e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
-  else if (!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
-});
-
-// ── CV upload (enforce type + size) ──
-uploadArea.addEventListener('click', function(){ cvFile.click(); });
-document.getElementById('cvAddBtn').addEventListener('click', function(){ cvFile.click(); });
-function handleFile(file){
-  if (file && validCv(file)){ showCvError(validCv(file)); cvFile.value=''; fileNameEl.style.display='none'; return; }
-  clearCvError();
-  if (file){ fileNameEl.textContent='📎 '+file.name; fileNameEl.style.display='block'; }
-}
-cvFile.addEventListener('change', function(){ handleFile(cvFile.files[0]); });
-uploadArea.addEventListener('dragover', function(e){ e.preventDefault(); uploadArea.style.borderColor='var(--blue)'; });
-uploadArea.addEventListener('dragleave', function(){ uploadArea.style.borderColor=''; });
-uploadArea.addEventListener('drop', function(e){
-  e.preventDefault(); uploadArea.style.borderColor='';
-  if (e.dataTransfer.files[0]){ cvFile.files = e.dataTransfer.files; handleFile(e.dataTransfer.files[0]); }
-});
-
-// ── Submit — validate BEFORE showing success ──
-applyForm.addEventListener('submit', function(e){
-  e.preventDefault();
-  var ok=true, firstBad=null;
-  var name=document.getElementById('aname'), email=document.getElementById('aemail');
-  fgClearError(name); fgClearError(email);
-  if (!name.value.trim()){ fgSetError(name,'Vui lòng nhập họ và tên.'); ok=false; firstBad=firstBad||name; }
-  if (!email.value.trim()){ fgSetError(email,'Vui lòng nhập email.'); ok=false; firstBad=firstBad||email; }
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){ fgSetError(email,'Email chưa đúng định dạng.'); ok=false; firstBad=firstBad||email; }
-  var cvErr = validCv(cvFile.files[0]);
-  if (cvErr){ showCvError(cvErr); ok=false; if(!firstBad) firstBad=document.getElementById('cvAddBtn'); }
-  if (!ok){ if (firstBad && firstBad.focus) firstBad.focus(); return; }
-
-  var submitBtn = applyForm.querySelector('[type=submit]');
-  if (submitBtn){ submitBtn.disabled=true; submitBtn.textContent='Đang gửi...'; }
-
-  var showApplySuccess = function(){
-    if (submitBtn){ submitBtn.disabled=false; submitBtn.textContent='Gửi hồ sơ →'; }
-    applyForm.style.display='none';
-    applySuccess.style.display='block';
-  };
-  var applyFail = function(){
-    if (submitBtn){ submitBtn.disabled=false; submitBtn.textContent='Gửi hồ sơ →'; }
-    alert('Xin lỗi, không gửi được lúc này. Vui lòng thử lại hoặc gửi CV về hr@ethanecom.com.');
-  };
-
-  var phoneEl = document.getElementById('aphone');
-  var expEl   = document.getElementById('aexp');
-  var jobEl   = document.getElementById('modalJobTitle');
-  var msgEl   = document.getElementById('amsg');
-  var cv      = cvFile.files[0];
-
-  var buildPayload = function(cvData){
-    return {
-      formType: 'careers',
-      name:       name.value.trim(),
-      email:      email.value.trim(),
-      phone:      phoneEl ? phoneEl.value.trim() : '',
-      position:   jobEl ? jobEl.textContent.trim() : '',
-      experience: expEl ? expEl.options[expEl.selectedIndex].text : '',
-      message:    msgEl ? msgEl.value.trim() : '',
-      cv: cvData ? { name: cv.name, mime: cv.type || 'application/octet-stream', data: cvData } : null
-    };
-  };
-
-  if (window.ethanSendForm && window.ETHAN_WEBHOOK_URL) {
-    (cv ? window.ethanFileToBase64(cv) : Promise.resolve(null))
-      .then(function(cvData){ return window.ethanSendForm(buildPayload(cvData)); })
-      .then(showApplySuccess)
-      .catch(applyFail);
-  } else {
-    showApplySuccess();
-  }
-});
-</script>
-
-<!-- Contact popup + dock 2 nút gim (Ứng tuyển ngay / Liên hệ ngay) -->
+<!-- Contact popup (chứa popup "Kiến Tạo Tương Lai" dùng chung cho mọi nút Ứng tuyển) + dock 2 nút gim -->
 <div id="contact-popup-root"></div>
 <script src="assets/js/contact-popup.js?v=housef07"></script>
 </body>

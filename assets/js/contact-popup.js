@@ -292,11 +292,15 @@
   .cp-field.is-invalid input,
   .cp-field.is-invalid select { border-color: var(--cp-error); }
 
-  /* ── Upload CV ── */
+  /* ── Upload CV (gọn — avatar tròn + nút riêng bên dưới) ── */
   .cp-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
     border: 1px dashed var(--cp-cream-400);
     background: var(--cp-cream-50);
-    padding: 32px 24px;
+    padding: 20px 16px;
     text-align: center;
     cursor: pointer;
     transition: border-color 0.25s ease, background 0.25s ease;
@@ -307,30 +311,60 @@
     background: var(--cp-navy-50);
   }
   .cp-upload:focus-visible { outline: 2px solid var(--cp-cream-400); outline-offset: 2px; }
-  .cp-upload svg { width: 28px; height: 28px; stroke: var(--cp-cream-500); margin-bottom: 8px; }
-  .cp-upload p {
-    font-family: var(--cp-font-body);
-    font-size: 16px;
-    line-height: 150%;
-    color: #3E5A78;
-    margin: 0;
+  .cp-upload input { display: none; }
+  .cp-upload-avatar {
+    position: relative;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--cp-cream-200);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 6px;
   }
-  .cp-upload p strong {
+  .cp-upload-avatar svg { width: 24px; height: 24px; stroke: var(--cp-navy-500); }
+  .cp-upload-plus {
+    position: absolute; right: -3px; top: -3px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--cp-navy-500);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; line-height: 1;
+    border: 2px solid var(--cp-cream-50);
+  }
+  .cp-upload-title {
     font-family: var(--cp-font-display);
     font-weight: 500;
-    color: var(--cp-navy-500);
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--cp-navy-700);
+    margin: 0;
   }
-  .cp-upload small {
-    display: block;
+  .cp-upload-hint {
     font-family: var(--cp-font-body);
-    font-size: 14px;
+    font-size: 13px;
     line-height: 150%;
     color: var(--cp-navy-300);
-    margin-top: 6px;
+    margin: 2px 0 0;
   }
-  .cp-upload input { display: none; }
+  .cp-upload-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 11px 16px;
+    text-align: center;
+    font-family: var(--cp-font-display);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--cp-cream-200);
+    background: transparent;
+    border: 1px solid rgba(241, 236, 226, 0.35);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .cp-upload-btn:hover { background: var(--cp-cream-100); color: var(--cp-navy-800); border-color: var(--cp-cream-100); }
+  .cp-upload-btn:focus-visible { outline: 2px solid var(--cp-cream-400); outline-offset: 2px; }
 
   /* Trạng thái đã chọn file */
   .cp-upload-file {
@@ -759,9 +793,9 @@
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
               +84 967 473 979
             </a>
-            <a href="mailto:support@ethanecom.com">
+            <a href="mailto:hr@ethanecom.com">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-              support@ethanecom.com
+              hr@ethanecom.com
             </a>
           </div>
 
@@ -785,16 +819,21 @@
               <div class="cp-select-wrap">
                 <select id="cpPosition" required>
                   <option value="" disabled selected>Chọn vị trí</option>
-                  <option value="quality-control">Quality Control · Operations</option>
-                  <option value="accountant">General Accountant · Finance</option>
-                  <option value="seller-pod">Seller POD · E-commerce</option>
-                  <option value="embroidery">Embroidery Technician · Production</option>
-                  <option value="graphic-designer">Graphic Designer · Creative Design</option>
-                  <option value="web-developer">Web Developer · Tech</option>
-                  <option value="video-creator">Video Creator · Media &amp; Production</option>
-                  <option value="leader-tiktok">Leader TikTokShop US · E-commerce</option>
-                  <option value="marketing">Internet Marketing · Online Marketing</option>
-                  <option value="other">Khác</option>
+                  <option value="tuyen-dung-seller-tmdt">Seller TMĐT &middot; Khối Kinh Doanh</option>
+                  <option value="tuyen-dung-video-creator">Video Creator/Editor &middot; Khối Kinh Doanh</option>
+                  <option value="tuyen-dung-chuyen-vien-hr">Chuyên viên HR &middot; Khối hỗ trợ</option>
+                  <option value="tuyen-dung-ke-toan-san-xuat">Kế toán Sản xuất &middot; Khối hỗ trợ</option>
+                  <option value="tuyen-dung-designer-pod">Designer POD &middot; Khối Sản Xuất · Design</option>
+                  <option value="tuyen-dung-designer-emb">Designer EMB &middot; Khối Sản Xuất · Design</option>
+                  <option value="tuyen-dung-qc-ca-hanh-chanh">Nhân viên QC — Ca Hành chánh &middot; Khối Sản Xuất</option>
+                  <option value="tuyen-dung-qc-ca-dem">Nhân viên QC — Ca Đêm &middot; Khối Sản Xuất</option>
+                  <option value="tuyen-dung-dung-may-theu">NV Đứng Máy Thêu — Ca Hành chánh &middot; Khối Sản Xuất</option>
+                  <option value="tuyen-dung-dung-may-theu-ca-dem">NV Đứng Máy Thêu — Ca Đêm &middot; Khối Sản Xuất</option>
+                  <option value="tuyen-dung-van-hanh-may-laser">NV Vận Hành Máy Laser &middot; Khối Sản Xuất</option>
+                  <option value="tuyen-dung-van-hanh-may-in-giay">NV Vận Hành Máy In Giấy &middot; Khối Sản Xuất</option>
+                  <option value="tuyen-dung-van-hanh-may-in-uv">NV Vận Hành Máy In UV Phẳng &middot; Khối Sản Xuất</option>
+                  <option value="tuyen-dung-quan-ly-kho">NV Quản lý Kho NVL &middot; Khối Sản Xuất</option>
+                  <option value="tuyen-dung-chuyen-vien-it-ai">Chuyên viên IT — Ứng dụng AI &middot; Khối hỗ trợ</option>
                 </select>
               </div>
               <p class="cp-msg">Vui lòng chọn vị trí bạn muốn ứng tuyển.</p>
@@ -808,11 +847,15 @@
             <div class="cp-field">
               <span class="cp-label" id="cpCvLabel">Upload CV (PDF / DOC)</span>
               <div class="cp-upload" id="cpFileZone" role="button" tabindex="0" aria-labelledby="cpCvLabel">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" aria-hidden="true"><path d="M21.4 11.05 12.25 20.2a6 6 0 0 1-8.49-8.49l9.2-9.19a4 4 0 0 1 5.65 5.66l-9.2 9.19a2 2 0 0 1-2.82-2.83l8.49-8.48"/></svg>
-                <p>Kéo thả file vào đây hoặc <strong>chọn tệp</strong></p>
-                <small>PDF, DOC, DOCX, tối đa 5 MB</small>
+                <span class="cp-upload-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 12 15 15"/></svg>
+                  <span class="cp-upload-plus">+</span>
+                </span>
+                <p class="cp-upload-title">Tải lên CV</p>
+                <p class="cp-upload-hint">PDF / DOC · tối đa 5MB</p>
                 <input type="file" id="cpFile" accept=".pdf,.doc,.docx" aria-label="Chọn file CV">
               </div>
+              <button type="button" class="cp-upload-btn" id="cpFileBtn">Chọn tệp CV</button>
               <div class="cp-upload-file" id="cpFileChip">
                 <span id="cpFileName"></span>
                 <button type="button" id="cpFileRemove">Xoá</button>
@@ -981,6 +1024,18 @@
     const triggerBtn = document.getElementById('cpTrigger');
     if (triggerBtn) triggerBtn.addEventListener('click', open);
 
+    /* API dùng chung: mọi nút "Ứng tuyển ngay" trên site (trang chi tiết vị trí,
+       card trang chủ, trang tuyển dụng…) gọi hàm này để mở CÙNG MỘT popup,
+       tự chọn sẵn vị trí nếu slug khớp option trong #cpPosition. */
+    const posSelect = document.getElementById('cpPosition');
+    window.ethanOpenApply = function (slug) {
+      if (slug && posSelect) {
+        const opt = posSelect.querySelector('option[value="' + slug + '"]');
+        if (opt) posSelect.value = slug;
+      }
+      open();
+    };
+
     closeBtn.addEventListener('click', close);
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) close();
@@ -1010,6 +1065,8 @@
     fileZone.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
     });
+    const fileBtn = document.getElementById('cpFileBtn');
+    if (fileBtn) fileBtn.addEventListener('click', function () { fileInput.click(); });
     fileInput.addEventListener('change', function () { setFile(fileInput.files[0]); });
 
     ['dragenter', 'dragover'].forEach(function (ev) {
